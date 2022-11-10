@@ -1,0 +1,18 @@
+site_name: Receitalista
+repo_url: https://github.com/mdsreq-fga-unb/2022.2-Receitalista
+
+theme:
+    name: material
+    language: pt
+    features:
+        - navigation.tabs
+    # logo: ./assets/GDS.png
+    # favicon: ./assets/GDS.png
+    palette:
+        primary: brown
+        accent: cyan
+        
+nav:
+  - Home: index.md
+  - Documentação: 
+    - Visão do produto e projeto: produto.md
