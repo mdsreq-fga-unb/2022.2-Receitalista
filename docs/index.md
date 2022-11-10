@@ -8,7 +8,7 @@
 
 | Nome | GitHub |
 |:-----------|:-----------:|
-| Nome 4 | AlefMemTav |
+| Nome 4 | alefMemTav |
 | Lucas Gomes Caldas | lucasgcaldas |
 | Nome 2 | matheusrazor |
 | Nome 3 | pehenobra2 |
