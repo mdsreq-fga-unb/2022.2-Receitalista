@@ -28,6 +28,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 - NodeJS - desenvolvimento do backend.
 - Postgres - banco de dados.
 - Docker - configuração do ambiente de desenvolvimento.
+- Kubernetes - orquestrar containers para o deploy.
+- AWS - hospedagem da aplicação.
 
 ## 2 - Visao Geral do Projeto
 
@@ -36,7 +38,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Papel|Atribuições|Responsável|Participantes|
 |:-----:|:------:|:------:|:------:|
 |Desenvolvedor Frontend|Codificar o design produto e conectar com o *backend*|Pedro Lucas|Igor Thiago, Pedro Henrique, Pedro Lucas, Matheus Raphael|
-|Desenvolvedor Backend|Codificar e implementar funcionalidades, fluxo de controle da aplicação e conectar banco de dados|Lucas Gomes|Lucas Gomes, Valderson Pontes|
+|Desenvolvedor Backend|Codificar e implementar funcionalidades e fluxo de controle da aplicação|Lucas Gomes|Lucas Gomes, Valderson Pontes|
+|Devops|Configuração do ambiente para deploy e conexão com banco de dados|Lucas Gomes|Lucas Gomes e Valderson Pontes|
 |Product Owner|Responsável por comunicar o projeto com os *stakeholders* e também selecionar quais itens do Product Backlog o time de desenvolvimento irá trabalhar primeiro|Pedro Henrique|Pedro Henrique|
 |Scrum Master|Instruir o time em princípios e valores do Scrum e XP|Valderson Pontes|Valderson Pontes|
 
@@ -57,7 +60,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
 |:-----:|:------:|:------:|:------:|
-|Daily|Equipe do Projeto|Diariamente|Nenhum|
+|Daily|Equipe do Projeto|Diariamente|Feedback diário do andamento individual no projeto|
 |Planejamento da Sprint|Equipe do Projeto|Semanalmente|Backlog do Sprint, Quadro Scrum|
 |Revisão da Sprint|Equipe do projeto|Semanalmente|Feedback da sprint|
 |Retrospectiva da Sprint|Equipe do projeto|Semanalmente|Plano de melhoria para as próximas sprints|
@@ -105,12 +108,12 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.4 - Teste
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-| - | - | - | - |
+|Teste de Sistema|Teste unitário|Jest|Identificação de erros|
 
 ### 3.5 - Gestão de Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|-|-|-|-|
+|Organização das tasks|Quadro Scrum|Trello|Controle do desenvolvimento das tasks|
 
 ## 4 - Lições Aprendidas
 
