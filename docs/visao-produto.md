@@ -113,7 +113,7 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.5 - Gestão de Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Organização das tasks|Quadro Scrum|Trello|Controle do desenvolvimento das tasks|
+|Organização das tarefas (tasks)|Quadro Scrum|Trello|Controle do desenvolvimento das tarefas|
 
 ## 4 - Lições Aprendidas
 
