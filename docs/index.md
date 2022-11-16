@@ -6,13 +6,19 @@
 
 ## Colaboradores
 
-| Nome | GitHub |
-|:-----------|:-----------:|
+| Pedro Lucas | Lucas Gomes | Matheus | Pedro Henrique | Valderson Pontes |
+|:----:|:-----------:|:----:|:----:|:----------------:|
+|<a href="https://github.com/alefMemTav" target="_blank"><img src="https://github.com/alefMemTav.png" alt="foto de alefMemTav" width="100rem"/></a>|<a href="https://github.com/lucasgcaldas" target="_blank"><img src="https://github.com/lucasgcaldas.png" alt="foto de lucasgcaldas" width="100rem"/></a>|<a href="https://github.com/matheusrazor" target="_blank"><img src="https://github.com/matheusrazor.png" alt="foto de matheusrazor" width="100rem"/></a>|<a href="https://github.com/pehenobra2" target="_blank"><img src="https://github.com/pehenobra2.png" alt="foto de pehenobra2" width="100rem"/></a>|<a href="https://github.com/valdersonjr" target="_blank"><img src="https://github.com/valdersonjr.png" alt="foto de valderson" width="100rem"/></a>|
+
+
+
+
+<!-- 
 | Nome 4 | alefMemTav |
 | Lucas Gomes Caldas | lucasgcaldas |
 | Nome 2 | matheusrazor |
 | Nome 3 | pehenobra2 |
-| Valderson Pontes da Silva Junior | valdersonjr |
+| Valderson Pontes da Silva Junior | valdersonjr | -->
 
 ## Tecnologias
 
