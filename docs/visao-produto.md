@@ -1,12 +1,3 @@
-## Histórico de Revisão
-|Data|Versão|Descrição|Autor|
-|:-----:|:------:|:------:|:------:|
-| 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
-| 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
-| 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
-
-
-
 # Visão do Produto e Projeto
 
 <p align="justify">
@@ -130,6 +121,13 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 <p align="justify">
 Os ensinamentos da primeira unidade fomentou a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
 </p>
+
+## Histórico de Revisão
+|Data|Versão|Descrição|Autor|
+|:-----:|:------:|:------:|:------:|
+| 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
+| 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
+| 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
 
 ## 5 - Referências Bibliográficas
 - VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
