@@ -122,13 +122,14 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 Os ensinamentos da primeira unidade fomentou a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
 </p>
 
+## 5 - Referências Bibliográficas
+- VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
+- SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
+
+
 ## Histórico de Revisão
 |Data|Versão|Descrição|Autor|
 |:-----:|:------:|:------:|:------:|
 | 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
 | 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
 | 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
-
-## 5 - Referências Bibliográficas
-- VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
-- SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
