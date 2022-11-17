@@ -31,7 +31,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 - Kubernetes - orquestrar containers para o deploy.
 - AWS - hospedagem da aplicação.
 
-## 2 - Visao Geral do Projeto
+## 2 - Visão Geral do Projeto
 
 ### 2.1 - Organização do Projeto
 
