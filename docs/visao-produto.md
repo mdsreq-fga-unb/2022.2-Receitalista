@@ -2,7 +2,7 @@
 |Data|Versão|Descrição|Autor|
 |:-----:|:------:|:------:|:------:|
 | 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
-| 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros |
+| 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
 | 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
 
 
