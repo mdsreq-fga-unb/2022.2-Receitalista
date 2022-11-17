@@ -82,7 +82,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, que possui um ciclo de vida incremental e iterativo. Assim, serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (Planning), Revisão (Review), Retrospectiva (Retrospective).
 </p>
 <p align="justify">
-Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento Programação em Pares (Pair Programming), Planning Poker e Clean Code.
+Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento Programação em Pares (Pair Programming), Planning Poker.
 </p>
 
 ### 3.1 - Requisitos
