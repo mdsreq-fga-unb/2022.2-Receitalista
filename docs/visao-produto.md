@@ -1,3 +1,12 @@
+## Histórico de Revisão
+|Data|Versão|Descrição|Autor|
+|:-----:|:------:|:------:|:------:|
+| 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
+| 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros |
+| 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
+
+
+
 # Visão do Produto e Projeto
 
 <p align="justify">
@@ -11,7 +20,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 | Preposição | Descrição |
 |--|--|
 | Para | Microempreendedores que a partir de materiais, geram um produto |
-| Dos quais (Quem) | Desejam calcular a receita e estipular o preço dos seus produtos por meio dos gastos de produção |
+| Quem | Os que desejam calcular a receita e estipular o preço dos seus produtos por meio dos gastos de produção |
 | O Receitalista | É uma aplicação web |
 | Que | Facilita o controle dos gastos e das margens de lucro |
 | Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático |
@@ -20,7 +29,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 1.2 - Objetivos do Produto
 
 <p align="justify">
-    O Receitalista tem por principal objetivo o usuário não precisar ter conhecimento técnico, ser gratuito e fornecer os dados, como o preço de custo, preço final com a margem e os registros dos preços periódicos registrados pelo usuário.
+    O Receitalista tem por principal objetivo não exigir conhecimento técnico do usuário, ser gratuito e fornecer os dados, como o preço de custo, preço final com a margem e os registros dos preços periódicos registrados pelo usuário.
 </p>
 
 ### 1.3 - Tecnologias a Serem Utilizadas
@@ -37,7 +46,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 
 |Papel|Atribuições|Responsável|Participantes|
 |:-----:|:------:|:------:|:------:|
-|Desenvolvedor Frontend|Codificar o design produto e conectar com o *backend*|Pedro Lucas|Igor Thiago, Pedro Henrique, Pedro Lucas, Matheus Raphael|
+|Desenvolvedor Frontend|Codificar o design do produto e conectar com o *backend*|Pedro Lucas|Igor Thiago, Pedro Henrique, Pedro Lucas, Matheus Raphael|
 |Desenvolvedor Backend|Codificar e implementar funcionalidades e fluxo de controle da aplicação|Lucas Gomes|Lucas Gomes, Valderson Pontes|
 |Devops|Configuração do ambiente para deploy e conexão com banco de dados|Lucas Gomes|Lucas Gomes e Valderson Pontes|
 |Product Owner|Responsável por comunicar o projeto com os *stakeholders* e também selecionar quais itens do Product Backlog o time de desenvolvimento irá trabalhar primeiro|Pedro Henrique|Pedro Henrique|
