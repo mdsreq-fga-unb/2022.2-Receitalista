@@ -119,7 +119,7 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 
 ### 4.1 - Unidade 1
 <p align="justify">
-Os ensinamentos da primeira unidade fomentou a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
+Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
 </p>
 
 ## 5 - Referências Bibliográficas
