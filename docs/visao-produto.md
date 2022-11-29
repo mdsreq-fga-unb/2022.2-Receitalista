@@ -103,7 +103,7 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Pair Programming|Reunião|Discord|Desenvolvimento de uma tarefa do Quadro Scrum|
+|-|-|-|-|
 
 ### 3.4 - Teste
 |Atividade|Método|Ferramenta|Entrega|
