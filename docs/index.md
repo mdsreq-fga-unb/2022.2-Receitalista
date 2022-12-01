@@ -6,7 +6,7 @@
 
 ## Colaboradores
 
-| Pedro Lucas | Lucas  | Matheus | Pedro Henrique | Valderson Pontes | Igor Thiago |
+| Pedro Lucas | Lucas Gomes | Matheus | Pedro Henrique | Valderson Pontes | Igor Thiago |
 |:----:|:-----------:|:----:|:----:|:----------------:|:----------------:|
 |<a href="https://github.com/alefMemTav" target="_blank"><img src="https://github.com/alefMemTav.png" alt="foto de alefMemTav" width="100rem"/></a>|<a href="https://github.com/lucasgcaldas" target="_blank"><img src="https://github.com/lucasgcaldas.png" alt="foto de lucasgcaldas" width="100rem"/></a>|<a href="https://github.com/matheusrazor" target="_blank"><img src="https://github.com/matheusrazor.png" alt="foto de matheusrazor" width="100rem"/></a>|<a href="https://github.com/pehenobra2" target="_blank"><img src="https://github.com/pehenobra2.png" alt="foto de pehenobra2" width="100rem"/></a>|<a href="https://github.com/valdersonjr" target="_blank"><img src="https://github.com/valdersonjr.png" alt="foto de valderson" width="100rem"/></a>|<a href="https://github.com/alladin-51" target="_blank"><img src="https://github.com/alladin-51.png" alt="foto de alladin" width="100rem"/></a>|
 
