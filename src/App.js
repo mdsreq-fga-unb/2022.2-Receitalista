@@ -1,19 +1,13 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Receitalista
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/mdsreq-fga-unb/2022.2-Receitalista"
-        >
-          Repositório
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+    </Router>
   );
 }
 
