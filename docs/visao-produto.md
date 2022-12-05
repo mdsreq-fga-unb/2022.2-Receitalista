@@ -88,17 +88,16 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.1 - Requisitos
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Elicitação|Entrevista com *stakeholders*|Google Meet|Levantamento dos Requisitos|
-|Verificação|Inspeção|-|-|
-|Validação|Revisão do documento de requisitos com o cliente (ou representante)|Google Meet|-|
+|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto|
+|Validação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Nova release|
 
 ### 3.2 - Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Sprint Planning (planejamento de Sprint)|Reunião|Discord| Definição do que pode ser entregue na sprint e como será feito |
-|Sprint Review (revisão de Sprint)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
-|Daily (reunião diária)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
-|Sprint Retrospecive (retrospectiva da sprint)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
+|Planejamento de Sprint (Sprint Planning)|Reunião|Discord|Backlog do Sprint|
+|Revisão de Sprint (Sprint Review)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
+|Reunião diária (Daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
+|Retrospectiva do Sprint (Sprint Retrospecive)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
 
 ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
