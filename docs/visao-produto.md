@@ -55,7 +55,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 6|Implementação de código|15/12/2022|21/12/2022|
 |Sprint 7|Implementação de código e banco de dados|22/12/2022|28/12/2022|
 |Sprint 8|Implementação de código, deploy e entrega da MVP1|29/12/2022|05/02/2022|
-|Sprint 9|Implementação de código, deploy e entrega da MVP2|06/12/2022|09/02/2022|
+|Sprint 9|Implementação de código, deploy e entrega da MVP2|06/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
