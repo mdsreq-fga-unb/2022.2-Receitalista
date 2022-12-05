@@ -94,10 +94,10 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.2 - Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Planejamento de Sprint (Sprint Planning)|Reunião|Discord|Backlog do Sprint|
-|Revisão de Sprint (Sprint Review)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
-|Reunião diária (Daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
-|Retrospectiva do Sprint (Sprint Retrospecive)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
+|Planejamento de Sprint (sprint planning)|Reunião|Discord|Backlog do Sprint|
+|Revisão de Sprint (sprint review)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
+|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
+|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
 
 ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
@@ -107,12 +107,12 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.4 - Teste
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Teste de Sistema|Teste unitário|Jest|Identificação de erros|
+|Teste de Sistema|Teste unitário|Jest|Segurança do produto|
 
 ### 3.5 - Gestão de Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Organização das tarefas (tasks)|Quadro Scrum|Trello|Controle do desenvolvimento das tarefas|
+|Organização das tarefas (tasks)|Quadro Scrum|Trello|Backlog do Sprint|
 
 ## 4 - Lições Aprendidas
 
@@ -125,11 +125,11 @@ Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser ut
 - VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
 - SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
 
-
 ## Histórico de Revisão
 |Data|Versão|Descrição|Autor|
 |:-----:|:------:|:------:|:------:|
 | 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
 | 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
 | 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
-| 16/11/2022 | 2.0 | Finalização da Visão do Produto e Projeto | Lucas Gomes, Valderson Pontes, Pedro Henrique e Pedro Lucas |
+| 16/11/2022 | 2.0 | Finalização da versão inicial da Visão do Produto e Projeto | Lucas Gomes, Valderson Pontes, Pedro Henrique e Pedro Lucas |
+| 05/12/2022 | 2.1 | Correção da Visão do Produto e Projeto | Pedro Lucas |
