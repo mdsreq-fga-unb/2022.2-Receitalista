@@ -16,4 +16,5 @@ nav:
   - Home: index.md
   - Documentação: 
     - Visão do produto e projeto: visao-produto.md
+    - Backlog do produto: backlog_do_produto.md
   - Entregas: entregas.md
