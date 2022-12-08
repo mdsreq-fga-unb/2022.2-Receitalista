@@ -68,7 +68,7 @@ RFN08 | Requisitos de Facilidade de Uso | A interface do site deve ser de fácil
  - **Funcionalidades**: 
 
 | Feature | Estimativa (Sprints) |
-|---------|----------------------|
+|---------|:----------------------:|
 | [FEAT01] Capacidade de cadastro do usuário | 4 |
 | [FEAT02] Capacidade de fazer edição dos dados pessoais na plataforma | 4 |
 | [FEAT03] Capacidade de excluir sua própria conta  | 4 |
@@ -88,7 +88,7 @@ RFN08 | Requisitos de Facilidade de Uso | A interface do site deve ser de fácil
   - **Funcionalidades**: 
 
 | Feature | Estimativa (Sprints) |
-|---------|----------------------|
+|---------|:----------------------:|
 | [FEAT12] Capacidade de gerar gráficos com base no preço x lucro de cada produto | 1 |
 | [FEAT13] Capacidade de exportar um relatório em csv | 1 |
 | [FEAT14] Capacidade de busca por produtos no sistema | 1 |
