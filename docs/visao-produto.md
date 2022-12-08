@@ -104,17 +104,17 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 |Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
 |Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Feedback do Sprint|
 
-### 3.3 - Construção
+<!-- ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|-|-|-|-|
+|-|-|-|-| -->
 
-### 3.4 - Teste
+### 3.3 - Teste
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
 |Teste de Sistema|Teste unitário|Jest|Segurança do produto|
 
-### 3.5 - Gestão de Projeto
+### 3.4 - Gestão de Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
 |Organização das tarefas (tasks)|Quadro Scrum|Trello|Backlog do Sprint|
@@ -128,7 +128,7 @@ Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser ut
 
 ### 4.2 - Unidade 2
 <p align="justify">
-Essa unidade contribuiu com o aprendizado a respeito da estruturação do backlog no formato do SAFe, nos fazendo entender melhor como funciona o refinamento gradual do backlog em épicos, features e histórias de usuário. Uma das dificuldades encontradadas pela equipe foi a definição de uma organização ideal para o backlog, visto que essa atividade pode ser bastante subjetiva. Ademais, essa unidade foi bastante produtiva, pois conseguimos melhorar ainda mais nosso trabalho em equipe.
+Essa unidade contribuiu com o aprendizado a respeito da estruturação do backlog no formato do SAFe, nos fazendo entender melhor como funciona o refinamento gradual do backlog em épicos, features e histórias de usuário. Uma das dificuldades encontradadas pela equipe foi a definição de uma organização ideal para o backlog que melhor atende às necessidades do projeto, visto que pode ser bastante subjetivo. Ademais, essa unidade foi bastante produtiva, pois conseguimos melhorar ainda mais nosso trabalho em equipe.
 </p>
 
 ## 5 - Referências Bibliográficas
