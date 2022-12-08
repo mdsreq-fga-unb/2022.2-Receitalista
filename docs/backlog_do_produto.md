@@ -1,8 +1,4 @@
-<h1 align="center"><b>Requisitos do Produto</b></h1>
-
-<br>
-
-## Backlog do produto
+# Backlog do Produto
 
 <br>
 
