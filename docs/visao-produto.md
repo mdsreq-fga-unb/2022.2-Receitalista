@@ -49,9 +49,9 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 0|Preparação de slides (Metodologia RAD) e definição da Visão Geral do Produto|03/11/2022|09/11/2022|
 |Sprint 1|Refinamento da definição da Visão Geral do Produto, Definição do Projeto|10/11/2022|16/11/2022|
 |Sprint 2|Documento de visão - Projeto e Produto, GitPages|17/11/2022|23/11/2022|
-|Sprint 3|Elicitação dos requisitos e estudo do SAFe|24/11/2022|30/11/2022|
+|Sprint 3|Elicitação dos requisitos e estudo do SAFe. Configuração de ambiente.|24/11/2022|30/11/2022|
 |Sprint 4|Análise e negociação dos requisitos. Documentação (backlog do produto). Verificação e Validação|01/11/2022|07/12/2022|
-|Sprint 5|Refinamento dos requisitos e implementação de código|08/12/2022|14/12/2022|
+|Sprint 5|Refinamento dos requisitos, deploy e implementação de código|08/12/2022|14/12/2022|
 |Sprint 6|Implementação de código|15/12/2022|21/12/2022|
 |Sprint 7|Implementação de código e banco de dados|22/12/2022|28/12/2022|
 |Sprint 8|Implementação de código, deploy e entrega da MVP1|29/12/2022|05/02/2022|
@@ -74,30 +74,34 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 2.5 - Critérios de Replanejamento
 |Descrição|Causa|Replanejamento|
 |:-----:|:------:|:------:|
-|Impossibilidade de entrega|Mau gerenciamento dos riscos|Redefinição e priorização do backlog|
-|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do backlog|
+|Impossibilidade de entrega|Mau gerenciamento dos riscos|Redefinição e priorização do Backlog do Produto|
+|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do Backlog do Produto|
+|Mal entendimento de requisitos|Falha da comunicação entre equipe de densolvimento e cliente|Redefinição do Backlog do Produto|
 
 ## 3 - Processo de Desenvolvimento de Software
 <p align="justify">
-O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, que possui um ciclo de vida incremental e iterativo. Assim, serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (Planning), Revisão (Review), Retrospectiva (Retrospective).
+    O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, pois o projeto tem duração de três meses, o cliente está em contato com a equipe de desenvolvimento e são lançadas novas alterações a cada iteração. 
 </p>
 <p align="justify">
-Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento Programação em Pares (Pair Programming), Planning Poker.
+    Serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (planning), Revisão (review), Retrospectiva (retrospective).
+</p>
+<p align="justify">
+Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento: As histórias de usuário, releases, programação em pares (pair programming) e planning poker.
 </p>
 
 ### 3.1 - Requisitos
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto|
-|Validação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Nova release|
-
+|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto, Histórias de Usuário|
+|Validação|Revisão dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
+|Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
 ### 3.2 - Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Planejamento de Sprint (sprint planning)|Reunião|Discord|Backlog do Sprint|
-|Revisão de Sprint (sprint review)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
-|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
-|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
+|Planejamento do Sprint (sprint planning)|Reunião|Discord|Backlog do Sprint|
+|Revisão do Sprint (sprint review)|Reunião|Discord|Nova release|
+|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
+|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Feedback do Sprint|
 
 ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
