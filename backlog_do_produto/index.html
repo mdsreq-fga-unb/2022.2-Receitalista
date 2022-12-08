@@ -1,0 +1,914 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.9">
+    
+    
+      
+        <title>Backlog do produto - Receitalista</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#versionamento" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Receitalista" class="md-header__button md-logo" aria-label="Receitalista" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Receitalista
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backlog do produto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2022.2-Receitalista" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../visao-produto/" class="md-tabs__link md-tabs__link--active">
+        Documentação
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../entregas/" class="md-tabs__link">
+      Entregas
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Receitalista" class="md-nav__button md-logo" aria-label="Receitalista" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Receitalista
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2022.2-Receitalista" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Documentação
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentação" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Documentação
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/" class="md-nav__link">
+        Visão do produto e projeto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Backlog do produto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Backlog do produto
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versionamento" class="md-nav__link">
+    Versionamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-do-produto" class="md-nav__link">
+    Backlog do produto
+  </a>
+  
+    <nav class="md-nav" aria-label="Backlog do produto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    User roles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-nao-funcionais" class="md-nav__link">
+    Requisitos não funcionais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvp1" class="md-nav__link">
+    MVP1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvp2" class="md-nav__link">
+    MVP2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas/" class="md-nav__link">
+        Entregas
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versionamento" class="md-nav__link">
+    Versionamento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-do-produto" class="md-nav__link">
+    Backlog do produto
+  </a>
+  
+    <nav class="md-nav" aria-label="Backlog do produto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    User roles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-nao-funcionais" class="md-nav__link">
+    Requisitos não funcionais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvp1" class="md-nav__link">
+    MVP1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mvp2" class="md-nav__link">
+    MVP2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/mdsreq-fga-unb/2022.2-Receitalista/edit/master/docs/backlog_do_produto.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 align="center"><b>Requisitos do Produto</b></h1>
+
+<h2 id="versionamento">Versionamento</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02/12/2022</td>
+<td>1.0</td>
+<td>Primeira versão do backlog do produto</td>
+<td><a href="https://github.com/pehenobra2">Pedro Henrique</a></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="backlog-do-produto">Backlog do produto</h2>
+<p><br></p>
+<h3 id="user-roles">User roles</h3>
+<p>É o personagem fictício da user story que representa o usuário ideal do produto, no caso do Receitalista o usuário. Todas as histórias são escritas a partir da perspectiva de um tipo de usuário.
+- Usuário: Pessoa que tem necessidade em calcular o preço de custo de um produto, baseado no preço dos ingredientes/materiais e o preço da mão de obra, podendo colocar o preço final, com intuito de saber a margem de lucro que irá ter.</p>
+<table>
+<thead>
+<tr>
+<th>Épico</th>
+<th>Feature</th>
+<th>User Story</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[EP01] Gerenciamento de usuário</td>
+<td>[FEAT01] Cadastro de usuário</td>
+<td>[US01] Como usuário, eu quero realizar o meu cadastro para utilizar dos serviçõs do site web.</td>
+</tr>
+<tr>
+<td>[EP01] Gerenciamento de usuário</td>
+<td>[FEAT02] Edição do perfil de usuário</td>
+<td>[US02] Como usuário, eu quero editar os dados do meu perfil de usuário.</td>
+</tr>
+<tr>
+<td>[EP01] Gerenciamento de usuário</td>
+<td>[FEAT03] Exclusão de usuário</td>
+<td>[US03] Como usuário, quero deletar o meu usuário</td>
+</tr>
+<tr>
+<td>[EP01] Gerenciamento de usuário</td>
+<td>[FEAT04] Login de usuário</td>
+<td>[US04] Como usuário, quero realizar o meu login no site web.</td>
+</tr>
+<tr>
+<td>[EP02] Gerenciamento de cliente</td>
+<td>[FEAT05] Cadastro de cliente</td>
+<td>[US05] Como usuário, quero realizar o cadastro de um cliente.</td>
+</tr>
+<tr>
+<td>[EP02] Gerenciamento de cliente</td>
+<td>[FEAT06] Edição de perfil de cliente</td>
+<td>[US06] Como usuário, quero editar os dados do perfil do cliente cadastrado.</td>
+</tr>
+<tr>
+<td>[EP02] Gerenciamento de cliente</td>
+<td>[FEAT07] Exclusão de cliente</td>
+<td>[US07] Como usuário, quero excluir um cliente cadastrado.</td>
+</tr>
+<tr>
+<td>[EP02] Gerenciamento de cliente</td>
+<td>[FEAT08] Listar todos os clientes cadastrados</td>
+<td>[US08] Como usuário, quero a lista de todos os clientes cadastrados.</td>
+</tr>
+<tr>
+<td>[EP02] Gerenciamento de cliente</td>
+<td>[FEAT09] Busca por cliente cadastrado</td>
+<td>[US09] Como usuário, quero buscar por um cliente específico que esteja cadastrado.</td>
+</tr>
+<tr>
+<td>[EP03] Gerenciamento de ingrediente/materiais</td>
+<td>[FEAT10] Cadastro de ingrediente/material</td>
+<td>[US10] Como usuário, quero cadastrar um ingrediente/material.</td>
+</tr>
+<tr>
+<td>[EP03] Gerenciamento de ingrediente/materiais</td>
+<td>[FEAT11] Edição de perfil do ingrediente/material cadastrado</td>
+<td>[US11] Como usuário, quero editar os dados de um ingrediente/material cadastrado.</td>
+</tr>
+<tr>
+<td>[EP03] Gerenciamento de ingrediente/materiais</td>
+<td>[FEAT12] Exclusão de ingrediente/material cadastrado</td>
+<td>[US12] Como usuário, quero excluir um ingrediente/material cadastrado.</td>
+</tr>
+<tr>
+<td>[EP03] Gerenciamento de ingrediente/materiais</td>
+<td>[FEAT13] Listar todos os ingredientes/materiais cadastrados</td>
+<td>[US13] Como usuário, quero listar todos os ingredientes/materiais cadastrados.</td>
+</tr>
+<tr>
+<td>[EP03] Gerenciamento de ingrediente/materiais</td>
+<td>[FEAT14] Buscar por ingrediente/material cadastrado</td>
+<td>[US14] Como usuário, quero buscar por um ingrediente/material específico cadastrado.</td>
+</tr>
+<tr>
+<td>[EP04] Gerenciamento de produto</td>
+<td>[FEAT15] Cadastro de produto</td>
+<td>[US15] Como usuário, quero cadastrar um produto no site web.</td>
+</tr>
+<tr>
+<td>[EP04] Gerenciamento de produto</td>
+<td>[FEAT16] Edição de perfil de produto cadastrado</td>
+<td>[US16] Como usuário, quero editar os dados de algum produto cadastrado.</td>
+</tr>
+<tr>
+<td>[EP04] Gerenciamento de produto</td>
+<td>[FEAT17] Excluir produto cadastrado</td>
+<td>[US17] Como usuário, quero excluir um produto cadastrado.</td>
+</tr>
+<tr>
+<td>[EP04] Gerenciamento de produto</td>
+<td>[FEAT18] Listar todos os produtos cadastrados</td>
+<td>[US18] Como usuário, quero a lista com todos os produtos cadastrados.</td>
+</tr>
+<tr>
+<td>[EP04] Gerenciamento de produto</td>
+<td>[FEAT19] Buscar por produto cadastrado</td>
+<td>[US19] Como usuário, quero buscar por um produto em específico que está cadastrado.</td>
+</tr>
+<tr>
+<td>[EP05] Gerenciamento de pedido</td>
+<td>[FEAT20] Cadastro de pedido</td>
+<td>[US20] Como usuário, quero cadastrar um pedido no site web.</td>
+</tr>
+<tr>
+<td>[EP05] Gerenciamento de pedido</td>
+<td>[FEAT21] Edição de pedido cadastrado</td>
+<td>[US21] Como usuário, quero editar o pedido cadastrado.</td>
+</tr>
+<tr>
+<td>[EP05] Gerenciamento de pedido</td>
+<td>[FEAT22] Exclusão de pedido cadastrado</td>
+<td>[US22] Como usuário, quero excluir um pedido cadastrado.</td>
+</tr>
+<tr>
+<td>[EP05] Gerenciamento de pedido</td>
+<td>[FEAT23] Listar todos os pedidos cadastrados</td>
+<td>[US23] Como usuário, quero a lista de todos os pedidos cadastrados.</td>
+</tr>
+<tr>
+<td>[EP05] Gerenciamento de pedido</td>
+<td>[FEAT24] Buscar por pedido cadastrado</td>
+<td>[US24] Como usuário, quero buscar por um pedido em específico cadastrado.</td>
+</tr>
+<tr>
+<td>[EP06] Gerenciamento de Dashboard</td>
+<td>[FEAT25] Gerar gráfico preço X lucro</td>
+<td>[US25] Como usuário, quero um gráfico em que mostra o preço e o lucro obtido com o produto.</td>
+</tr>
+<tr>
+<td>[EP06] Gerenciamento de Dashboard</td>
+<td>[FEAT26] Exportar relatório via PDF</td>
+<td>[US26] Como usuário, quero um relatório com o lucro obtido em um produto específico.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="requisitos-nao-funcionais">Requisitos não funcionais</h2>
+<table>
+<thead>
+<tr>
+<th align="center">N°</th>
+<th align="center">Classificação</th>
+<th align="center">Requisitos Não Funcionais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">RNF01</td>
+<td align="center">Requisitos de Implementação</td>
+<td align="center">Back-end desenvolvido em Node.js</td>
+</tr>
+<tr>
+<td align="center">RNF02</td>
+<td align="center">Requisitos de Implementação</td>
+<td align="center">Front-end desenvolvido em React</td>
+</tr>
+<tr>
+<td align="center">RNF03</td>
+<td align="center">Requisitos de Padrões</td>
+<td align="center">O sistema deve ser desenvolvido em orientação a objetos</td>
+</tr>
+<tr>
+<td align="center">RNF04</td>
+<td align="center">Requisitos de Portabilidade</td>
+<td align="center">A aplicação acessível via internet, uma aplicação web</td>
+</tr>
+<tr>
+<td align="center">RFN05</td>
+<td align="center">Requisitos de Usabilidade</td>
+<td align="center">A aplicação deve ter responsividade da interface</td>
+</tr>
+<tr>
+<td align="center">RFN06</td>
+<td align="center">Requisitos de Produtos</td>
+<td align="center">O sistema deve funcionar 24/7</td>
+</tr>
+<tr>
+<td align="center">RFN07</td>
+<td align="center">Requisitos Éticos</td>
+<td align="center">A aplicação deve ser segura em se tratando dos dados do usuário</td>
+</tr>
+<tr>
+<td align="center">RFN08</td>
+<td align="center">Requisitos de Facilidade de Uso</td>
+<td align="center">A interface do site deve ser de fácil manipulação</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="mvp1">MVP1</h2>
+<ul>
+<li><strong>Objetivo</strong>: Disponibilizar para o usuário as funcionalidades básicas do site web desenvolvido</li>
+<li><strong>Funcionalidades</strong>: </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Estimativa (Sprints)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[FEAT01] Capacidade de cadastro do usuário</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT02] Capacidade de fazer edição dos dados pessoais na plataforma</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT03] Capacidade de excluir sua própria conta</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT04] Capacidade de fazer login do usuário</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT05] Capacidade de fazer cadastro de produto</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT06] Capacidade de editar um produto</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT07] Capacidade de excluir um produto cadastrado</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT08] Capacidade de colocar a margem de lucro</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT09] Capacidade de editar a margem de lucro colocada</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT10] Capacidade de calcular o preço de venda baseado na margem de lucro colocada</td>
+<td>4</td>
+</tr>
+<tr>
+<td>[FEAT11] Capacidade de listar todos os produtos cadastrados</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="mvp2">MVP2</h2>
+<ul>
+<li><strong>Objetivo</strong>: Disponibilizar para o usuário funcionalidades mais específicas, que auxiliaram o usuário na experiência em uso do site web</li>
+<li><strong>Funcionalidades</strong>: </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Estimativa (Sprints)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[FEAT12] Capacidade de gerar gráficos com base no preço x lucro de cada produto</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[FEAT13] Capacidade de exportar um relatório em csv</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[FEAT14] Capacidade de busca por produtos no sistema</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[FEAT15] Capacidade de filtrar por produtos cadastrados no sistema</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+      
+        
+        <a href="../visao-produto/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Visão do produto e projeto" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Visão do produto e projeto
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../entregas/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Entregas" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              Entregas
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version.title": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
