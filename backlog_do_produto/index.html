@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#versionamento" class="md-skip">
+        <a href="#backlog-do-produto" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -349,13 +349,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versionamento" class="md-nav__link">
-    Versionamento
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#backlog-do-produto" class="md-nav__link">
     Backlog do produto
   </a>
@@ -386,20 +379,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../definicao-mvp/" class="md-nav__link">
-        Definição dos MPVs
-      </a>
     </li>
   
 
@@ -451,13 +430,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versionamento" class="md-nav__link">
-    Versionamento
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#backlog-do-produto" class="md-nav__link">
     Backlog do produto
   </a>
@@ -506,31 +478,14 @@
 
 <h1 align="center"><b>Requisitos do Produto</b></h1>
 
-<h2 id="versionamento">Versionamento</h2>
-<table>
-<thead>
-<tr>
-<th>Data</th>
-<th>Versão</th>
-<th>Descrição</th>
-<th>Autor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>02/12/2022</td>
-<td>1.0</td>
-<td>Primeira versão do backlog do produto</td>
-<td><a href="https://github.com/pehenobra2">Pedro Henrique</a></td>
-</tr>
-</tbody>
-</table>
 <p><br></p>
 <h2 id="backlog-do-produto">Backlog do produto</h2>
 <p><br></p>
 <h3 id="user-roles">User roles</h3>
-<p>É o personagem fictício da user story que representa o usuário ideal do produto, no caso do Receitalista o usuário. Todas as histórias são escritas a partir da perspectiva de um tipo de usuário.
-- Usuário: Pessoa que tem necessidade em calcular o preço de custo de um produto, baseado no preço dos ingredientes/materiais e o preço da mão de obra, podendo colocar o preço final, com intuito de saber a margem de lucro que irá ter.</p>
+<p>É o personagem fictício da user story que representa o usuário ideal do produto, no caso do Receitalista o usuário. Todas as histórias são escritas a partir da perspectiva de um tipo de usuário.</p>
+<ul>
+<li>Usuário: Pessoa que tem necessidade em calcular o preço de custo de um produto, baseado no preço dos ingredientes/materiais e o preço da mão de obra, podendo colocar o preço final, com intuito de saber a margem de lucro que irá ter.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -542,133 +497,123 @@
 <tbody>
 <tr>
 <td>[EP01] Gerenciamento de usuário</td>
-<td>[FEAT01] Cadastro de usuário</td>
-<td>[US01] Como usuário, eu quero realizar o meu cadastro para utilizar dos serviçõs do site web.</td>
+<td>[FEAT01] Autenticação de usuário para entrar na plataforma</td>
+<td>[US01] Eu como usuário gostaria de me cadastrar na aplicação para conseguir realizar login.</td>
 </tr>
 <tr>
 <td>[EP01] Gerenciamento de usuário</td>
-<td>[FEAT02] Edição do perfil de usuário</td>
-<td>[US02] Como usuário, eu quero editar os dados do meu perfil de usuário.</td>
+<td>[FEAT01] Autenticação de usuário para entrar na plataforma</td>
+<td>[US02] Eu como usuário gostaria de poder realizar o login na aplicação para poder utilizar suas funcionalidades.</td>
 </tr>
 <tr>
 <td>[EP01] Gerenciamento de usuário</td>
-<td>[FEAT03] Exclusão de usuário</td>
-<td>[US03] Como usuário, quero deletar o meu usuário</td>
+<td>[FEAT01] Autenticação de usuário para entrar na plataforma</td>
+<td>[US03] Eu como usuário gostaria de poder alterar minha senha sem a necessidade de estar logado na aplicação para caso eu a esqueça.</td>
 </tr>
 <tr>
 <td>[EP01] Gerenciamento de usuário</td>
-<td>[FEAT04] Login de usuário</td>
-<td>[US04] Como usuário, quero realizar o meu login no site web.</td>
+<td>[FEAT02] Ações voltadas para o perfil de usuário</td>
+<td>[US04] Eu como usuário gostaria de poder editar minhas informações de cadastro na aplicação para que eu possa mitigar possíveis erros durante o cadastro.</td>
 </tr>
 <tr>
-<td>[EP02] Gerenciamento de cliente</td>
-<td>[FEAT05] Cadastro de cliente</td>
-<td>[US05] Como usuário, quero realizar o cadastro de um cliente.</td>
+<td>[EP01] Gerenciamento de cliente</td>
+<td>[FEAT02] Ações voltadas para o perfil de usuário</td>
+<td>[US05] Eu como usuário gostaria de poder excluir minha conta para que minhas informações sejam deletadas caso eu não queria mais utilizar a aplicação.</td>
 </tr>
 <tr>
-<td>[EP02] Gerenciamento de cliente</td>
-<td>[FEAT06] Edição de perfil de cliente</td>
-<td>[US06] Como usuário, quero editar os dados do perfil do cliente cadastrado.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT03] Gerenciamento de ingredientes/materiais</td>
+<td>[US06] Eu como usuário gostaria de poder cadastrar os ingredientes na aplicação para que eu possa utilizar suas informações na criação de um produto.</td>
 </tr>
 <tr>
-<td>[EP02] Gerenciamento de cliente</td>
-<td>[FEAT07] Exclusão de cliente</td>
-<td>[US07] Como usuário, quero excluir um cliente cadastrado.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT03] Gerenciamento de ingredientes/materiais</td>
+<td>[US07] Eu como usuário gostaria de poder editar as informações de um ingrediente/material cadastrado para poder mitigar possíveis erros durante seu cadastro.</td>
 </tr>
 <tr>
-<td>[EP02] Gerenciamento de cliente</td>
-<td>[FEAT08] Listar todos os clientes cadastrados</td>
-<td>[US08] Como usuário, quero a lista de todos os clientes cadastrados.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT03] Gerenciamento de ingredientes/materiais</td>
+<td>[US08] Eu como usuário gostaria de poder excluir um ingrediente cadastrado para caso eu não queira mais utilizar sua informação na aplicação.</td>
 </tr>
 <tr>
-<td>[EP02] Gerenciamento de cliente</td>
-<td>[FEAT09] Busca por cliente cadastrado</td>
-<td>[US09] Como usuário, quero buscar por um cliente específico que esteja cadastrado.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT03] Gerenciamento de ingredientes/materiais</td>
+<td>[US09] Eu como usuário gostaria de poder visualizar a listagem dos meus ingredientes cadastrados na aplicação para manter controle dos ingredientes cadastrados.</td>
 </tr>
 <tr>
-<td>[EP03] Gerenciamento de ingrediente/materiais</td>
-<td>[FEAT10] Cadastro de ingrediente/material</td>
-<td>[US10] Como usuário, quero cadastrar um ingrediente/material.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT04] Gerenciamento de produto</td>
+<td>[US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto.</td>
 </tr>
 <tr>
-<td>[EP03] Gerenciamento de ingrediente/materiais</td>
-<td>[FEAT11] Edição de perfil do ingrediente/material cadastrado</td>
-<td>[US11] Como usuário, quero editar os dados de um ingrediente/material cadastrado.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT04] Gerenciamento de produto</td>
+<td>[US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro.</td>
 </tr>
 <tr>
-<td>[EP03] Gerenciamento de ingrediente/materiais</td>
-<td>[FEAT12] Exclusão de ingrediente/material cadastrado</td>
-<td>[US12] Como usuário, quero excluir um ingrediente/material cadastrado.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT04] Gerenciamento de produto</td>
+<td>[US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação.</td>
 </tr>
 <tr>
-<td>[EP03] Gerenciamento de ingrediente/materiais</td>
-<td>[FEAT13] Listar todos os ingredientes/materiais cadastrados</td>
-<td>[US13] Como usuário, quero listar todos os ingredientes/materiais cadastrados.</td>
+<td>[EP02] Automação do controle de estoque de ingredientes e de receita de produtos</td>
+<td>[FEAT04] Gerenciamento de produto</td>
+<td>[US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles.</td>
 </tr>
 <tr>
-<td>[EP03] Gerenciamento de ingrediente/materiais</td>
-<td>[FEAT14] Buscar por ingrediente/material cadastrado</td>
-<td>[US14] Como usuário, quero buscar por um ingrediente/material específico cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT05] Gerenciamento de cliente</td>
+<td>[US14] Eu como usuário gostaria de poder realizar o cadastro das informações dos meus clientes na aplicação para utilizar durante o gerenciamento de pedidos.</td>
 </tr>
 <tr>
-<td>[EP04] Gerenciamento de produto</td>
-<td>[FEAT15] Cadastro de produto</td>
-<td>[US15] Como usuário, quero cadastrar um produto no site web.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT05] Gerenciamento de cliente</td>
+<td>[US15] Eu como usuário gostaria de poder editar as informações de um cliente cadastrado na aplicação para poder mitigar possíveis erros durante seu cadastro.</td>
 </tr>
 <tr>
-<td>[EP04] Gerenciamento de produto</td>
-<td>[FEAT16] Edição de perfil de produto cadastrado</td>
-<td>[US16] Como usuário, quero editar os dados de algum produto cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT05] Gerenciamento de cliente</td>
+<td>[US16] Eu como usuário gostaria de poder excluir um cliente cadastrado para caso eu não queira mais utilizar sua informação na aplicação.</td>
 </tr>
 <tr>
-<td>[EP04] Gerenciamento de produto</td>
-<td>[FEAT17] Excluir produto cadastrado</td>
-<td>[US17] Como usuário, quero excluir um produto cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT05] Gerenciamento de cliente</td>
+<td>[US17] Eu como usuário gostaria de poder visualizar a listagem dos meus clientes cadastrados na aplicação para poder visualizar o perfil de consumo de cada cliente.</td>
 </tr>
 <tr>
-<td>[EP04] Gerenciamento de produto</td>
-<td>[FEAT18] Listar todos os produtos cadastrados</td>
-<td>[US18] Como usuário, quero a lista com todos os produtos cadastrados.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT06] Gerenciamento de pedidos</td>
+<td>[US18] Eu como usuário gostaria de poder cadastrar pedidos na aplicação para que eu possa alocar um produto a um cliente.</td>
 </tr>
 <tr>
-<td>[EP04] Gerenciamento de produto</td>
-<td>[FEAT19] Buscar por produto cadastrado</td>
-<td>[US19] Como usuário, quero buscar por um produto em específico que está cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT06] Gerenciamento de pedido</td>
+<td>[US19] Eu como usuário gostaria de poder editar as informações de um pedido cadastrado para poder mitigar possíveis erros durante seu cadastro.</td>
 </tr>
 <tr>
-<td>[EP05] Gerenciamento de pedido</td>
-<td>[FEAT20] Cadastro de pedido</td>
-<td>[US20] Como usuário, quero cadastrar um pedido no site web.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT06] Gerenciamento de pedido</td>
+<td>[US20] Eu como usuário gostaria de poder excluir um pedido cadastrado para caso eu não queira mais utilizar sua informação na aplicação.</td>
 </tr>
 <tr>
-<td>[EP05] Gerenciamento de pedido</td>
-<td>[FEAT21] Edição de pedido cadastrado</td>
-<td>[US21] Como usuário, quero editar o pedido cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT06] Gerenciamento de pedido</td>
+<td>[US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros.</td>
 </tr>
 <tr>
-<td>[EP05] Gerenciamento de pedido</td>
-<td>[FEAT22] Exclusão de pedido cadastrado</td>
-<td>[US22] Como usuário, quero excluir um pedido cadastrado.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT07] Gerenciamento de custos</td>
+<td>[US22] Eu como usuário gostaria de visualizar os gastos com cada ingrediente mensalmente para poder estimar margem de lucro por produto.</td>
 </tr>
 <tr>
-<td>[EP05] Gerenciamento de pedido</td>
-<td>[FEAT23] Listar todos os pedidos cadastrados</td>
-<td>[US23] Como usuário, quero a lista de todos os pedidos cadastrados.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT07] Gerenciamento de custos</td>
+<td>[US23] Eu como usuário gostaria de visualizar qual a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido.</td>
 </tr>
 <tr>
-<td>[EP05] Gerenciamento de pedido</td>
-<td>[FEAT24] Buscar por pedido cadastrado</td>
-<td>[US24] Como usuário, quero buscar por um pedido em específico cadastrado.</td>
-</tr>
-<tr>
-<td>[EP06] Gerenciamento de Dashboard</td>
-<td>[FEAT25] Gerar gráfico preço X lucro</td>
-<td>[US25] Como usuário, quero um gráfico em que mostra o preço e o lucro obtido com o produto.</td>
-</tr>
-<tr>
-<td>[EP06] Gerenciamento de Dashboard</td>
-<td>[FEAT26] Exportar relatório via PDF</td>
-<td>[US26] Como usuário, quero um relatório com o lucro obtido em um produto específico.</td>
+<td>[EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas</td>
+<td>[FEAT07] Gerenciamento de custos</td>
+<td>[US24] Eu como usuário gostaria de visualizar qual a margem de lucro de todos os pedidos mensalmente ter controle da minha margem de lucro.</td>
 </tr>
 </tbody>
 </table>
@@ -725,6 +670,7 @@
 </tr>
 </tbody>
 </table>
+<p><br></p>
 
 
 
@@ -761,13 +707,13 @@
       
       
         
-        <a href="../definicao-mvp/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Definição dos MPVs" rel="next">
+        <a href="../entregas/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Entregas" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Próximo
               </span>
-              Definição dos MPVs
+              Entregas
             </div>
           </div>
           <div class="md-footer__button md-icon">
