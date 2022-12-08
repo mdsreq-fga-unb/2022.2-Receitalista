@@ -126,6 +126,11 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
 </p>
 
+### 4.2 - Unidade 2
+<p align="justify">
+Essa unidade contribuiu com o aprendizado a respeito da estruturação do backlog no formato do SAFe, nos fazendo entender melhor como funciona o refinamento gradual do backlog em épicos, features e histórias de usuário. Uma das dificuldades encontradadas pela equipe foi a definição de uma organização ideal para o backlog, visto que essa atividade pode ser bastante subjetiva. Ademais, essa unidade foi bastante produtiva, pois conseguimos melhorar ainda mais nosso trabalho em equipe.
+</p>
+
 ## 5 - Referências Bibliográficas
 - VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
 - SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
