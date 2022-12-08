@@ -1,10 +1,5 @@
 <h1 align="center"><b>Requisitos do Produto</b></h1>
 
-## Versionamento
-| Data | Versão | Descrição | Autor |
-|------| ------ | --------- | ----- |
-| 02/12/2022 | 1.0 | Primeira versão do backlog do produto | [Pedro Henrique](https://github.com/pehenobra2) |
-
 <br>
 
 ## Backlog do produto
@@ -24,14 +19,14 @@
 | [EP01] Gerenciamento de usuário | [FEAT01] Autenticação de usuário para entrar na plataforma | [US03] Eu como usuário gostaria de poder alterar minha senha sem a necessidade de estar logado na aplicação para caso eu a esqueça. |
 | [EP01] Gerenciamento de usuário | [FEAT02] Ações voltadas para o perfil de usuário | [US04] Eu como usuário gostaria de poder editar minhas informações de cadastro na aplicação para que eu possa mitigar possíveis erros durante o cadastro. |
 | [EP01] Gerenciamento de cliente | [FEAT02] Ações voltadas para o perfil de usuário | [US05] Eu como usuário gostaria de poder excluir minha conta para que minhas informações sejam deletadas caso eu não queria mais utilizar a aplicação. |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US06] Eu como usuário gostaria de poder cadastrar os ingredientes (que irão compor meu produto final)  na aplicação para que eu possa utilizar suas informações na criação de um produto |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US07] Eu como usuário gostaria de poder editar as informações de um ingrediente cadastrado para poder mitigar possíveis erros durante seu cadastro. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US06] Eu como usuário gostaria de poder cadastrar os ingredientes na aplicação para que eu possa utilizar suas informações na criação de um produto. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US07] Eu como usuário gostaria de poder editar as informações de um ingrediente/material cadastrado para poder mitigar possíveis erros durante seu cadastro. |
 | [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US08] Eu como usuário gostaria de poder excluir um ingrediente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
 | [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US09] Eu como usuário gostaria de poder visualizar a listagem dos meus ingredientes cadastrados na aplicação para manter controle dos ingredientes cadastrados. |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Cadastro de ingrediente/material | [US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto. |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Edição de perfil do ingrediente/material cadastrado | [US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro. |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Exclusão de ingrediente/material cadastrado | [US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
-| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Listar todos os ingredientes/materiais cadastrados | [US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Gerenciamento de produto | [US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Gerenciamento de produto | [US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Gerenciamento de produto | [US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Gerenciamento de produto | [US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US14] Eu como usuário gostaria de poder realizar o cadastro das informações dos meus clientes na aplicação para utilizar durante o gerenciamento de pedidos. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US15] Eu como usuário gostaria de poder editar as informações de um cliente cadastrado na aplicação para poder mitigar possíveis erros durante seu cadastro. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US16] Eu como usuário gostaria de poder excluir um cliente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
@@ -39,7 +34,7 @@
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedidos | [US18] Eu como usuário gostaria de poder cadastrar pedidos na aplicação para que eu possa alocar um produto a um cliente. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedido | [US19] Eu como usuário gostaria de poder editar as informações de um pedido cadastrado para poder mitigar possíveis erros durante seu cadastro. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedido | [US20] Eu como usuário gostaria de poder excluir um pedido cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
-| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedidoo | [US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedido | [US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US22] Eu como usuário gostaria de visualizar os gastos com cada ingrediente mensalmente para poder estimar margem de lucro por produto. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US23] Eu como usuário gostaria de visualizar qual a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido. |
 | [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US24] Eu como usuário gostaria de visualizar qual a margem de lucro de todos os pedidos mensalmente ter controle da minha margem de lucro. |
@@ -64,32 +59,40 @@ RFN08 | Requisitos de Facilidade de Uso | A interface do site deve ser de fácil
 
 ## MVP1
 
- - **Objetivo**: Disponibilizar para o usuário as funcionalidades básicas do site web desenvolvido
- - **Funcionalidades**: 
+ - **Objetivo**: Disponibilizar para o cliente funcionalidade básicas para o cliente navegar na plataforma.
 
-| Feature | Estimativa (Sprints) |
+| User story | Estimativa (Sprints) |
 |---------|:----------------------:|
-| [FEAT01] Capacidade de cadastro do usuário | 4 |
-| [FEAT02] Capacidade de fazer edição dos dados pessoais na plataforma | 4 |
-| [FEAT03] Capacidade de excluir sua própria conta  | 4 |
-| [FEAT04] Capacidade de fazer login do usuário | 4 |
-| [FEAT05] Capacidade de fazer cadastro de produto | 4 |
-| [FEAT06] Capacidade de editar um produto | 4 |
-| [FEAT07] Capacidade de excluir um produto cadastrado | 4 |
-| [FEAT08] Capacidade de colocar a margem de lucro | 4 |
-| [FEAT09] Capacidade de editar a margem de lucro colocada | 4 |
-| [FEAT10] Capacidade de calcular o preço de venda baseado na margem de lucro colocada | 4 |
-| [FEAT11] Capacidade de listar todos os produtos cadastrados | 4 |
+| [US01] Eu como usuário gostaria de me cadastrar na aplicação para conseguir realizar login. | 4 |
+| [US02] Eu como usuário gostaria de poder realizar o login na aplicação para poder utilizar suas funcionalidades. | 4 |
+| [US06] Eu como usuário gostaria de poder cadastrar os ingredientes na aplicação para que eu possa utilizar suas informações na criação de um produto.  | 4 |
+| [US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto. | 4 |
+| [US18] Eu como usuário gostaria de poder cadastrar pedidos na aplicação para que eu possa alocar um produto a um cliente. | 4 |
+| [US04] Eu como usuário gostaria de poder editar minhas informações de cadastro na aplicação para que eu possa mitigar possíveis erros durante o cadastro. | 4 |
+| [US07] Eu como usuário gostaria de poder editar as informações de um ingrediente/material cadastrado para poder mitigar possíveis erros durante seu cadastro. | 4 |
+| [US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro. | 4 |
+| [US19] Eu como usuário gostaria de poder editar as informações de um pedido cadastrado para poder mitigar possíveis erros durante seu cadastro. | 4 |
+| [US03] Eu como usuário gostaria de poder alterar minha senha sem a necessidade de estar logado na aplicação para caso eu a esqueça. | 4 |
+| [US05] Eu como usuário gostaria de poder excluir minha conta para que minhas informações sejam deletadas caso eu não queria mais utilizar a aplicação. | 4 |
+| [US08] Eu como usuário gostaria de poder excluir um ingrediente cadastrado para caso eu não queira mais utilizar sua informação na aplicação.  | 4 |
+| [US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação. | 4 |
+| [US20] Eu como usuário gostaria de poder excluir um pedido cadastrado para caso eu não queira mais utilizar sua informação na aplicação.. | 4 |
 
 <br>
 
 ## MVP2
-  - **Objetivo**: Disponibilizar para o usuário funcionalidades mais específicas, que auxiliaram o usuário na experiência em uso do site web
-  - **Funcionalidades**: 
 
-| Feature | Estimativa (Sprints) |
+  - **Objetivo**: Disponibilizar funcionalidades adicionais para melhorar a navegação do usuário dentro da plataforma.
+
+| User story | Estimativa (Sprints) |
 |---------|:----------------------:|
-| [FEAT12] Capacidade de gerar gráficos com base no preço x lucro de cada produto | 1 |
-| [FEAT13] Capacidade de exportar um relatório em csv | 1 |
-| [FEAT14] Capacidade de busca por produtos no sistema | 1 |
-| [FEAT15] Capacidade de filtrar por produtos cadastrados no sistema | 1 |
+| [US09] Eu como usuário gostaria de poder visualizar a listagem dos meus ingredientes cadastrados na aplicação para manter controle dos ingredientes cadastrados. | 4 |
+| [US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles. | 4 |
+| [US14] Eu como usuário gostaria de poder realizar o cadastro das informações dos meus clientes na aplicação para utilizar durante o gerenciamento de pedidos. | 4 |
+| [US15] Eu como usuário gostaria de poder editar as informações de um cliente cadastrado na aplicação para poder mitigar possíveis erros durante seu cadastro. | 4 |
+| [US16] Eu como usuário gostaria de poder excluir um cliente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. | 4 |
+| [US17] Eu como usuário gostaria de poder visualizar a listagem dos meus clientes cadastrados na aplicação para poder visualizar o perfil de consumo de cada cliente. | 4 |
+| [US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros. | 4 |
+| [US22] Eu como usuário gostaria de visualizar os gastos com cada ingrediente mensalmente para poder estimar margem de lucro por produto. | 4 |
+| [US23] Eu como usuário gostaria de visualizar qual a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido. | 4 |
+| [US24] Eu como usuário gostaria de visualizar qual a margem de lucro de todos os pedidos mensalmente ter controle da minha margem de lucro. | 4 |
