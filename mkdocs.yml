@@ -17,4 +17,5 @@ nav:
   - Documentação: 
     - Visão do produto e projeto: visao-produto.md
     - Backlog do produto: backlog_do_produto.md
+    - Definição dos MVPs: definicao-mvp.md
   - Entregas: entregas.md
