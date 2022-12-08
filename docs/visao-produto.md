@@ -14,8 +14,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 | Quem | Os que desejam calcular a receita e estipular o preço dos seus produtos por meio dos gastos de produção |
 | O Receitalista | É uma aplicação web |
 | Que | Facilita o controle dos gastos e das margens de lucro |
-| Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático |
-| Nosso produto | Calcula de forma automática a receita e o lucro de cada produto desenvolvido por meio dos preços desses produtos e da margem de lucro que o usuário deseja, mostrando os valores periódicos dos itens registrados pelo usuário |
+| Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático e, geralmente, são restritas à um produto ou área específica |
+| Nosso produto | é versátil, isto é, pode ser utilizado para diferentes tipos de produtos (podendo tanto ser empregado no gerenciamento de uma confeitaria ou de uma empreiteira). Além disso, o Receitalista facilita o cadastro e a visualização de clientes, ingredientes (utilizados nos produtos), produtos e pedidos. Ademais, ele também contribui com o gerenciamento financeiro automatizando todos os cálculos necessários para estipular custo, receita e lucro |
 
 ### 1.2 - Objetivos do Produto
 
