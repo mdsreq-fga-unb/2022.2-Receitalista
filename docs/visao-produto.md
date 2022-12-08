@@ -95,6 +95,7 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 |Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto, Histórias de Usuário|
 |Validação|Revisão dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
 |Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
+
 ### 3.2 - Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
