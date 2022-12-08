@@ -18,32 +18,31 @@
 
 | Épico | Feature | User Story |
 |-------|---------|------------|
-| [EP01] Gerenciamento de usuário | [FEAT01] Cadastro de usuário | [US01] Como usuário, eu quero realizar o meu cadastro para utilizar dos serviçõs do site web. | 
-| [EP01] Gerenciamento de usuário | [FEAT02] Edição do perfil de usuário | [US02] Como usuário, eu quero editar os dados do meu perfil de usuário. |
-| [EP01] Gerenciamento de usuário | [FEAT03] Exclusão de usuário | [US03] Como usuário, quero deletar o meu usuário|
-| [EP01] Gerenciamento de usuário | [FEAT04] Login de usuário | [US04] Como usuário, quero realizar o meu login no site web. |
-| [EP02] Gerenciamento de cliente | [FEAT05] Cadastro de cliente | [US05] Como usuário, quero realizar o cadastro de um cliente. |
-| [EP02] Gerenciamento de cliente | [FEAT06] Edição de perfil de cliente | [US06] Como usuário, quero editar os dados do perfil do cliente cadastrado. |
-| [EP02] Gerenciamento de cliente | [FEAT07] Exclusão de cliente | [US07] Como usuário, quero excluir um cliente cadastrado. |
-| [EP02] Gerenciamento de cliente | [FEAT08] Listar todos os clientes cadastrados| [US08] Como usuário, quero a lista de todos os clientes cadastrados. |
-| [EP02] Gerenciamento de cliente | [FEAT09] Busca por cliente cadastrado| [US09] Como usuário, quero buscar por um cliente específico que esteja cadastrado. |
-| [EP03] Gerenciamento de ingrediente/materiais | [FEAT10] Cadastro de ingrediente/material | [US10] Como usuário, quero cadastrar um ingrediente/material. |
-| [EP03] Gerenciamento de ingrediente/materiais | [FEAT11] Edição de perfil do ingrediente/material cadastrado | [US11] Como usuário, quero editar os dados de um ingrediente/material cadastrado. |
-| [EP03] Gerenciamento de ingrediente/materiais | [FEAT12] Exclusão de ingrediente/material cadastrado | [US12] Como usuário, quero excluir um ingrediente/material cadastrado. |
-| [EP03] Gerenciamento de ingrediente/materiais | [FEAT13] Listar todos os ingredientes/materiais cadastrados | [US13] Como usuário, quero listar todos os ingredientes/materiais cadastrados. |
-| [EP03] Gerenciamento de ingrediente/materiais | [FEAT14] Buscar por ingrediente/material cadastrado | [US14] Como usuário, quero buscar por um ingrediente/material específico cadastrado. |
-| [EP04] Gerenciamento de produto | [FEAT15] Cadastro de produto| [US15] Como usuário, quero cadastrar um produto no site web. |
-| [EP04] Gerenciamento de produto | [FEAT16] Edição de perfil de produto cadastrado | [US16] Como usuário, quero editar os dados de algum produto cadastrado. |
-| [EP04] Gerenciamento de produto | [FEAT17] Excluir produto cadastrado | [US17] Como usuário, quero excluir um produto cadastrado. |
-| [EP04] Gerenciamento de produto | [FEAT18] Listar todos os produtos cadastrados | [US18] Como usuário, quero a lista com todos os produtos cadastrados. |
-| [EP04] Gerenciamento de produto | [FEAT19] Buscar por produto cadastrado | [US19] Como usuário, quero buscar por um produto em específico que está cadastrado. |
-| [EP05] Gerenciamento de pedido | [FEAT20] Cadastro de pedido | [US20] Como usuário, quero cadastrar um pedido no site web. |
-| [EP05] Gerenciamento de pedido | [FEAT21] Edição de pedido cadastrado | [US21] Como usuário, quero editar o pedido cadastrado. |
-| [EP05] Gerenciamento de pedido | [FEAT22] Exclusão de pedido cadastrado | [US22] Como usuário, quero excluir um pedido cadastrado. |
-| [EP05] Gerenciamento de pedido | [FEAT23] Listar todos os pedidos cadastrados | [US23] Como usuário, quero a lista de todos os pedidos cadastrados. |
-| [EP05] Gerenciamento de pedido | [FEAT24] Buscar por pedido cadastrado | [US24] Como usuário, quero buscar por um pedido em específico cadastrado. |
-| [EP06] Gerenciamento de Dashboard | [FEAT25] Gerar gráfico preço X lucro | [US25] Como usuário, quero um gráfico em que mostra o preço e o lucro obtido com o produto. |
-| [EP06] Gerenciamento de Dashboard | [FEAT26] Exportar relatório via PDF | [US26] Como usuário, quero um relatório com o lucro obtido em um produto específico. |
+| [EP01] Gerenciamento de usuário | [FEAT01] Autenticação de usuário para entrar na plataforma | [US01] Eu como usuário gostaria de me cadastrar na aplicação para conseguir realizar login. | 
+| [EP01] Gerenciamento de usuário | [FEAT01] Autenticação de usuário para entrar na plataforma | [US02] Eu como usuário gostaria de poder realizar o login na aplicação para poder utilizar suas funcionalidades. |
+| [EP01] Gerenciamento de usuário | [FEAT01] Autenticação de usuário para entrar na plataforma | [US03] Eu como usuário gostaria de poder alterar minha senha sem a necessidade de estar logado na aplicação para caso eu a esqueça. |
+| [EP01] Gerenciamento de usuário | [FEAT02] Ações voltadas para o perfil de usuário | [US04] Eu como usuário gostaria de poder editar minhas informações de cadastro na aplicação para que eu possa mitigar possíveis erros durante o cadastro. |
+| [EP01] Gerenciamento de cliente | [FEAT02] Ações voltadas para o perfil de usuário | [US05] Eu como usuário gostaria de poder excluir minha conta para que minhas informações sejam deletadas caso eu não queria mais utilizar a aplicação. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US06] Eu como usuário gostaria de poder cadastrar os ingredientes (que irão compor meu produto final)  na aplicação para que eu possa utilizar suas informações na criação de um produto |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US07] Eu como usuário gostaria de poder editar as informações de um ingrediente cadastrado para poder mitigar possíveis erros durante seu cadastro. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US08] Eu como usuário gostaria de poder excluir um ingrediente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT03] Gerenciamento de ingredientes/materiais | [US09] Eu como usuário gostaria de poder visualizar a listagem dos meus ingredientes cadastrados na aplicação para manter controle dos ingredientes cadastrados. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Cadastro de ingrediente/material | [US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Edição de perfil do ingrediente/material cadastrado | [US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Exclusão de ingrediente/material cadastrado | [US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
+| [EP02] Automação do controle de estoque de ingredientes e de receita de produtos | [FEAT04] Listar todos os ingredientes/materiais cadastrados | [US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US14] Eu como usuário gostaria de poder realizar o cadastro das informações dos meus clientes na aplicação para utilizar durante o gerenciamento de pedidos. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US15] Eu como usuário gostaria de poder editar as informações de um cliente cadastrado na aplicação para poder mitigar possíveis erros durante seu cadastro. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US16] Eu como usuário gostaria de poder excluir um cliente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT05] Gerenciamento de cliente | [US17] Eu como usuário gostaria de poder visualizar a listagem dos meus clientes cadastrados na aplicação para poder visualizar o perfil de consumo de cada cliente. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedidos | [US18] Eu como usuário gostaria de poder cadastrar pedidos na aplicação para que eu possa alocar um produto a um cliente. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedido | [US19] Eu como usuário gostaria de poder editar as informações de um pedido cadastrado para poder mitigar possíveis erros durante seu cadastro. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedido | [US20] Eu como usuário gostaria de poder excluir um pedido cadastrado para caso eu não queira mais utilizar sua informação na aplicação. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT06] Gerenciamento de pedidoo | [US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US22] Eu como usuário gostaria de visualizar os gastos com cada ingrediente mensalmente para poder estimar margem de lucro por produto. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US23] Eu como usuário gostaria de visualizar qual a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido. |
+| [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas | [FEAT07] Gerenciamento de custos | [US24] Eu como usuário gostaria de visualizar qual a margem de lucro de todos os pedidos mensalmente ter controle da minha margem de lucro. |
+
 
 <br>
 
