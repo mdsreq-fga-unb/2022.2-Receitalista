@@ -14,8 +14,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 | Quem | Os que desejam calcular a receita e estipular o preço dos seus produtos por meio dos gastos de produção |
 | O Receitalista | É uma aplicação web |
 | Que | Facilita o controle dos gastos e das margens de lucro |
-| Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático |
-| Nosso produto | Calcula de forma automática a receita e o lucro de cada produto desenvolvido por meio dos preços desses produtos e da margem de lucro que o usuário deseja, mostrando os valores periódicos dos itens registrados pelo usuário |
+| Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático e, geralmente, são restritas à um produto ou área específica |
+| Nosso produto | é versátil, isto é, pode ser utilizado para diferentes tipos de produtos (podendo tanto ser empregado no gerenciamento de uma confeitaria ou de uma empreiteira). Além disso, o Receitalista facilita o cadastro e a visualização de clientes, ingredientes (utilizados nos produtos), produtos e pedidos. Ademais, ele também contribui com o gerenciamento financeiro automatizando todos os cálculos necessários para estipular custo, receita e lucro |
 
 ### 1.2 - Objetivos do Produto
 
@@ -49,13 +49,13 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 0|Preparação de slides (Metodologia RAD) e definição da Visão Geral do Produto|03/11/2022|09/11/2022|
 |Sprint 1|Refinamento da definição da Visão Geral do Produto, Definição do Projeto|10/11/2022|16/11/2022|
 |Sprint 2|Documento de visão - Projeto e Produto, GitPages|17/11/2022|23/11/2022|
-|Sprint 3|Elicitação dos requisitos e estudo do SAFe|24/11/2022|30/11/2022|
+|Sprint 3|Elicitação dos requisitos e estudo do SAFe. Configuração de ambiente.|24/11/2022|30/11/2022|
 |Sprint 4|Análise e negociação dos requisitos. Documentação (backlog do produto). Verificação e Validação|01/11/2022|07/12/2022|
-|Sprint 5|Refinamento dos requisitos e implementação de código|08/12/2022|14/12/2022|
+|Sprint 5|Refinamento dos requisitos, deploy e implementação de código|08/12/2022|14/12/2022|
 |Sprint 6|Implementação de código|15/12/2022|21/12/2022|
 |Sprint 7|Implementação de código e banco de dados|22/12/2022|28/12/2022|
 |Sprint 8|Implementação de código, deploy e entrega da MVP1|29/12/2022|05/02/2022|
-|Sprint 9|Implementação de código, deploy e entrega da MVP2|06/12/2022|09/02/2022|
+|Sprint 9|Implementação de código, deploy e entrega da MVP2|06/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
@@ -74,46 +74,50 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 2.5 - Critérios de Replanejamento
 |Descrição|Causa|Replanejamento|
 |:-----:|:------:|:------:|
-|Impossibilidade de entrega|Mau gerenciamento dos riscos|Redefinição e priorização do backlog|
-|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do backlog|
+|Impossibilidade de entrega|Mau gerenciamento dos riscos|Redefinição e priorização do Backlog do Produto|
+|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do Backlog do Produto|
+|Mal entendimento de requisitos|Falha da comunicação entre equipe de densolvimento e cliente|Redefinição do Backlog do Produto|
 
 ## 3 - Processo de Desenvolvimento de Software
 <p align="justify">
-O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, que possui um ciclo de vida incremental e iterativo. Assim, serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (Planning), Revisão (Review), Retrospectiva (Retrospective).
+    O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, pois o projeto tem duração de três meses, o cliente está em contato com a equipe de desenvolvimento e são lançadas novas alterações a cada iteração. 
 </p>
 <p align="justify">
-Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento Programação em Pares (Pair Programming), Planning Poker.
+    Serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (planning), Revisão (review), Retrospectiva (retrospective).
+</p>
+<p align="justify">
+Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento: As histórias de usuário, releases, programação em pares (pair programming) e planning poker.
 </p>
 
 ### 3.1 - Requisitos
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Elicitação|Entrevista com *stakeholders*|Google Meet|Levantamento dos Requisitos|
-|Verificação|Inspeção|-|-|
-|Validação|Revisão do documento de requisitos com o cliente (ou representante)|Google Meet|-|
+|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto, Histórias de Usuário|
+|Validação|Revisão dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
+|Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
 
 ### 3.2 - Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Sprint Planning (planejamento de Sprint)|Reunião|Discord| Definição do que pode ser entregue na sprint e como será feito |
-|Sprint Review (revisão de Sprint)|Reunião|Discord|Revisão de todo o trabalho feito durante a sprint e determinar se mudanças adicionais são necessárias|
-|Daily (reunião diária)|Conversa entre os integrantes da equipe|Telegram|Feedback do andamento das tasks|
-|Sprint Retrospecive (retrospectiva da sprint)|Reunião|Discord|Averiguar o que deu bom e o que pode ser melhorado em uma sprint|
+|Planejamento do Sprint (sprint planning)|Reunião|Discord|Backlog do Sprint|
+|Revisão do Sprint (sprint review)|Reunião|Discord|Nova release|
+|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
+|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Feedback do Sprint|
 
-### 3.3 - Construção
+<!-- ### 3.3 - Construção
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|-|-|-|-|
+|-|-|-|-| -->
 
-### 3.4 - Teste
+### 3.3 - Teste
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Teste de Sistema|Teste unitário|Jest|Identificação de erros|
+|Teste de Sistema|Teste unitário|Jest|Segurança do produto|
 
-### 3.5 - Gestão de Projeto
+### 3.4 - Gestão de Projeto
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Organização das tarefas (tasks)|Quadro Scrum|Trello|Controle do desenvolvimento das tarefas|
+|Organização das tarefas (tasks)|Quadro Scrum|Trello|Backlog do Sprint|
 
 ## 4 - Lições Aprendidas
 
@@ -122,10 +126,14 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser utilizada no nosso projeto, visto que realizou a capacitação dos integrantes. Além de contribuir com o aprendizado de diferentes processos, nesta unidade também aprendemos a utilizar o Github Pages, visto que foi necessário para realizar a documentação do projeto para a disciplina e nenhum dos integrantes tinha conhecimento nessa tecnologia.
 </p>
 
+### 4.2 - Unidade 2
+<p align="justify">
+Essa unidade contribuiu com o aprendizado a respeito da estruturação do backlog no formato do SAFe, nos fazendo entender melhor como funciona o refinamento gradual do backlog em épicos, features e histórias de usuário. Uma das dificuldades encontradadas pela equipe foi a definição de uma organização ideal para o backlog que melhor atende às necessidades do projeto, visto que pode ser bastante subjetivo. Ademais, essa unidade foi bastante produtiva, pois conseguimos melhorar ainda mais nosso trabalho em equipe.
+</p>
+
 ## 5 - Referências Bibliográficas
 - VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
 - SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
-
 
 ## Histórico de Revisão
 |Data|Versão|Descrição|Autor|
@@ -133,4 +141,5 @@ Os ensinamentos da primeira unidade fomentaram a escolha da metodologia a ser ut
 | 31/10/2022 | 1.0 | Criação da Visão do Produto | Todos os membros |
 | 10/11/2022 | 1.1 | Criação da Visão Geral do Projeto Todos os membros | Todos os membros |
 | 15/11/2022 | 1.2 | Criação do Processo de Desenvolvimento de Software | Lucas Gomes, Valderson Pontes e Pedro Lucas |
-| 16/11/2022 | 2.0 | Finalização da Visão do Produto e Projeto | Lucas Gomes, Valderson Pontes, Pedro Henrique e Pedro Lucas |
+| 16/11/2022 | 2.0 | Finalização da versão inicial da Visão do Produto e Projeto | Lucas Gomes, Valderson Pontes, Pedro Henrique e Pedro Lucas |
+| 05/12/2022 | 2.1 | Correção da Visão do Produto e Projeto | Pedro Lucas |
