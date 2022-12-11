@@ -51,13 +51,13 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 3|Elicitação dos requisitos e estudo do SAFe|24/11/2022|30/11/2022|
 |Sprint 4|Análise e negociação dos requisitos. Documentação (backlog do produto). Verificação e Validação|01/11/2022|07/12/2022|
 |Sprint 5|Refinamento dos requisitos e configuração de ambiente para desenvolvimento (banco de dados, integração continua e deploy)|08/12/2022|14/12/2022|
-|Sprint 6| Implementação da US01, US02, US06, US10 |15/12/2022|21/12/2022|
-|Sprint 7|Implementação da US18, US04, US07, US11 |22/12/2022|28/12/2022|
-|Sprint 8|Implementação da US19, US03 US05 e entrega da PC1|29/12/2022|05/01/2023|
-|Sprint 9|Implementação da US08, US12, US20 e entrega da MVP1|06/01/2023|12/01/2023|
-|Sprint 10|Implementação da US09, US13, US14|13/01/2023|19/01/2023|
-|Sprint 11|Implementação da US15, US16, US17, US21, US22 e entrega da PC2|20/01/2023|31/01/2023|
-|Sprint 9|Implementação da US23, US24, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
+|Sprint 6| Implementação das US01, US02, US06, US10 |15/12/2022|21/12/2022|
+|Sprint 7|Implementação das US18, US04, US07, US11 |22/12/2022|28/12/2022|
+|Sprint 8|Implementação das US19, US03 US05 e entrega da PC1|29/12/2022|05/01/2023|
+|Sprint 9|Implementação das US08, US12, US20 e entrega da MVP1|06/01/2023|12/01/2023|
+|Sprint 10|Implementação das US09, US13, US14|13/01/2023|19/01/2023|
+|Sprint 11|Implementação das US15, US16, US17, US21, US22 e entrega da PC2|20/01/2023|31/01/2023|
+|Sprint 12|Implementação das US23, US24, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
