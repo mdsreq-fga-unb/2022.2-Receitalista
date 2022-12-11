@@ -46,16 +46,18 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 2.2 - Planejamento das Fases e/ou Iterações do Projeto
 |Sprint|Produto(Entrega)|Data de Início|Data de Fim|
 |:-----:|:------:|:------:|:------:|
-|Sprint 0|Preparação de slides (Metodologia RAD) e definição da Visão Geral do Produto|03/11/2022|09/11/2022|
-|Sprint 1|Refinamento da definição da Visão Geral do Produto, Definição do Projeto|10/11/2022|16/11/2022|
+|Sprint 1|Documentação da Visão Geral do Produto, Definição do Projeto|10/11/2022|16/11/2022|
 |Sprint 2|Documento de visão - Projeto e Produto, GitPages|17/11/2022|23/11/2022|
-|Sprint 3|Elicitação dos requisitos e estudo do SAFe. Configuração de ambiente.|24/11/2022|30/11/2022|
+|Sprint 3|Elicitação dos requisitos e estudo do SAFe|24/11/2022|30/11/2022|
 |Sprint 4|Análise e negociação dos requisitos. Documentação (backlog do produto). Verificação e Validação|01/11/2022|07/12/2022|
-|Sprint 5|Refinamento dos requisitos, deploy e implementação de código|08/12/2022|14/12/2022|
-|Sprint 6|Implementação de código|15/12/2022|21/12/2022|
-|Sprint 7|Implementação de código e banco de dados|22/12/2022|28/12/2022|
-|Sprint 8|Implementação de código, deploy e entrega da MVP1|29/12/2022|05/02/2022|
-|Sprint 9|Implementação de código, deploy e entrega da MVP2|06/02/2022|09/02/2022|
+|Sprint 5|Refinamento dos requisitos e configuração de ambiente para desenvolvimento (banco de dados, integração continua e deploy)|08/12/2022|14/12/2022|
+|Sprint 6| Implementação da US01, US02, US06, US10 |15/12/2022|21/12/2022|
+|Sprint 7|Implementação da US18, US04, US07, US11 |22/12/2022|28/12/2022|
+|Sprint 8|Implementação da US19, US03 US05 e entrega da PC1|29/12/2022|05/01/2023|
+|Sprint 9|Implementação da US08, US12, US20 e entrega da MVP1|06/01/2023|12/01/2023|
+|Sprint 10|Implementação da US09, US13, US14|13/01/2023|19/01/2023|
+|Sprint 11|Implementação da US15, US16, US17, US21, US22 e entrega da PC2|20/01/2023|31/01/2023|
+|Sprint 9|Implementação da US23, US24, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
