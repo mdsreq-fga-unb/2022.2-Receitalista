@@ -1,7 +1,11 @@
+import styles from './Home.module.css'
 
 function Home(){
 	return(
-		<p>Bem-vindo ao Receitalista</p>
+		<section className={styles.home_container}>
+			<h1>Bem-vindo ao Receitalista!</h1>
+			<p>Comece a gerenciar os seus produtos</p>
+		</section>
 	);
 }
 
