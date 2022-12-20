@@ -1,39 +1,40 @@
 const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
-const Product = require('./product')
+const Item = require('./item');
+const ItemProduct = require('./itemProduct');
 
-const Item = database.define('item', {
+const Product = database.define('product',  {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        allowNull: true,
+        allowNull: false,
         primaryKey: true
     },
     name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    quantity: {
+    used_quantity: {
         type: Sequelize.FLOAT,
         allowNull: false
     },
-    unit: {
-        type: Sequelize.STRING,
+    itens_price: {
+        type:Sequelize.DECIMAL,
         allowNull: false
     },
-    price: {
+    total_price: {
         type: Sequelize.DECIMAL,
         allowNull: false
     }
 });
 
-Item.belongsToMany(Product, {
+Product.belongsToMany(Item, {
     through: {
         model: ItemProduct
     },
-    foreignKey: 'id_item',
+    foreignKey: 'id_product',
     constraints: true
 });
 
-module.exports = Item;
+module.exports = Product;

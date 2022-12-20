@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../db/queries');
+const database = require('../db/connect');
 
 const User = database.define('user', {
     id: {
@@ -20,7 +20,7 @@ const User = database.define('user', {
         type: Sequelize.STRING(20),
         allowNull: false
     },
-    pricePerHour: Sequelize.DECIMAL
+    price_per_hour: Sequelize.DECIMAL
 });
 
 module.exports = User;
