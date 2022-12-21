@@ -17,10 +17,13 @@ const User = database.define('user', {
         allowNull: false
     },
     password: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING,
         allowNull: false
     },
-    price_per_hour: Sequelize.DECIMAL
+    price_per_hour: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+    }
 });
 
 module.exports = User;
