@@ -1,9 +1,6 @@
-*{
-  font-family: 'Open Sans', sans-serif;
-}
 
 html, body, #root{
-  background-color: #efefef;
+  background-color: #ffff;
   height: 100%;
 }
 
