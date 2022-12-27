@@ -7,22 +7,25 @@ function LoginForm() {
 
   return (
     <form onSubmit className={classes.form}>
-      <Input
-        type="text"
-        text="Nome"
-        name="name"
-        placeholder="Insira o seu nome"
-        handleOnChange=""
-        value="" 
-      />
+
       <Input
         type="email"
-        text="Orçamento do projeto"
-        name="budget"
-        placeholder="Insira o orçamento total"
-        handleOnChange=""
-        value=""
+        text="Email"
+        name="email"
+        placeholder="Insira o seu email"
+        handleOnChange={handleChange}
+        value={account.email ? account.email : ''}
       />
+
+      <Input
+        type="password"
+        text="Senha"
+        name="password"
+        placeholder="Insira sua senha"
+        handleOnChange={handleChange}
+        value={account.password ? account.password : ''}
+      />
+
       <SubmitButton text="Enviar" />
     </form>
   )
