@@ -17,7 +17,7 @@ function ProductForm({ handleSubmit, productData }) {
   }
 
   return (
-    
+
     <form onSubmit={submit} className={classes.form}>
 
       <Input
