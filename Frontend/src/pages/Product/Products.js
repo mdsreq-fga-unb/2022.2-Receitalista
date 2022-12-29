@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-
+import { Link } from "react-router-dom"
+import * as AiIcons from 'react-icons/ai';
 import ProductCard from '../../components/Card/ProductCard'
 import classes1 from '../Page.module.css'
 import classes from './Products.module.css'
@@ -72,22 +73,27 @@ function Products() {
 	return (
 		<>
 			<div className={classes1.page}>
-				<h1>Produtos criados</h1>
-				<p>Veja seus produtos</p>
+				<h1 >Seus Produtos</h1>								
+			
+				<div className={classes.bt}>
+					<Link to="/criarproduto" > 
+						<AiIcons.AiFillPlusCircle />Criar novo produto
+					</Link>
+				</div>
+				<div className={classes.products}>
+					<ul>
+						{products.length > 0 &&
+							products.map((product) =>
+								<ProductCard
+									id={product.id}
+									name={product.name}
+									price={product.price}
+								/>
+							)
+						}
+					</ul>
+				</div >
 			</div>
-			<div className={classes.products}>
-				<ul>
-					{products.length > 0 &&
-						products.map((product) =>
-							<ProductCard
-								id={product.id}
-								name={product.name}
-								price={product.price}
-							/>
-						)
-					}
-				</ul>
-			</div >
 		</>
 	)
 }
