@@ -73,27 +73,27 @@ function Products() {
 	return (
 		<>
 			<div className={classes1.page}>
-				<h1 >Seus Produtos</h1>								
-			
+				<h1>Produtos criados</h1>
+				<p>Veja seus produtos</p>
 				<div className={classes.bt}>
-					<Link to="/criarproduto" > 
-						<AiIcons.AiFillPlusCircle />Criar novo produto
-					</Link>
-				</div>
-				<div className={classes.products}>
-					<ul>
-						{products.length > 0 &&
-							products.map((product) =>
-								<ProductCard
-									id={product.id}
-									name={product.name}
-									price={product.price}
-								/>
-							)
-						}
-					</ul>
-				</div >
+				<Link to="/criarproduto" >
+					<AiIcons.AiFillPlusCircle />Criar novo produto
+				</Link>
 			</div>
+			</div>
+			<div className={classes.products}>
+				<ul>
+					{products.length > 0 &&
+						products.map((product) =>
+							<ProductCard
+								id={product.id}
+								name={product.name}
+								price={product.price}
+							/>
+						)
+					}
+				</ul>
+			</div >
 		</>
 	)
 }

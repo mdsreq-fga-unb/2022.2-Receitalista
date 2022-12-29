@@ -1,11 +1,5 @@
-	.page {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		height: 100vh;
-	}
-
-	.page h1{
-		margin-top: 90px;
-		margin-bottom: 2.5%;
-	}
+.page {
+	width: 500px;
+	margin: 0 auto;
+	padding: 5em;
+}
