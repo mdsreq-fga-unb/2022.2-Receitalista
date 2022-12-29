@@ -6,8 +6,7 @@ import classes from "../Page.module.css"
 function NewProduct() {
     return (
         <div className={classes.page}>
-            <h1>Criar produto</h1>
-            <p>Crie o seu produto</p>
+            <h1>Criar produto</h1>  
             <ProductForm />
         </div>
     )

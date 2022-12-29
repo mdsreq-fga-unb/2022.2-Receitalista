@@ -30,12 +30,13 @@ function ProductForm({ handleSubmit, productData }) {
       />
 
       <Input
-        type="number"
-        text="Preço do produto"
-        name="price"
-        placeholder="Insira o preço de venda do produto"
+        type="text"
+        text="Descrição do produto"
+        name="description"
+        placeholder="Ex.: Receita do produto"
+        MAXLENGTH = "10"
         handleOnChange={handleChange}
-        value={product.price ? product.price : ''}
+        value={product.description ? product.description : ''}
       />
 
       <SubmitButton text="Criar" />
