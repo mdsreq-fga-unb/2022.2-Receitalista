@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.card h4 {
+	border-radius: 4em;
+	background-color: #8b2b05;
+	color: #ff7200;
+	padding: 0.4em;
+	margin-bottom: 1.3em;
+	font-size: 1.3em;
+}
+
+.card p {
+	color: #7a7a7a;
+	margin-bottom: 1em;
+}
+
+.card p span {
+	font-weight: bold;
+}
+
+.category_text {
+	display: flex;
+	align-items: center;
+}
+
+.category_text span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin-right: 5px;
+}
+
+.category_text .infra {
+	background-color: #ffaebc;
+}
+
+.category_text .desenvolvimento {
+	background-color: #a0e7e5;
+}
+
+.category_text .design {
+	background-color: #b4f8c8;
+}
+
+.category_text .planejamento {
+	background-color: #fbe7c6;
+}
+
+.card_actions {
+	margin-top: 1.2em;
+	display: flex;
+	align-items: center;
+}
+
+.card_actions a,
+.card_actions button {
+	text-decoration: none;
+	border: none;
+	background-color: #fff;
+	color: #222;
+	font-size: 0.9em;
+	padding: 0.6em 1em;
+	margin-right: 1em;
+	cursor: pointer;
+	border: 1px solid #222;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card_actions svg {
+	margin-right: 0.5em;
+}
+
+.card_actions a:hover,
+.card_actions button:hover {
+	background-color: #222;
+	color: #ff7200;
+}

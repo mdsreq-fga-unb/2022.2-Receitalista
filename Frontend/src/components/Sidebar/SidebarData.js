@@ -15,13 +15,13 @@ export const SidebarData = [
     },
     {
     title:'Perfil',
-    path:"/conta",
+    path:"/perfil",
     icon:<BsIcons.BsFillFilePersonFill/>,
     cName: 'nav-text'
     },
     {
     title:'Materiais',
-    path:"/itens",
+    path:"/materiais",
     icon:<GiIcons.GiPaperBagOpen/>,
     cName: 'nav-text'
     },
@@ -39,7 +39,7 @@ export const SidebarData = [
     },
     {
     title:'Clientes',
-    path:"/Client",
+    path:"/clientes",
     icon:<BiIcons.BiUserCircle />,
     cName:'nav-text'
     }
