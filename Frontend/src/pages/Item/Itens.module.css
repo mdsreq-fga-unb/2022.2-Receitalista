@@ -1,0 +1,12 @@
+.itens {
+	padding: 6em;
+	margin-top: -8em;
+  margin-left: auto;
+	margin-right: auto;
+}
+
+itens .h1 {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2em;
+}

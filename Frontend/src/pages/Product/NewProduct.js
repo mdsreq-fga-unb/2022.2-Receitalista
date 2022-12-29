@@ -3,7 +3,7 @@ import ProductForm from '../../components/Form/ProductForm'
 
 import classes from "../Page.module.css"
 
-function NewProject() {
+function NewProduct() {
     return (
         <div className={classes.page}>
             <h1>Criar produto</h1>
@@ -13,4 +13,4 @@ function NewProject() {
     )
 }
 
-export default NewProject
+export default NewProduct

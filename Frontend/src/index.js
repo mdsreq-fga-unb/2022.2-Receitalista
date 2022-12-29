@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home"
 import NewAccount from "./pages/Account/NewAccount"
 import NewItem from "./pages/Item/NewItem"
 import NewProduct from "./pages/Product/NewProduct"
+import Itens from "./pages/Item/Itens"
 import Products from "./pages/Product/Products"
 
 import reportWebVitals from './reportWebVitals';
@@ -26,6 +27,7 @@ root.render(
           <Route path="/criarconta" element={<NewAccount />} />
           <Route path="/criaritem" element={<NewItem />} />
           <Route path="/criarproduto" element={<NewProduct />} />
+          <Route path="/materiais" element={<Itens />} />
           <Route path="/produtos" element={<Products />} />
         </Route>
       </Routes>

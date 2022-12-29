@@ -1,0 +1,89 @@
+.item_card {
+	background-color: #ffff;
+	padding: 1.5em;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 24%;
+	margin: 0.5%;
+}
+
+.item_card h4 {
+	border-radius: 4em;
+	background-color: #8b2b05;
+	color: #ff7200;
+	padding: 0.4em;
+	margin-bottom: 1.3em;
+	font-size: 1.3em;
+}
+
+.item_card p {
+	color: #7a7a7a;
+	margin-bottom: 1em;
+}
+
+.item_card p span {
+	font-weight: bold;
+}
+
+.category_text {
+	display: flex;
+	align-items: center;
+}
+
+.category_text span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin-right: 5px;
+}
+
+.category_text .infra {
+	background-color: #ffaebc;
+}
+
+.category_text .desenvolvimento {
+	background-color: #a0e7e5;
+}
+
+.category_text .design {
+	background-color: #b4f8c8;
+}
+
+.category_text .planejamento {
+	background-color: #fbe7c6;
+}
+
+.item_card_actions {
+	margin-top: 1.2em;
+	display: flex;
+	align-items: center;
+}
+
+.item_card_actions a,
+.item_card_actions button {
+	text-decoration: none;
+	border: none;
+	background-color: #fff;
+	color: #222;
+	font-size: 0.9em;
+	padding: 0.6em 1em;
+	margin-right: 0.5em;
+	cursor: pointer;
+	border: 1px solid #222;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.item_card_actions svg {
+	margin-right: 0.5em;
+}
+
+.item_card_actions a:hover,
+.item_card_actions button:hover {
+	background-color: #222;
+	color: #ffbb33;
+}

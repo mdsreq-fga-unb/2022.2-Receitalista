@@ -8,40 +8,40 @@ import * as GiIcons from "react-icons/gi";
 
 export const SidebarData = [
     {
-    title:'Home',
-    path:"/home",
-    icon:<AiIcons.AiFillHome/>,
-    cName: 'nav-text'
+        title: 'Home',
+        path: "/home",
+        icon: <AiIcons.AiFillHome />,
+        cName: 'nav-text'
     },
     {
-    title:'Perfil',
-    path:"/perfil",
-    icon:<BsIcons.BsFillFilePersonFill/>,
-    cName: 'nav-text'
+        title: 'Perfil',
+        path: "/perfil",
+        icon: <BsIcons.BsFillFilePersonFill />,
+        cName: 'nav-text'
     },
     {
-    title:'Materiais',
-    path:"/materiais",
-    icon:<GiIcons.GiPaperBagOpen/>,
-    cName: 'nav-text'
+        title: 'Produtos',
+        path: "/produtos",
+        icon: <IoIcons.IoIosPaper />,
+        cName: 'nav-text'
     },
     {
-    title:'Produtos',
-    path:"/produtos",
-    icon:<IoIcons.IoIosPaper />,
-    cName: 'nav-text'
+        title: 'Materiais',
+        path: "/materiais",
+        icon: <GiIcons.GiPaperBagOpen />,
+        cName: 'nav-text'
     },
     {
-    title:'Pedidos',
-    path:"/pedidos",
-    icon:<FaIcons.FaCartPlus />,
-    cName:'nav-text'
+        title: 'Pedidos',
+        path: "/pedidos",
+        icon: <FaIcons.FaCartPlus />,
+        cName: 'nav-text'
     },
     {
-    title:'Clientes',
-    path:"/clientes",
-    icon:<BiIcons.BiUserCircle />,
-    cName:'nav-text'
+        title: 'Clientes',
+        path: "/clientes",
+        icon: <BiIcons.BiUserCircle />,
+        cName: 'nav-text'
     }
 
 ]
