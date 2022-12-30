@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
-const Product = require('./product')
+const Product = require('./product');
+const ItemProduct = require('./itemProduct');
 
 const Item = database.define('item', {
     id: {
