@@ -17,6 +17,7 @@ import Profile from "./pages/Account/Profile"
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
+import NewPassword from './pages/Account/NewPassword';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,7 @@ root.render(
           <Route path="/produtos" element={<Products />} />
           <Route path="/produto/:id" element={<Product />} />
           <Route path="/perfil" element={<Profile />} />
+          <Route path="/novasenha" element={<NewPassword />} />
         </Route>
       </Routes>
     </BrowserRouter>

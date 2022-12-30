@@ -25,16 +25,16 @@ function ProfileForm({ handleSubmit, accountData }) {
         name="email"
         placeholder="Insira o novo email"
         handleOnChange={handleChange}
-        value={account.newEmail ? account.newEmail : account.email} 
+        value={account.newEmail ? account.newEmail : account.email}
       />
 
       <Input
         type="text"
-        text="Trocar valor/hora"
+        text="Alterar mão de obra"
         name="value"
-        placeholder="Insira o novo valor/hora"
+        placeholder="Insira novao valor da mão de obra"
         handleOnChange={handleChange}
-        value={account.newValue ? account.newValue : account.value} 
+        value={account.newValue ? account.newValue : account.value}
       />
 
       <SubmitButton text="Enviar" />
