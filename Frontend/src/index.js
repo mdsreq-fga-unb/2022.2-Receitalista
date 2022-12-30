@@ -12,6 +12,7 @@ import NewProduct from "./pages/Product/NewProduct"
 import Materials from "./pages/Material/Materials"
 import Products from "./pages/Product/Products"
 import Product from "./pages/Product/Product"
+import Profile from "./pages/Account/Profile"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -31,6 +32,7 @@ root.render(
           <Route path="/materiais" element={<Materials />} />
           <Route path="/produtos" element={<Products />} />
           <Route path="/produto/:id" element={<Product />} />
+          <Route path="/perfil" element={<Profile />} />
         </Route>
       </Routes>
     </BrowserRouter>
