@@ -91,35 +91,32 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento: As histórias de usuário, releases, programação em pares (pair programming) e planning poker.
 </p>
 
-### 3.1 - Requisitos
+### 3.1 - Planejamento
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Google Meet|Backlog do Produto, Histórias de Usuário|
-|Validação|Revisão dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
-|Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto|
+|Elicitação|Entrevista com *stakeholders* para levantamento de requisitos|Discord|Backlog do Produto, Histórias de Usuário|
+|Validação|Revisão e refinamento dos requisitos em grupo e também com o cliente ou dono do produto|Discord, Miro|Backlog do Produto, PBB, Protótipo de Baixa Fidelidade|
+|Planejamento do Sprint|Reunião em grupo para decidir quais Histórias de Usuário serão implementadas em cada Sprint|Discord|Backlog do Sprint|
+|Divisão de Histórias de Usuário|Assinação de issues por cada membro do grupo|Discord, GitHub|Backlog do Sprint|
 
-### 3.2 - Projeto
+### 3.2 - Desenvolvimento
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Planejamento do Sprint (sprint planning)|Reunião|Discord|Backlog do Sprint|
-|Revisão do Sprint (sprint review)|Reunião|Discord|Nova release|
 |Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
-|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Feedback do Sprint|
-
-<!-- ### 3.3 - Construção
-|Atividade|Método|Ferramenta|Entrega|
-|:-----:|:------:|:------:|:------:|
-|-|-|-|-| -->
-
-### 3.3 - Teste
-|Atividade|Método|Ferramenta|Entrega|
-|:-----:|:------:|:------:|:------:|
+|Implementação de banco de dados|||Banco de Dados|
+|Deploy||||
 |Teste de Sistema|Teste unitário|Jest|Segurança do produto|
+|Codificação|Programação pareada|VSCode, GitHub|Backend, Frontend|
 
-### 3.4 - Gestão de Projeto
+### 3.3 - Revisão
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Organização das tarefas (tasks)|Quadro Scrum|Trello|Backlog do Sprint|
+|Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto, Histórias de Usuário, Release|
+
+### 3.4 - Retrospectiva
+|Atividade|Método|Ferramenta|Entrega|
+|:-----:|:------:|:------:|:------:|
+|Retrospectiva do Sprint (sprint retrospecive)|Reunião|Discord|Feedback do Sprint|
 
 ## 4 - Lições Aprendidas
 
