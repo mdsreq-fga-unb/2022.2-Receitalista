@@ -1,7 +1,11 @@
+
+import { Link } from "react-router-dom"
+import * as AiIcons from 'react-icons/ai';
 import ItemCard from '../../components/Card/ItemCard'
 import Container from '../../components/Container/Container'
 import classes1 from '../Page.module.css'
 import classes from './Itens.module.css'
+import classes2 from '../../components/Button/LinkButton.module.css'
 
 function Itens() {
 
@@ -59,8 +63,14 @@ function Itens() {
 	return (
 		<>
 			<div className={classes1.page}>
-				<h1>Materiais adquiridos</h1>
-				<p>Veja seus materiais</p>
+			<div className={classes.title}>
+				<h1>Materiais adicionados</h1>
+				<div className={classes2.btn}>
+					<Link to="/criarmaterial" >
+						<AiIcons.AiFillPlusCircle />Criar novo material
+					</Link>
+				</div>
+				</div>
 			</div>
 			<div className={classes.itens}>
 				<Container customClass="start">

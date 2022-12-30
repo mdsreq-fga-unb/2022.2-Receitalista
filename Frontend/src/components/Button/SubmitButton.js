@@ -1,4 +1,4 @@
-import classes from './Button.module.css'
+import classes from './SubmitButton.module.css'
 
 function SubmitButton({text}) {
   return (

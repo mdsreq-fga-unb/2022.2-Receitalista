@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import classes from './ProductCard.module.css'
+import classes1 from '../../components/Button/CardButton.module.css'
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 
 function ProductCard({ id, name, price }) {
@@ -11,7 +12,7 @@ function ProductCard({ id, name, price }) {
 			<p>
 				<span>Preço:</span> R${price}
 			</p>
-			<div className={classes.card_actions}>
+			<div className={classes1.btn_card}>
 				<Link to="/">
 					<BsPencil /> Editar
 				</Link>

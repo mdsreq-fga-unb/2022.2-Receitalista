@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react"
+
 import { Link } from "react-router-dom"
 import * as AiIcons from 'react-icons/ai';
 import ProductCard from '../../components/Card/ProductCard'
-import classes1 from '../Page.module.css'
 import classes from './Products.module.css'
+import classes1 from '../Page.module.css'
+import classes2 from '../../components/Button/LinkButton.module.css'
 
 function Products() {
 
@@ -73,13 +74,14 @@ function Products() {
 	return (
 		<>
 			<div className={classes1.page}>
-				<h1>Produtos criados</h1>
-				<p>Veja seus produtos</p>
-				<div className={classes.bt}>
-				<Link to="/criarproduto" >
-					<AiIcons.AiFillPlusCircle />Criar novo produto
-				</Link>
-			</div>
+				<div className={classes.title}>
+					<h1>Produtos adicionados</h1>
+					<div className={classes2.btn}>
+						<Link to="/criarproduto" >
+							<AiIcons.AiFillPlusCircle />Criar novo produto
+						</Link>
+					</div>
+				</div>
 			</div>
 			<div className={classes.products}>
 				<ul>

@@ -1,0 +1,32 @@
+.btn_card {
+	margin-top: 1.2em;
+	display: flex;
+	align-items: center;
+}
+
+.btn_card a,
+.btn_card button {
+	text-decoration: none;
+	border: none;
+	background-color: #fff;
+	color: #222;
+	font-size: 0.9em;
+	padding: 0.6em 1em;
+	margin-right: 0.5em;
+	cursor: pointer;
+	border: 1px solid #222;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn_card svg {
+	margin-right: 0.5em;
+}
+
+.btn_card a:hover,
+.btn_card button:hover {
+	background-color: #222;
+	color: #ffbb33;
+}

@@ -14,75 +14,8 @@
 	padding: 0;
 }
 
-.products h1 {
+.title {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2em;
-}
-
-.bt {
-	margin-bottom: 0.5%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.bt a,
-.bt button {
-	text-decoration: none;
-	border: none;
-	background-color: #fff;
-	color: #222;
-	font-size: 1.3em;
-	padding: 0.6em 1em;
-	margin-right: 1em;
-	cursor: pointer;
-	border: 1px solid #222;
-	transition: 0.5s;
-	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.bt svg {
-	margin-right: 0.5em;
-}
-
-
-
-
-.bt {
-	margin-bottom: 0.5%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.bt a,
-.bt button {
-	text-decoration: none;
-	border: none;
-	background-color: #fff;
-	color: #222;
-	font-size: 1.3em;
-	padding: 0.6em 1em;
-	margin-right: 1em;
-	cursor: pointer;
-	border: 1px solid #222;
-	transition: 0.5s;
-	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.bt svg {
-	margin-right: 0.5em;
-}
-
-.bt a:hover,
-.bt button:hover {
-	background-color: #222;
-	color: #ff7200;
 }
