@@ -1,13 +1,13 @@
 
 import { Link } from "react-router-dom"
 import * as AiIcons from 'react-icons/ai';
-import ItemCard from '../../components/Card/ItemCard'
+import MaterialCard from '../../components/Card/MaterialCard'
 import Container from '../../components/Container/Container'
 import classes1 from '../Page.module.css'
-import classes from './Itens.module.css'
+import classes from './Materials.module.css'
 import classes2 from '../../components/Button/LinkButton.module.css'
 
-function Itens() {
+function Materials() {
 
 	const itens = [
 		{
@@ -76,7 +76,7 @@ function Itens() {
 				<Container customClass="start">
 					{itens.length > 0 &&
 						itens.map((item) =>
-							<ItemCard
+							<MaterialCard
 								id={item.id}
 								name={item.name}
 							/>
@@ -88,4 +88,4 @@ function Itens() {
 	)
 }
 
-export default Itens
+export default Materials

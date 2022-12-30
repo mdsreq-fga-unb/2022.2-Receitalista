@@ -5,6 +5,7 @@ import SubmitButton from "../Button/SubmitButton"
 import classes from './Form.module.css'
 
 function MaterialForm({ handleSubmit, materialData }) {
+  
   const [material, setMaterial] = useState(materialData || {})
 
   const submit = (e) => {
@@ -31,31 +32,36 @@ function MaterialForm({ handleSubmit, materialData }) {
 
       <Input
         type="number"
+        min="1"
         text="Preço do material"
         name="price"
-        placeholder="Insira o preço do material"
+        placeholder="Insira o preço que custou o material"
         handleOnChange={handleChange}
-        value={material.price ? material.price : ''}    
+        value={material.price ? material.price : ''}
       />
 
       <Input
         type="number"
-        text="Quantidade do material"
+        min="1"
+        text="Quantidade"
         name="amount"
         placeholder="Insira a quantidade do material"
         handleOnChange={handleChange}
-        value={material.amount ? material.amount : ''}    
+        value={material.amount ? material.amount : ''}
       />
+
       <div>
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Quilos
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Litros
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Metros
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Centimetros      
-      </div>      
+        <h4>Medida:</h4>
+        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Quilo
+        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Litro
+        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Mililitro
+        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Metro
+        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Centímetro
+        <p></p>
+      </div>
 
       <SubmitButton text="Criar" />
     </form>
-
   )
 }
 

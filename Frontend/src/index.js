@@ -7,10 +7,11 @@ import App from './App';
 import Login from "./pages/Login/Login"
 import Home from "./pages/Home/Home"
 import NewAccount from "./pages/Account/NewAccount"
-import NewMaterial from "./pages/Item/NewMaterial"
+import NewMaterial from "./pages/Material/NewMaterial"
 import NewProduct from "./pages/Product/NewProduct"
-import Itens from "./pages/Item/Itens"
+import Materials from "./pages/Material/Materials"
 import Products from "./pages/Product/Products"
+import Product from "./pages/Product/Product"
 
 import reportWebVitals from './reportWebVitals';
 
@@ -27,8 +28,9 @@ root.render(
           <Route path="/criarconta" element={<NewAccount />} />
           <Route path="/criarmaterial" element={<NewMaterial />} />
           <Route path="/criarproduto" element={<NewProduct />} />
-          <Route path="/materiais" element={<Itens />} />
+          <Route path="/materiais" element={<Materials />} />
           <Route path="/produtos" element={<Products />} />
+          <Route path="/produto/:id" element={<Product />} />
         </Route>
       </Routes>
     </BrowserRouter>

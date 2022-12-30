@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 
-import classes from './ItemCard.module.css'
+import classes from './MaterialCard.module.css'
 import classes1 from '../../components/Button/CardButton.module.css'
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 
-function ItemCard({ id, name }) {
+function MaterialCard({ id, name }) {
 
 	return (
 		<div className={classes.item_card}>
@@ -21,4 +21,4 @@ function ItemCard({ id, name }) {
 	)
 }
 
-export default ItemCard
+export default MaterialCard
