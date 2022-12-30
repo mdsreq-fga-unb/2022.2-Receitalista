@@ -20,7 +20,6 @@ exports.userSignUp = async function (req, res) {
                         });
                     } else {
                         const newUser = {
-                            id: 1,
                             name: req.body.name,
                             email: req.body.email,
                             password: hash,
