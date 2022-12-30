@@ -4,7 +4,7 @@ const database = require('../db/connect');
 const Item = require('./item');
 const ItemProduct = require('./itemProduct');
 
-const Product = database.define('product',  {
+const Product = database.define('product', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -15,12 +15,16 @@ const Product = database.define('product',  {
         type: Sequelize.STRING,
         allowNull: false
     },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
     used_quantity: {
         type: Sequelize.FLOAT,
         allowNull: false
     },
     itens_price: {
-        type:Sequelize.DECIMAL,
+        type: Sequelize.DECIMAL,
         allowNull: false
     },
     total_price: {
@@ -34,7 +38,15 @@ Product.belongsToMany(Item, {
         model: ItemProduct
     },
     foreignKey: 'id_product',
-    constraints: true
+    constraint: true
 });
 
-module.exports = Product;
+Item.belongsToMany(Product, {
+    through: {
+        model: ItemProduct
+    },
+    foreignKey: 'id_item',
+    constraint: true
+});
+
+module.exports = Product; 

@@ -66,8 +66,10 @@ exports.userLogIn = (req, res) => {
                 }
                 if (result) {
                     const token = jwt.sign({
+                        id: userData.id,
+                        name: userData.name,
                         email: userData.email,
-                        userId: userData.id
+                        pricePerHour: userData.price_per_hour
                     },
                         process.env.JWT_KEY,
                         {
