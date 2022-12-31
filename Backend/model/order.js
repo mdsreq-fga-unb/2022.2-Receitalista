@@ -8,7 +8,7 @@ const User = require('./user');
 const Order = database.define('order', {
     id: {
         type: Sequelize.INTEGER,
-        autoIncremente: true,
+        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
@@ -28,9 +28,8 @@ Order.belongsTo(Client, {
     foreignKey: 'id_client'
 });
 
-
-Order.hasOne(User, {
-    foreignKey: 'id_user'
+Client.hasMany(Order, {
+    foreignKey: 'id_client'
 });
 
 module.exports = Order;

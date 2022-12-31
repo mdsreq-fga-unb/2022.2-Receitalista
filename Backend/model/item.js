@@ -27,8 +27,4 @@ const Item = database.define('item', {
     }
 });
 
-User.hasOne(Item, {
-    foreignKey: 'id_user'
-});
-
 module.exports = Item;

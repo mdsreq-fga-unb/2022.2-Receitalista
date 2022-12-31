@@ -50,9 +50,4 @@ Item.belongsToMany(Product, {
     constraint: true
 });
 
-
-Product.hasOne(User, {
-    foreignKey: 'id_user'
-});
-
 module.exports = Product; 
