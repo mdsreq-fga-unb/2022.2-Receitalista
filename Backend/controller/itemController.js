@@ -33,3 +33,61 @@ exports.addItem = async function (req, res) {
             }
         })
 }
+
+exports.updateItem = async function (req, res) {
+    const id = req.params.id;
+    const { quantity, price } = req.body;
+
+   if(quantity && !price){
+       Item.update(
+            { quantity: quantity },
+            { where: { id: id } }
+       )
+       .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Item quantity updated'
+            })
+       })
+       .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err:err
+            })
+       });
+   } else if(!quantity && price){
+        Item.update(
+            { price: price },
+            { where: { id: id } }
+        )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Item price updated'
+            })
+       })
+       .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err:err
+            })
+       });
+   } else {
+        Item.update(
+            { price: price, quantity: quantity },
+            { where: { id: id } }
+        )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Item price and quantity updated'
+            })
+       })
+       .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err:err
+            })
+       });
+   }
+}

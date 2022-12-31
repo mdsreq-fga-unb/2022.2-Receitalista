@@ -3,6 +3,7 @@ const database = require('../db/connect');
 
 const Product = require('./product');
 const Client = require('./client');
+const User = require('./user');
 
 const Order = database.define('order', {
     id: {
@@ -25,6 +26,11 @@ Order.belongsTo(Product, {
 Order.belongsTo(Client, {
     constraints: true,
     foreignKey: 'id_client'
+});
+
+
+Order.hasOne(User, {
+    foreignKey: 'id_user'
 });
 
 module.exports = Order;

@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../db/connect');
+const User = require('./user');
 
 const Item = database.define('item', {
     id: {
@@ -24,6 +25,10 @@ const Item = database.define('item', {
         type: Sequelize.DECIMAL,
         allowNull: false
     }
+});
+
+User.hasOne(Item, {
+    foreignKey: 'id_user'
 });
 
 module.exports = Item;

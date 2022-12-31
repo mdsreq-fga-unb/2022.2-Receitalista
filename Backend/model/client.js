@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
 const Order = require('./order');
+const User = require('./user');
 
 const Client = database.define('client', {
     id: {
@@ -22,6 +23,10 @@ const Client = database.define('client', {
 
 Client.hasMany(Order, {
     foreignKey: 'id_client'
+});
+
+Client.hasOne(User, {
+    foreignKey: 'id_user'
 });
 
 module.exports = Client;

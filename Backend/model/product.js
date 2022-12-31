@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
 const Item = require('./item');
+const User = require('./user');
 const ItemProduct = require('./itemProduct');
 
 const Product = database.define('product', {
@@ -47,6 +48,11 @@ Item.belongsToMany(Product, {
     },
     foreignKey: 'id_item',
     constraint: true
+});
+
+
+Product.hasOne(User, {
+    foreignKey: 'id_user'
 });
 
 module.exports = Product; 
