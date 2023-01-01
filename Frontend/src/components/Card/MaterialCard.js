@@ -9,7 +9,7 @@ function MaterialCard({ id, name }) {
 	return (
 		<div className={classes.item_card}>
 			<h4>{name}</h4>
-			<div className={classes1.btn_card}>
+			<div className={classes1.btn}>
 				<Link to="/">
 					<BsPencil /> Editar
 				</Link>

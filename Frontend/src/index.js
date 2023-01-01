@@ -21,24 +21,24 @@ import NewPassword from './pages/Account/NewPassword';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route element={<App />}>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/criarconta" element={<NewAccount />} />
-          <Route path="/criarmaterial" element={<NewMaterial />} />
-          <Route path="/criarproduto" element={<NewProduct />} />
-          <Route path="/materiais" element={<Materials />} />
-          <Route path="/produtos" element={<Products />} />
-          <Route path="/produto/:id" element={<Product />} />
-          <Route path="/perfil" element={<Profile />} />
-          <Route path="/novasenha" element={<NewPassword />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+<React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route element={<App />}>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/criarconta" element={<NewAccount />} />
+        <Route path="/criarmaterial" element={<NewMaterial />} />
+        <Route path="/criarproduto" element={<NewProduct />} />
+        <Route path="/materiais" element={<Materials />} />
+        <Route path="/produtos" element={<Products />} />
+        <Route path="/produto/:id" element={<Product />} />
+        <Route path="/perfil" element={<Profile />} />
+        <Route path="/novasenha" element={<NewPassword />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+</React.StrictMode>
 );
 
 reportWebVitals();

@@ -29,10 +29,11 @@ function ProfileForm({ handleSubmit, accountData }) {
       />
 
       <Input
-        type="text"
+        type="number"
+        min="1"
         text="Alterar mão de obra"
         name="value"
-        placeholder="Insira novao valor da mão de obra"
+        placeholder="Insira novo valor da mão de obra"
         handleOnChange={handleChange}
         value={account.newValue ? account.newValue : account.value}
       />

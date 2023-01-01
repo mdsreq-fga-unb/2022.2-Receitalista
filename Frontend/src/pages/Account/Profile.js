@@ -3,14 +3,20 @@ import ProfileForm from '../../components/Form/ProfileForm';
 import classes from '../Page.module.css'
 import classes2 from '../../components/Button/CardButton.module.css'
 import { Link } from 'react-router-dom';
-import { Component, useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) {
+
   const [showProfileForm, setShowProfileForm] = useState(false)
+//  const [showPasswordForm, setShowPasswordForm] = useState(false)
 
   function toggleProfileForm() {
     setShowProfileForm(!showProfileForm)
   }
+
+// function togglePasswordForm() {
+//   setShowPasswordForm(!showProfileForm)
+// }
 
   return (
     <>
@@ -25,7 +31,7 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
         ) : (
           <ProfileForm />
         )}
-        <div className={classes2.btn_card}>
+        <div className={classes2.btn}>
           <button onClick={toggleProfileForm}>
             {!showProfileForm ? 'Editar perfil' : 'Fechar'}
           </button>
@@ -34,7 +40,6 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
         </div>
       </div>
     </>
-
   )
 }
 

@@ -12,7 +12,7 @@ function ProductCard({ id, name, price }) {
 			<p>
 				<span>Preço:</span> R${price}
 			</p>
-			<div className={classes1.btn_card}>
+			<div className={classes1.btn}>
 				<Link to="/">
 					<BsPencil /> Editar
 				</Link>

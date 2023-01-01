@@ -15,7 +15,9 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
-          <h1 className='textHeader'>Receitalista</h1>
+          <h1 className='textHeader'>
+            <Link to="/home">Receitalista</Link>
+          </h1>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>

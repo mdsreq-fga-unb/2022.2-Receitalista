@@ -34,30 +34,6 @@ function Materials() {
 			id: '6',
 			name: 'pano',
 		},
-		{
-			id: '1',
-			name: 'madeira',
-		},
-		{
-			id: '2',
-			name: 'pano',
-		},
-		{
-			id: '3',
-			name: 'madeira',
-		},
-		{
-			id: '4',
-			name: 'pano',
-		},
-		{
-			id: '5',
-			name: 'madeira',
-		},
-		{
-			id: '6',
-			name: 'pano',
-		},
 	]
 
 	return (

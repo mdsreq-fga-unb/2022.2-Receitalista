@@ -1,92 +1,90 @@
-    .text-title {
-        font-weight: bold;
-        padding-top: 0.6%;
-    }
+.text-title {
+    font-weight: bold;
+    padding-top: 0.6%;
+}
 
-    .box-add-material{
-        border: 1px solid #000;
-        border-radius: 12px;
-        justify-content: center;
-        margin-top: 1%;
-        margin-bottom: 5%;
-        display: block;   
-            
-    }
+.box-add-material {
+    background-color: #ffff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: block;
+}
 
-    .input {
-        margin-top:2%;
-        margin-bottom: 2%;
-        margin-left: 5%;
-           
-    }
+.input {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
 
-    .input-amount{
-        width: 20%;
-    }
+.input-amount {
+    width: 20%;
+}
 
-    .text-amount{
-        font-size: 12px;        
-    }
+.text-amount {
+    font-size: 12px;
+}
 
- 
-    .list {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 1% ;
-        padding-bottom: 1%;        
-        border-top: 1px solid #000;
-         
-    }
-    
-    .actions {
-        display: flex;
-        justify-content: space-around;
-        border-left: 1px solid #000;
-    
-    }
 
-    .form {
-        width: 100vh;
-        margin: 0 auto;
-        padding: 1em;
-        margin-bottom: 5%;
-    }
-    
-    .form h1 {
-        margin-bottom: 0.5em;
-    }
-    
-    .form p {
-        color: #7b7b7b;
-    }
+.list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: 1px solid #ccc;
+}
 
-    .input-profit{
-        margin-left: 1%;
-        padding: 0.7em;
-	    border-radius: 0;
-	    border: none;
-        width: 8%;
-    }
+.actions {
+    display: flex;
+    justify-content: space-around;
+    border-left: 1px solid #ccc;
+}
 
-    .box-options {
-        display: flex;
-        justify-content: space-between;
-        
-    }
+.form {
+    margin: 0 auto;
+    padding: 1em;
+    margin-bottom: 5%;
+}
 
-    .final-price {
-        display: flex;
-        justify-content: center;
-        margin-top:2.5%;
-    }
+.form h1 {
+    margin-bottom: 0.5em;
+}
 
-    .box-description{
-        display: flex;
-        flex-direction: column;
-    }
+.form p {
+    color: #7b7b7b;
+}
 
-    .textarea-description{
-        margin-top: 1%;
-        margin-bottom: 1%;
-        max-width: 100%;
-    }
+.input-profit {
+    margin-left: 1%;
+    padding: 0.7em;
+    border-radius: 0;
+    border: none;
+    width: 8%;
+}
+
+.box-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.final-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+
+.box-description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+}
+
+.textarea-description {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-width: 100%;
+}

@@ -10,7 +10,6 @@ function App() {
   //  function showCartHandler() {
   //    setCartIsShown(true);
   // }
-
   return (
     <div className="App">
       <Navbar />
