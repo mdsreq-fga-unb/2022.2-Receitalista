@@ -10,17 +10,17 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 
 | Preposição | Descrição |
 |--|--|
-| Para | Microempreendedores que a partir de materiais, geram um produto |
-| Quem | Os que desejam calcular a receita e estipular o preço dos seus produtos por meio dos gastos de produção |
+| Para | Microempreendedores que a partir de materiais geram um produto |
+| Quem | Deseja calcular os gastos ou estipular o preço dos seus produtos com base na margem lucro |
 | O Receitalista | É uma aplicação web |
-| Que | Facilita o controle dos gastos e das margens de lucro |
-| Ao contrário | Das planilhas Excel e similares pagas que exigem conhecimento técnico e matemático e, geralmente, são restritas à um produto ou área específica |
-| Nosso produto | é versátil, isto é, pode ser utilizado para diferentes tipos de produtos (podendo tanto ser empregado no gerenciamento de uma confeitaria ou de uma empreiteira). Além disso, o Receitalista facilita o cadastro e a visualização de clientes, ingredientes (utilizados nos produtos), produtos e pedidos. Ademais, ele também contribui com o gerenciamento financeiro automatizando todos os cálculos necessários para estipular custo, receita e lucro |
+| Que | Facilita o controle dos gastos, da gerencia de materias e produtos e das margens de lucro |
+| Ao contrário | Das planilhas Excel e similares pagas que são restritas à um produto ou área específica |
+| Nosso produto | Permite o controle de estoque tanto de materiais quanto de produtos, a criação de produto com base nos materiais, o cadastro de pedidos e de clientes e o controle dos gastos e dos lucros. |
 
 ### 1.2 - Objetivos do Produto
 
 <p align="justify">
-    O Receitalista tem por principal objetivo não exigir conhecimento técnico do usuário, ser gratuito e fornecer os dados, como o preço de custo, preço final com a margem e os registros dos preços periódicos registrados pelo usuário.
+    O Receitalista tem por principal objetivo gerir o estoque de um usuário e seus gastos e lucros, além de não exigir conhecimento técnico do usuário, ser gratuito e fornecer os dados finaceiros registrados pelo usuário de forma periódica.
 </p>
 
 ### 1.3 - Tecnologias a Serem Utilizadas
@@ -37,7 +37,7 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 
 |Papel|Atribuições|Responsável|Participantes|
 |:-----:|:------:|:------:|:------:|
-|Desenvolvedor Frontend|Codificar o design do produto e conectar com o *backend*|Pedro Lucas|Igor Thiago, Pedro Henrique, Pedro Lucas, Matheus Raphael|
+|Desenvolvedor Frontend|Codificar o design do produto e conectar com o *backend*|Pedro Lucas| Pedro Henrique, Pedro Lucas, Matheus Raphael|
 |Desenvolvedor Backend|Codificar e implementar funcionalidades e fluxo de controle da aplicação|Lucas Gomes|Lucas Gomes, Valderson Pontes|
 |Devops|Configuração do ambiente para deploy e conexão com banco de dados|Lucas Gomes|Lucas Gomes e Valderson Pontes|
 |Product Owner|Responsável por comunicar o projeto com os *stakeholders* e também selecionar quais itens do Product Backlog o time de desenvolvimento irá trabalhar primeiro|Pedro Henrique|Pedro Henrique|
@@ -51,21 +51,21 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 3|Elicitação dos requisitos e estudo do SAFe|24/11/2022|30/11/2022|
 |Sprint 4|Análise e negociação dos requisitos. Documentação (backlog do produto). Verificação e Validação|01/11/2022|07/12/2022|
 |Sprint 5|Refinamento dos requisitos e configuração de ambiente para desenvolvimento (banco de dados, integração continua e deploy)|08/12/2022|14/12/2022|
-|Sprint 6| Implementação das US01, US02, US06, US10 |15/12/2022|21/12/2022|
-|Sprint 7|Implementação das US18, US04, US07, US11 |22/12/2022|28/12/2022|
-|Sprint 8|Implementação das US19, US03 US05 e entrega da PC1|29/12/2022|05/01/2023|
-|Sprint 9|Implementação das US08, US12, US20 e entrega da MVP1|06/01/2023|12/01/2023|
-|Sprint 10|Implementação das US09, US13, US14|13/01/2023|19/01/2023|
+|Sprint 6| Implementação das US01, US02, US06, US09, US10, US13 |15/12/2022|21/12/2022|
+|Sprint 7|Implementação das US04, US07, US11 |22/12/2022|28/12/2022|
+|Sprint 8|Implementação das US03, US05 e entrega da PC1|29/12/2022|05/01/2023|
+|Sprint 9|Implementação das US08, US12 e entrega da MVP1|06/01/2023|12/01/2023|
+|Sprint 10|Implementação das US14, US18, US19, US20|13/01/2023|19/01/2023|
 |Sprint 11|Implementação das US15, US16, US17, US21, US22 e entrega da PC2|20/01/2023|31/01/2023|
 |Sprint 12|Implementação das US23, US24, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
 |:-----:|:------:|:------:|:------:|
-|Daily|Equipe do Projeto|Diariamente|Feedback diário do andamento individual no projeto|
-|Planejamento da Sprint|Equipe do Projeto|Semanalmente|Backlog do Sprint, Quadro Scrum|
-|Revisão da Sprint|Equipe do projeto|Semanalmente|Feedback da sprint|
-|Retrospectiva da Sprint|Equipe do projeto|Semanalmente|Plano de melhoria para as próximas sprints|
+|Daily|Equipe do Projeto|Diariamente|Feedback do Sprint|
+|Planejamento do Sprint|Equipe do Projeto|Semanalmente|Backlog do Sprint, Issues|
+|Revisão do Sprint|Equipe do projeto|Semanalmente|Feedback do Sprint|
+|Retrospectiva do Sprint|Equipe do projeto|Semanalmente|Feedback do Sprint|
 
 ### 2.4 - Gerenciamento de Riscos
 |Descrição|Causa|Medida Mitigadora|
@@ -76,8 +76,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 2.5 - Critérios de Replanejamento
 |Descrição|Causa|Replanejamento|
 |:-----:|:------:|:------:|
-|Impossibilidade de entrega|Mau gerenciamento dos riscos|Redefinição e priorização do Backlog do Produto|
-|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do Backlog do Produto|
+|Impossibilidade de entrega|Mau gerenciamento dos riscos, problemas técnicos|Redefinição e priorização do Backlog do Produto|
+|Mudança de requisitos|Mudança de ideia do cliente em relação a alguma funcionalidade|Redefinição do Backlog do Produto, altereação nas Histórias de Usuário|
 |Mal entendimento de requisitos|Falha da comunicação entre equipe de densolvimento e cliente|Redefinição do Backlog do Produto|
 
 ## 3 - Processo de Desenvolvimento de Software
@@ -85,10 +85,10 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
     O processo de desenvolvimento de software será ágil e adaptado para utilizar o Scrum com o XP, pois o projeto tem duração de três meses, o cliente está em contato com a equipe de desenvolvimento e são lançadas novas alterações a cada iteração. 
 </p>
 <p align="justify">
-    Serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint e o Quadro Scrum, para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. A ferramenta vai fazer o acompanhamento do Backlog do Produto, das histórias de usuário e tarefas. Também serão usados os eventos Scrum: Sprint, Planejamento (planning), Revisão (review), Retrospectiva (retrospective).
+    Serão utilizados os artefatos Scrum: Backlog do Produto e Backlog da Sprint para o gerenciamento interno de tarefas e execuções do time e alinhar a equipe em relação ao progresso, tarefas executadas e as futuras atividades. Também serão usados os eventos Scrum: Sprint, Planejamento (planning), Revisão (review), Retrospectiva (retrospective).
 </p>
 <p align="justify">
-Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento: As histórias de usuário, releases, programação em pares (pair programming) e planning poker.
+Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvimento: As histórias de usuário, releases e a programação em pares (pair programming).
 </p>
 
 ### 3.1 - Planejamento
@@ -102,7 +102,6 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.2 - Desenvolvimento
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
 |Implementação de banco de dados|||Banco de Dados|
 |Deploy||||
 |Teste de Sistema|Teste unitário|Jest|Segurança do produto|
@@ -111,6 +110,7 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.3 - Revisão
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
+|Reunião diária (daily)|Conversa entre os integrantes da equipe|Telegram|Feedback do Sprint|
 |Verificação|Revisão da implementação dos requisitos com o cliente ou dono do produto|Google Meet|Backlog do Produto, Histórias de Usuário, Release|
 
 ### 3.4 - Retrospectiva
