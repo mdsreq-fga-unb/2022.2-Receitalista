@@ -4,20 +4,19 @@
 
 N° | User story | Sprint |
 :-----:|---------|:----------------------:|
-1| [US01] Eu como usuário gostaria de me cadastrar na aplicação para conseguir realizar login. | 6 |
-2| [US02] Eu como usuário gostaria de poder realizar o login na aplicação para poder utilizar suas funcionalidades. | 6 |
-3| [US06] Eu como usuário gostaria de poder cadastrar os ingredientes na aplicação para que eu possa utilizar suas informações na criação de um produto. | 6 |
-4| [US10] Eu como usuário gostaria de poder cadastrar produtos para que eu possa saber, baseado nos preços dos ingredientes, o preço de custo do produto. | 6 |
-5| [US18] Eu como usuário gostaria de poder cadastrar pedidos na aplicação para que eu possa alocar um produto a um cliente. | 7 |
-6| [US04] Eu como usuário gostaria de poder editar minhas informações de cadastro na aplicação para que eu possa mitigar possíveis erros durante o cadastro. | 7 |
-7| [US07] Eu como usuário gostaria de poder editar as informações de um ingrediente/material cadastrado para poder mitigar possíveis erros durante seu cadastro. | 7 |
-8| [US11] Eu como usuário gostaria de poder editar as informações de um produto cadastrado para poder mitigar possíveis erros durante seu cadastro. | 7 |
-9| [US19] Eu como usuário gostaria de poder editar as informações de um pedido cadastrado para poder mitigar possíveis erros durante seu cadastro. | 8 |
-10| [US03] Eu como usuário gostaria de poder alterar minha senha sem a necessidade de estar logado na aplicação para caso eu a esqueça. | 8 |
-11| [US05] Eu como usuário gostaria de poder excluir minha conta para que minhas informações sejam deletadas caso eu não queria mais utilizar a aplicação. | 8 |
-12| [US08] Eu como usuário gostaria de poder excluir um ingrediente cadastrado para caso eu não queira mais utilizar sua informação na aplicação.  | 9 |
-13| [US12] Eu como usuário gostaria de poder excluir um produto cadastrado para caso eu não queira mais utilizar sua informação na aplicação. | 9 |
-14| [US20] Eu como usuário gostaria de poder excluir um pedido cadastrado para caso eu não queira mais utilizar sua informação na aplicação.. | 9 |
+1| [US01] Cadastrar no Receitalista | 6 |
+2| [US02] Login no Receitalista | 6 |
+3| [US06] Cadastrar material | 6 |
+4| [US09] Visualizar materiais | 6 |
+5| [US10] Cadastrar produto | 6 |
+6| [US13] Visualizar produtos | 6 |
+7| [US04] Editar usuário | 7 |
+8| [US07] Editar material | 7 |
+9| [US11] Editar produto | 7 |
+10| [US03] Alterar senha | 8 |
+11| [US05] Excluir conta | 8 |
+12| [US08] Excluir material | 9 |
+13| [US12] Excluir produto | 9 |
 
 <br>
 
@@ -27,13 +26,14 @@ N° | User story | Sprint |
 
 N° | User story | Sprint |
 :-----:|---------|:----------------------:|
-1| [US09] Eu como usuário gostaria de poder visualizar a listagem dos meus ingredientes cadastrados na aplicação para manter controle dos ingredientes cadastrados. | 10 |
-2| [US13] Eu como usuário gostaria de poder visualizar a listagem dos meus produtos cadastrados na aplicação para ter um apanhado geral de todos eles. | 10 |
-3| [US14] Eu como usuário gostaria de poder realizar o cadastro das informações dos meus clientes na aplicação para utilizar durante o gerenciamento de pedidos. | 10 |
-4| [US15] Eu como usuário gostaria de poder editar as informações de um cliente cadastrado na aplicação para poder mitigar possíveis erros durante seu cadastro. | 11 |
-5| [US16] Eu como usuário gostaria de poder excluir um cliente cadastrado para caso eu não queira mais utilizar sua informação na aplicação. | 11 |
-6| [US17] Eu como usuário gostaria de poder visualizar a listagem dos meus clientes cadastrados na aplicação para poder visualizar o perfil de consumo de cada cliente. | 11 |
-7| [US21] Eu como usuário gostaria de poder visualizar a listagem dos  pedidos cadastrados na aplicação para manter controle de gastos e lucros. | 11 |
-8| [US22] Eu como usuário gostaria de visualizar os gastos com cada ingrediente mensalmente para poder estimar margem de lucro por produto. | 11 |
-9| [US23] Eu como usuário gostaria de visualizar qual a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido. | 12 |
-10| [US24] Eu como usuário gostaria de visualizar qual a margem de lucro de todos os pedidos mensalmente ter controle da minha margem de lucro. | 12 |
+1| [US14] Cadastrar cliente | 10 |
+2| [US18] Cadastrar pedido | 10 |
+3| [US19] Editar pedido | 10 |
+4| [US20] Excluir pedido | 10 |
+5| [US15] Editar cliente | 11 |
+6| [US16] Excluir cliente | 11 |
+7| [US17] Visualizar clientes | 11 |
+8| [US21] Visualizar pedidos | 11 |
+9| [US22] Visualizar gastos de material | 11 |
+10| [US23] Visualizar lucro de produto | 12 |
+11| [US24] Visualizar lucro de pedido | 12 |
