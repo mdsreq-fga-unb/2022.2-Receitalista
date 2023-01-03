@@ -6,8 +6,7 @@ import NonAuthenticatedRoutes from "./NonAuthenticatedRoutes";
 const GatewayRoutes = () => {
     const { auth } = useContext(AuthContext);
 
-        //nao tenho ideia pq isso ta funcionando com a negacao no localstorage
-    if(auth && !localStorage.getItem('acess_token')){
+    if(!auth || !localStorage.getItem('acess_token')){
         return(
            <NonAuthenticatedRoutes />
         )
