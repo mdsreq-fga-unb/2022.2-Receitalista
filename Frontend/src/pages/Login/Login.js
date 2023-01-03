@@ -29,16 +29,7 @@ const Login = () => {
 		}
 		
 	}
-	// axios.post('/user/login', {
-	// 	email: loginData.email,
-	// 	password: loginData.password,
-	//   })
-	//   .then(function (response) {
-	// 	console.log(response);
-	//   })
-	//   .catch(function (error) {
-	// 	console.log(error);
-	//   });
+
 	return (
 		<div className={classes.page}>
 			<h1>Entrar na sua conta</h1>
