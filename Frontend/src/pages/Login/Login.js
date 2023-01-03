@@ -7,10 +7,12 @@ import AuthContext from '../../context/AuthProvider';
 import LoginForm from '../../components/Form/LoginForm'
 
 import classes from "../Page.module.css"
+import { useNavigate } from 'react-router';
 
 const Login = () => {
 	const [loginData, setLoginData] = useState({})
 	const { setAuth } = useContext(AuthContext);
+	const navigate = useNavigate();
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
@@ -22,7 +24,10 @@ const Login = () => {
 				});
 
 				const acessToken = response?.data?.token;
-				setAuth({ loginData, acessToken });
+				localStorage.setItem('acess_token', acessToken);
+				
+				navigate("/home");
+				setAuth(localStorage.getItem('acess_token', acessToken));
 
 		} catch (err) {
 			console.log(err);
