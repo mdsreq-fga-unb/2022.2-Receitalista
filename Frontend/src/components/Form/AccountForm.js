@@ -1,17 +1,9 @@
-import { useState } from 'react'
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 
 import classes from './Form.module.css'
 
-function AccountForm({ handleSubmit, accountData }) {
-
-	const [account, setAccount] = useState(accountData || {})
-
-	const submit = (e) => {
-		e.preventDefault()
-		handleSubmit(account)
-	}
+function AccountForm({ handleSubmit, account, setAccount }) {
 
 	function handleChange(e) {
 		setAccount({ ...account, [e.target.name]: e.target.value })
@@ -19,7 +11,7 @@ function AccountForm({ handleSubmit, accountData }) {
 
 	return (
 
-		<form onSubmit={submit} className={classes.form}>
+		<form onSubmit={handleSubmit} className={classes.form}>
 
 			<Input
 				type="text"
@@ -49,15 +41,15 @@ function AccountForm({ handleSubmit, accountData }) {
 			/>
 
 			<Input
-				type="password"
-				text="Confirmar senha"
-				name="confirmPassword"
-				placeholder="Insira sua senha novamente"
+				type="number"
+				text="Preço por hora"
+				name="pricePerHour"
+				placeholder="Preço por hora"
 				handleOnChange={handleChange}
-				value={account.confirmPassword ? account.confirmPassword : ''}
+				value={account.pricePerHour ? account.pricePerHour : ''}
 			/>
 
-			<SubmitButton text="Criar" />
+			<SubmitButton text="Criar" type="button" />
 		</form>
 	)
 }
