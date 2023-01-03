@@ -1,12 +1,38 @@
-import React from 'react'
-import classes1 from "../Page.module.css"
+import React, { useState } from 'react'
+
+import { useNavigate } from 'react-router';
+
+import axios from "../../api/axios";
+
 import MaterialForm from '../../components/Form/MaterialForm'
 
+import classes1 from "../Page.module.css"
+
+
 const NewMaterial = () => {
+	const [material, setMaterial] = useState({});
+	const navigate = useNavigate();
+
+	const onSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+			const response = await axios.post('/item/add', 
+				JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: "ARRUMAR ESSA PARTE AQUI" }),
+				{
+					headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
+				});
+			
+			navigate(-1);
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
 	return (
 		<div className={classes1.page}>
 			<h1>Inserir novo material</h1>	
-			<MaterialForm/>	
+			<MaterialForm handleSubmit={onSubmit} material={material} setMaterial={setMaterial} />	
 		</div>
 	)
 }

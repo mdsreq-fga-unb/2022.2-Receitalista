@@ -4,22 +4,15 @@ import SubmitButton from "../Button/SubmitButton"
 
 import classes from './Form.module.css'
 
-function MaterialForm({ handleSubmit, materialData }) {
+function MaterialForm({ handleSubmit, material, setMaterial }) {
   
-  const [material, setMaterial] = useState(materialData || {})
-
-  const submit = (e) => {
-    e.preventDefault()
-    handleSubmit(material)
-  }
-
   function handleChange(e) {
     setMaterial({ ...material, [e.target.name]: e.target.value })
   }
 
   return (
 
-    <form onSubmit={submit} className={classes.form}>
+    <form onSubmit={handleSubmit} className={classes.form}>
 
       <Input
         type="text"
