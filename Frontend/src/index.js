@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 
+import { AuthProvider } from './context/AuthProvider';
+
 import App from './App';
 
 import Login from "./pages/Login/Login"
@@ -22,6 +24,7 @@ import NewPassword from './pages/Account/NewPassword';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode>
+<AuthProvider>
   <BrowserRouter>
     <Routes>
       <Route element={<App />}>
@@ -37,7 +40,8 @@ root.render(
         <Route path="/novasenha" element={<NewPassword />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+    </BrowserRouter>
+  </AuthProvider>
 </React.StrictMode>
 );
 

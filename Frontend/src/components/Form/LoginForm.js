@@ -1,24 +1,16 @@
-import { useState } from 'react'
-
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 
 import classes from './Form.module.css'
 
-function LoginForm({ handleSubmit, loginData }) {
-  const [login, setLogin] = useState(loginData || {})
-
-  const submit = (e) => {
-    e.preventDefault()
-    handleSubmit(login)
-  }
+function LoginForm({ handleSubmit, loginData, setLoginData }) {
 
   function handleChange(e) {
-    setLogin({ ...login, [e.target.name]: e.target.value })
+    setLoginData({ ...loginData, [e.target.name]: e.target.value })
   }
 
   return (
-    <form onSubmit={submit} className={classes.form}>
+    <form onSubmit={handleSubmit} className={classes.form}>
 
       <Input
         type="email"
@@ -26,7 +18,7 @@ function LoginForm({ handleSubmit, loginData }) {
         name="email"
         placeholder="Insira o seu email"
         handleOnChange={handleChange}
-        value={login.email ? login.email : ''}
+        value={loginData.email ? loginData.email : ''}
       />
 
       <Input
@@ -35,7 +27,7 @@ function LoginForm({ handleSubmit, loginData }) {
         name="password"
         placeholder="Insira sua senha"
         handleOnChange={handleChange}
-        value={login.password ? login.password : ''}
+        value={loginData.password ? loginData.password : ''}
       />
 
       <SubmitButton text="Entrar" />
