@@ -1,0 +1,23 @@
+.summary {
+  text-align: center;
+
+  width: 100%;
+  margin: auto;
+  margin-top: 6em;
+  margin-bottom: -6em;
+  position: relative;
+  background-color: #8b2b05;
+  color:  #222;
+
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.summary p, h4{
+  color: #ffff;
+}
+
+.summary h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}

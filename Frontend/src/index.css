@@ -1,0 +1,18 @@
+
+
+html, body, #root{
+  background-color: #efefef;
+  height: 100%;
+}
+
+h1 {
+	margin-bottom: 0.5em;
+}
+
+h1 span {
+	color: #ff7200;
+}
+
+p {
+	color: #7b7b7b;
+}

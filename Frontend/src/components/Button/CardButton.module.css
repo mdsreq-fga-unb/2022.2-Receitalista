@@ -1,0 +1,32 @@
+.btn {
+	margin-top: 1.2em;
+	display: flex;
+	align-items: center;
+}
+
+.btn a,
+.btn button {
+	text-decoration: none;
+	border: none;
+	background-color: #fff;
+	color: #222;
+	font-size: 0.9em;
+	padding: 0.6em 1em;
+	margin-right: 0.5em;
+	cursor: pointer;
+	border: 1px solid #222;
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn svg {
+	margin-right: 0.5em;
+}
+
+.btn a:hover,
+.btn button:hover {
+	background-color: #222;
+	color: #ffbb33;
+}
