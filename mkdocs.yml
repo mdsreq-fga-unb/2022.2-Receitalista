@@ -16,6 +16,8 @@ nav:
   - Home: index.md
   - Documentação: 
     - Visão do produto e projeto: visao-produto.md
-    - Backlog do produto: backlog_do_produto.md
+    - Backlog do produto - SAFe: backlog_do_produto.md
     - Definição dos MVPs: definicao-mvp.md
+    - Produtos gerados por Sprint: produtos-gerados.md
+    - Protótipos de baixa fidelidade: prototipos-baixa-fidelidade.md
   - Entregas: entregas.md
