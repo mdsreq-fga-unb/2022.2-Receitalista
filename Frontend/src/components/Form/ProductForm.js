@@ -32,7 +32,7 @@ export default function ProductForm({ handleSubmit, product, setProduct }) {
       </text>
 
       <div className='box-add-material'>
-        <Add />
+        <Add product={product} setProduct={setProduct} />
       </div>
 
       <div className='box-description'>
@@ -45,7 +45,8 @@ export default function ProductForm({ handleSubmit, product, setProduct }) {
           className='textarea-description'
           name="description"
           placeholder='Ex.: Receita do produto'
-          handleOnChange={handleChange}
+          onChange={handleChange}
+          value={product.description}
         />
 
       </div>
@@ -85,11 +86,12 @@ export default function ProductForm({ handleSubmit, product, setProduct }) {
   )
 }
 
-export function Add() {
+export function Add({ product, setProduct }) {
   const [materials, setMaterial] = useState([]);
 
   const addMaterial = material => {
     setMaterial([...materials, material]);
+    setProduct({ ...product, materials: materials });
   };
 
   const deleteMaterial = index => {
@@ -97,6 +99,7 @@ export function Add() {
     newMaterials.splice(index, 1);
 
     setMaterial(newMaterials);
+    setProduct({ ...product, materials: materials });
   };
 
   return (
@@ -134,7 +137,7 @@ export function Form1(props) {
 
   const { onSave } = props;
 
-  const [text, setText] = useState("");
+  const [selectedItem, setSelectedItem] = useState("");
 
   return (
     <div>
@@ -142,14 +145,14 @@ export function Form1(props) {
       <Select
         name="material"
         options={materials}
-        handleOnChange={e => setText(e.target.options[e.target.selectedIndex].text)}
-        value={text || ""}
+        handleOnChange={e => setSelectedItem(e.target.options[e.target.selectedIndex].value)}
+        value={selectedItem}
       />
 
       <button
         onClick={() => {
-          setText("");
-          onSave(text);
+          setSelectedItem("");
+          onSave(selectedItem);
         }}>Adicionar</button>
     </div>
   );

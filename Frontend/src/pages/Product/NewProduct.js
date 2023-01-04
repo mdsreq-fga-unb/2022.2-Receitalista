@@ -6,10 +6,11 @@ import classes from "../Page.module.css"
 
 function NewProduct() {
     const [product, setProduct] = useState({});
+    // const [materials, setMaterials] = useState([]);
 
     const onSubmit = (e) => {
         e.preventDefault();
-        //criacao do produto
+        console.log(product);
     }
 
     return (
