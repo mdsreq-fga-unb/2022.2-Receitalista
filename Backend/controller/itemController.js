@@ -1,5 +1,19 @@
 const Item = require('../model/item');
 
+exports.getAllItem = async function (req, res) {   
+    Item.findAll({ where: { id: req.userData.id } })
+        .then(item => {
+            return res.status(200).json({
+                item: item
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err:err
+            });
+        });
+}
+
 exports.addItem = async function (req, res) {
     console.log(req.body);
     Item.findOne({ where: { name: req.body.name } })
