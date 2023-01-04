@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+import axios from '../../api/axios';
 
 import Input from "../Input/Input"
 import Select from "../Select/Select"
@@ -6,14 +8,7 @@ import SubmitButton from "../Button/SubmitButton"
 
 import "./ProductForm.css"
 
-export default function ProductForm({ handleSubmit, productData }) {
-  
-  const [product, setProduct] = useState(productData || {})
-
-  const submit = (e) => {
-    e.preventDefault()
-    handleSubmit(product)
-  }
+export default function ProductForm({ handleSubmit, product, setProduct }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -21,7 +16,7 @@ export default function ProductForm({ handleSubmit, productData }) {
 
   return (
 
-    <form onSubmit={submit} className="form">
+    <form onSubmit={handleSubmit} className="form">
 
       <Input
         type="text"
@@ -112,22 +107,30 @@ export function Add() {
         onSave={addMaterial}
       />
 
-      <List
-        materials={materials}
-        deleteMaterial={deleteMaterial} /
-      >
+      <List materials={materials} deleteMaterial={deleteMaterial} />
 
     </div>
   );
 }
 
 export function Form1(props) {
-  
-  //Exemplo
-  const materials = [
-    {id:1,name:"A"},
-    {id:2,name:"B"},
-  ]
+  const [materials, setMaterials] = useState([{}]);
+
+  useEffect(()=>{
+    try {
+			axios.get('/item/list', {
+					headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
+			})
+        .then(response => {
+          setMaterials(response.data.item);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+		} catch (err) {
+			console.log(err);
+		}
+  },[]);
 
   const { onSave } = props;
 
