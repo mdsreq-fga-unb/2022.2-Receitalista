@@ -92,7 +92,7 @@ exports.userLogIn = (req, res) => {
 }
 
 exports.userUpdate = (req, res) => {
-    const id = req.params.id;
+    const id = req.userData.id;
     const { password, price_per_hour } = req.body;
 
     if (password === null && price_per_hour !== null) { // troca somente o preco por hora
