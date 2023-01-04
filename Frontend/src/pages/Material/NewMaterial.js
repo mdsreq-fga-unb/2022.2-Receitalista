@@ -15,10 +15,12 @@ const NewMaterial = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
+		
+		console.log(material.unity);
 
 		try {
-			const response = await axios.post('/item/add', 
-				JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: "ARRUMAR ESSA PARTE AQUI" }),
+			await axios.post('/item/add', 
+				JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: material.unity }),
 				{
 					headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
 				});

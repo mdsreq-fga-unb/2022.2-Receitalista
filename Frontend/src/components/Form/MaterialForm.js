@@ -1,8 +1,29 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 
 import classes from './Form.module.css'
+
+const labelList = [{
+  key: 0,
+  label: "Quilo"
+},
+{
+  key: 1,
+  label: "Litro"
+},
+{
+  key: 2,
+  label: "Mililitro"
+},
+{
+  key: 3,
+  label: "Metro"
+},
+{
+  key: 4,
+  label: "Centímetro"
+}];
 
 function MaterialForm({ handleSubmit, material, setMaterial }) {
   
@@ -20,7 +41,7 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         name="name"
         placeholder="Insira o nome do material"
         handleOnChange={handleChange}
-        value={material.name ? material.name : ''}
+        value={material.name}
       />
 
       <Input
@@ -30,7 +51,7 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         name="price"
         placeholder="Insira o preço que custou o material"
         handleOnChange={handleChange}
-        value={material.price ? material.price : ''}
+        value={material.price}
       />
 
       <Input
@@ -40,16 +61,17 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         name="amount"
         placeholder="Insira a quantidade do material"
         handleOnChange={handleChange}
-        value={material.amount ? material.amount : ''}
+        value={material.amount}
       />
 
       <div>
         <h4>Medida:</h4>
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Quilo
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Litro
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Mililitro
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Metro
-        <input type="radio" name="unity" handleOnChange={handleChange} value={material.unity ? material.unity : ''} /> Centímetro
+        {labelList.map((item) => (
+          <React.Fragment key={item.key}>
+            <input type="radio" name="unity" onChange={handleChange} value={item.label} />
+            <label>{item.label}</label>
+          </React.Fragment>
+        ))}
         <p></p>
       </div>
 
