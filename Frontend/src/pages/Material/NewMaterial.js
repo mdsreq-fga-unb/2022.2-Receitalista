@@ -16,8 +16,6 @@ const NewMaterial = () => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 		
-		console.log(material.unity);
-
 		try {
 			await axios.post('/item/add', 
 				JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: material.unity }),
