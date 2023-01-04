@@ -1,7 +1,7 @@
 const Item = require('../model/item');
 
-exports.getAllItem = async function (req, res) {   
-    Item.findAll({ where: { id: req.userData.id } })
+exports.getAllItem = async function (req, res) {
+    Item.findAll({ where: { user_id: req.userData.id } })
         .then(item => {
             return res.status(200).json({
                 item: item
@@ -15,6 +15,7 @@ exports.getAllItem = async function (req, res) {
 }
 
 exports.addItem = async function (req, res) {
+
     console.log(req.body);
     Item.findOne({ where: { name: req.body.name } })
         .then(item => {
@@ -28,7 +29,8 @@ exports.addItem = async function (req, res) {
                     name: req.body.name,
                     price: req.body.price,
                     quantity: req.body.quantity,
-                    unit: req.body.unit
+                    unit: req.body.unit,
+                    user_id: req.userData.id
                 };
 
                 Item.create(newItem)
