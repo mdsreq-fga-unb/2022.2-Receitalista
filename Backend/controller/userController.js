@@ -165,3 +165,21 @@ exports.userUpdate = (req, res) => {
         });
     }
 }
+
+exports.userDelete = async function (req, res) {
+    User.destroy(
+        { where: { id: req.userData.id } }
+    )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'User deleted'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            })
+        });
+}
