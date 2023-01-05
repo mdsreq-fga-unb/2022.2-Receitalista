@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
+const Product = require('../model/product');
+
 const Item = database.define('item', {
     id: {
         type: Sequelize.INTEGER,
