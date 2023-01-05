@@ -21,10 +21,12 @@ const NewMaterial = () => {
 				JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: material.unity }),
 				{
 					headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
-				});
-			
-			navigate(-1);
+				}).then(() => {
+					alert("Material criado com sucesso!");
+					navigate(-1);
+				});			
 		} catch (err) {
+			alert("Erro interno!");
 			console.log(err);
 		}
 	}

@@ -4,9 +4,11 @@ import axios from 'axios';
 import AccountForm from '../../components/Form/AccountForm'
 
 import classes from "../Page.module.css"
+import { useNavigate } from 'react-router-dom';
 
 function NewAccount() {
-	const [account, setAccount] = useState({})
+	const [account, setAccount] = useState({});
+	const navigate = useNavigate();
 
 	const onSubmit = (e) => {
 		e.preventDefault();
@@ -19,9 +21,14 @@ function NewAccount() {
 		  })
 		  .then(function (response) {
 			console.log(response);
+			alert("Conta de usuário criada!");
+			navigate("/");
 		  })
 		  .catch(function (error) {
-			console.log(error);
+			if(error.response.status === 409){
+				alert("Conta de usuário já existente!");
+				setAccount({});
+			}
 		  });
 	}
 
