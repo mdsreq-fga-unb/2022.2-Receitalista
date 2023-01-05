@@ -92,3 +92,22 @@ exports.updateItem = async function (req, res) {
             })
         });
 }
+
+exports.deleteItem = async function (req, res) {
+    const id = req.params.id;
+    Item.destroy(
+        { where: { id: id, user_id: req.userData.id } }
+    )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Item deleted'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            })
+        });
+}
