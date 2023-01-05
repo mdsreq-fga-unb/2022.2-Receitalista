@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../db/connect');
 const database = require('../db/connect');
+
+const Order = require('../model/order');
 
 const Product = database.define('product', {
     id: {
@@ -33,6 +34,11 @@ const Product = database.define('product', {
         type: Sequelize.DECIMAL,
         allowNull: false
     }
+});
+
+Order.belongsTo(Product, {
+    constraints: true,
+    foreignKey: 'product_id'
 });
 
 module.exports = Product; 
