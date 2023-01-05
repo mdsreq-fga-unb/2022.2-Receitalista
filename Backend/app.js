@@ -5,8 +5,9 @@ const cors = require("cors");
 
 const userRouter = require('./routes/userRouter');
 const itemRouter = require('./routes/itemRouter');
-const orderRouter = require('./routes/orderRouter');
 const productRouter = require('./routes/productRouter');
+const clientRouter = require('./routes/clientRouter');
+const orderRouter = require('./routes/orderRouter');
 
 const database = require("./db/queries");
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use('/user', userRouter);
 app.use('/item', itemRouter);
 app.use('/product', productRouter);
+app.use('/client', clientRouter);
 app.use('/order', orderRouter);
 
 module.exports = app;
