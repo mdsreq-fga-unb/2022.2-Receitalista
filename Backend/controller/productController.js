@@ -1,4 +1,3 @@
-const Item = require('../model/item');
 const Product = require('../model/product');
 
 exports.addProduct = async function (req, res) {
@@ -57,4 +56,47 @@ exports.updateProduct = async function (req, res) {
             err: err
         });
     });
+}
+
+exports.getAllProducts = async function (req, res) {
+    Product.findAll({ where: { user_id: req.userData.id } })
+        .then(product => {
+            return res.status(200).json({
+                product: product
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err: err
+            });
+        });
+}
+
+exports.getAllProducts = async function (req, res) {
+    Product.findAll({ where: { user_id: req.userData.id } })
+        .then(product => {
+            return res.status(200).json({
+                products: product
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err: err
+            });
+        });
+}
+
+exports.getProduct = async function (req, res) {
+    const id = req.params.id;
+    Product.findOne({ where: { id: id, user_id: req.userData.id } })
+        .then(product => {
+            return res.status(200).json({
+                product: product
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err: err
+            });
+        });
 }
