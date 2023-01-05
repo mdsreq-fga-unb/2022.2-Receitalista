@@ -26,10 +26,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 ### 1.3 - Tecnologias a Serem Utilizadas
 - React - desenvolvimento do frontend.
 - NodeJS - desenvolvimento do backend.
-- Postgres - banco de dados.
-- Docker - configuração do ambiente de desenvolvimento.
-- Kubernetes - orquestrar containers para o deploy.
-- AWS - hospedagem da aplicação.
+- PostgreSQL - banco de dados.
+- Digital Ocean - hospedagem da aplicação.
 
 ## 2 - Visão Geral do Projeto
 
@@ -102,10 +100,10 @@ Com relação ao XP, utilizaremos como Práticas sobre o Processo de Desenvolvim
 ### 3.2 - Desenvolvimento
 |Atividade|Método|Ferramenta|Entrega|
 |:-----:|:------:|:------:|:------:|
-|Implementação de banco de dados|||Banco de Dados|
-|Deploy||||
+|Implementação de banco de dados|Codificação|PostgreSQL|Banco de Dados|
+|Deploy|Automatização|Digital Ocean|MVP|
 |Teste de Sistema|Teste unitário|Jest|Segurança do produto|
-|Codificação|Programação pareada|VSCode, GitHub|Backend, Frontend|
+|Codificação backend e frontend|Programação pareada|VSCode, GitHub|Backend, Frontend|
 
 ### 3.3 - Revisão
 |Atividade|Método|Ferramenta|Entrega|
