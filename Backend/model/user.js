@@ -3,6 +3,7 @@ const database = require('../db/connect');
 
 const Item = require('./item');
 const Product = require('./product');
+const Client = require('./client');
 const Order = require('./order');
 
 const User = database.define('user', {
@@ -36,6 +37,11 @@ Item.belongsTo(User, {
 });
 
 Product.belongsTo(User, {
+    constraints: true,
+    foreignKey: 'user_id'
+});
+
+Client.belongsTo(User, {
     constraints: true,
     foreignKey: 'user_id'
 });
