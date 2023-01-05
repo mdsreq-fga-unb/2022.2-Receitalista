@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import axios from "../../api/axios";
+
 import ProductForm from '../../components/Form/ProductForm'
 
 import classes from "../Page.module.css"
@@ -8,9 +10,14 @@ function NewProduct() {
     const [product, setProduct] = useState({});
     // const [materials, setMaterials] = useState([]);
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(product);
+        try {
+            axios.post("product/add", JSON.stringify({name: product.name, description: product.description, materials: product.materiais}))
+        }
+        catch {
+
+        }
     }
 
     return (
