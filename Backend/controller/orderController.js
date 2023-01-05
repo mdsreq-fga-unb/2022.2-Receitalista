@@ -2,6 +2,8 @@ const Order = require('../model/order');
 
 exports.addOrder = async function(req, res) {
     const newOrder = {
+        user_id: req.dataValues.id,
+        client_id: req.body.client_id, 
         total_price: req.body.total_price
     };
 
