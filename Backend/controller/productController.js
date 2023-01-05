@@ -100,3 +100,22 @@ exports.getProduct = async function (req, res) {
             });
         });
 }
+
+exports.deleteProduct = async function (req, res) {
+    const id = req.params.id;
+    Product.destroy(
+        { where: { id: id, user_id: req.userData.id } }
+    )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Product deleted'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            })
+        });
+}
