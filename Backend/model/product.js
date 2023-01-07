@@ -18,17 +18,9 @@ const Product = database.define('product', {
         type: Sequelize.STRING,
         allowNull: true
     },
-    itens_id: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
+    itens: {
+        type: Sequelize.ARRAY(Sequelize.JSON),
         allowNull: true
-    },
-    used_quantity: {
-        type: Sequelize.FLOAT,
-        allowNull: false
-    },
-    itens_price: {
-        type: Sequelize.DECIMAL,
-        allowNull: false
     },
     total_price: {
         type: Sequelize.DECIMAL,
