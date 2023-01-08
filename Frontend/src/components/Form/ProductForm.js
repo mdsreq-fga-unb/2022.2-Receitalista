@@ -3,8 +3,9 @@ import SubmitButton from "../Button/SubmitButton"
 
 import "./ProductForm.css"
 import ProductMaterial from "./ProductMaterial"
+import { useEffect, useState } from "react"
 
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, onClick }) {
+export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -28,7 +29,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
       </text>
 
       <div className='box-add-material'>
-        <ProductMaterial setItemList={setItemList} />
+        <ProductMaterial totalPrice={totalPrice} setTotalPrice={setTotalPrice} setItemList={setItemList} />
       </div>
 
       <div className='box-description'>
@@ -74,10 +75,10 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
       </div>
 
       <div className='final-price'>
-        <text className='text-title'>Preço final do produto: R$ 12.00</text>
+        <text className='text-title'>Preço final do produto: R$ {totalPrice}</text>
       </div>
 
-      <SubmitButton text="Criar" onClick={onClick} />
+      <SubmitButton text="Criar" onClick={handleSubmit} />
     </form>
   )
 }

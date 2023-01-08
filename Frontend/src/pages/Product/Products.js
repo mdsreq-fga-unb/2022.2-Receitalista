@@ -5,8 +5,11 @@ import ProductCard from '../../components/Card/ProductCard'
 import classes from './Products.module.css'
 import classes1 from '../Page.module.css'
 import classes2 from '../../components/Button/LinkButton.module.css'
+import { useState } from "react";
+import axios from "../../api/axios";
 
 function Products() {
+	const [productList, setProductList] = useState([]);
 
 	const products = [
 		{
@@ -71,6 +74,15 @@ function Products() {
 		},
 	]
 
+	const getProductList = async () => {
+		await axios.get("/product/list", {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+			setProductList(response.data.products);
+		}).catch(err => {
+			console.log(err);
+			alert("Não foi possível carregar a lista de produtos");
+		});
+	}
+
 	return (
 		<>
 			<div className={classes1.page}>
@@ -85,12 +97,12 @@ function Products() {
 			</div>
 			<div className={classes.products}>
 				<ul>
-					{products.length > 0 &&
-						products.map((product) =>
+					{getProductList() && productList.length > 0 &&
+						productList.map((product) =>
 							<ProductCard
 								id={product.id}
 								name={product.name}
-								price={product.price}
+								price={product.total_price}
 							/>
 						)
 					}

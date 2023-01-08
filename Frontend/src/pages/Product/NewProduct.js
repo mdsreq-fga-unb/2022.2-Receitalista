@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import axios from "../../api/axios";
@@ -12,44 +12,27 @@ function NewProduct() {
     const [product, setProduct] = useState({});
     const [itemList, setItemList] = useState([]);
     const [aux, setAux] = useState(false);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     let formatedItemList = [];
     let name = product.name;
     let description = product.description;
-    let totalPrice = 0;
-
-    itemList.forEach(element => {
-        formatedItemList.push({
-            name: element.name,
-            quantity: element.quantity,
-            unit: element.unit,
-            price: element.price,
-            usedQuantity: element.usedQuantity
-        });
-    });
-
-    formatedItemList.forEach((item) => {
-        if(item.price){
-            totalPrice = totalPrice + item.price;
-        }
-    })
-
+    // let totalPrice = 0;
 
     
-
 
     const onSubmit = async (e) => {
         setAux(true);
 
         e.preventDefault();
-        if(formatedItemList.length !== 0 && name && aux){
+        if(itemList.length !== 0 && name && aux){
             try {
-                await axios.post("product/add", JSON.stringify({
+                await axios.post("product/add",  JSON.stringify({
                     name: name,
                     description: description,
                     total_price: totalPrice,
                     itens: formatedItemList
-                })).then(response => {
+                }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
                     alert("Produto criado com sucesso!");
                     navigate("/home");
@@ -63,12 +46,13 @@ function NewProduct() {
             }
             setAux(false);
         }
-        else if(!name){ alert("Adicione um nome no produto") }
+        else if(!name){ alert("Adicione um nome no produto");   setAux(false)}
+        else if (itemList.length === 0) { alert("Adicione no mínimo um material ao seu produto");  setAux(false) }
     }
     return (
         <div className={classes.page}  >
             <h1>Criar produto</h1>  
-            <ProductForm onClick={onSubmit}  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
+            <ProductForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit}  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
         </div>
     )
 }

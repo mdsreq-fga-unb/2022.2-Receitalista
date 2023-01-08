@@ -7,25 +7,15 @@ import classes from './Product.module.css'
 
 import Container from '../../components/Container/Container'
 import ProductForm from '../../components/Form/ProductForm'
-import axios from '../../api/axios'
 
 function Product() {
 	let { id } = useParams()
 	
-	const [productList, setProductList] = useState([]);
 	const [showProductForm, setShowProductForm] = useState(false)
 
 	function toggleProductForm() {
 		setShowProductForm(!showProductForm)
 	}
-
-	axios.get("/product/list").then(response => {
-		console.log(response);
-	}).catch(err => {
-		console.log(err);
-		alert("Não foi possível carregar a lista de produtos");
-	})
-
 	const product = [
 		{
 			id: '1',

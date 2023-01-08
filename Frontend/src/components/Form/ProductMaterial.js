@@ -4,12 +4,28 @@ import axios from "../../api/axios";
 
 import "./ProductMaterial.css";
 
-const ProductMaterial = ({setItemList}) => {
+const ProductMaterial = ({setItemList, setTotalPrice}) => {
     const [materialList, setMaterialList] = useState([]);
     const [selectedMaterialList, setSelectedMaterialList] = useState([]);
     const [quantity, setQuantity] = useState(0);
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
     const [renderAux, setRenderAux] = useState(false);
+
+    useEffect(()=> {
+        let newPrice=0;
+
+        if(selectedMaterialList.length !== 0){
+            selectedMaterialList.forEach(element => {
+                if(element[0].price){
+                    newPrice = newPrice + (Number(element[0].price) * element[0].usedQuantity);
+                    setTotalPrice(newPrice);
+                }
+            });
+        }
+        else {
+            setTotalPrice(0);
+        }
+    },[selectedMaterialList,renderAux]);
 
     const getItems = async () => {
         await axios.get("item/list",{ headers: {  "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
@@ -52,7 +68,6 @@ const ProductMaterial = ({setItemList}) => {
 
         if(!itemExists){
             setSelectedMaterialList([...selectedMaterialList, {...selectedMaterial}]);
-            setItemList(selectedMaterialList);
         }
     }
 
@@ -69,9 +84,10 @@ const ProductMaterial = ({setItemList}) => {
         materialList.splice(indexToDelete, 1);
         
         setSelectedMaterialList(materialList);
-        setItemList(selectedMaterialList);
         setRenderAux(!renderAux);
     }
+
+    setItemList(selectedMaterialList);
 
     return (
         <div className="product-material">
@@ -83,8 +99,8 @@ const ProductMaterial = ({setItemList}) => {
                     }) : ""}
                 </select>
                 
-                <input className="" type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
-                <button className="" type="submit" onClick={(event) => handleMaterialIncrement(event)} >Add</button>
+                <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
+                <button type="submit" onClick={(event) => handleMaterialIncrement(event)}>Add</button>
             </div>
             {selectedMaterialList ? selectedMaterialList.map((item) => {
                 
