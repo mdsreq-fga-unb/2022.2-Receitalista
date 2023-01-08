@@ -8,22 +8,45 @@ import classes from "../Page.module.css"
 
 function NewProduct() {
     const [product, setProduct] = useState({});
-    // const [materials, setMaterials] = useState([]);
+    const [itemList, setItemList] = useState([]);
+
+    let formatedItemList = [];
+    let name = product.name;
+    let description = product.description;
+
+    itemList.forEach(element => {
+        formatedItemList.push({
+            name: element.name,
+            quantity: element.quantity,
+            unit: element.unit,
+            price: element.price,
+            usedQuantity: element.usedQuantity
+        });
+    });    
+
+
+    
+
 
     const onSubmit = async (e) => {
+
         e.preventDefault();
         try {
-            axios.post("product/add", JSON.stringify({name: product.name, description: product.description, materials: product.materiais}))
+            await axios.post("product/add", JSON.stringify({
+                name: name,
+                description: description,
+                total_price: 40,
+                itens: formatedItemList
+            })).then(response => console.log(response));
         }
-        catch {
-
+        catch(err) {
+            console.log(err);
         }
     }
-
     return (
-        <div className={classes.page}>
+        <div className={classes.page} onClick={onSubmit} >
             <h1>Criar produto</h1>  
-            <ProductForm handleSubmit={onSubmit} product={product} setProduct={setProduct} />
+            <ProductForm  product={product} setProduct={setProduct} setItemList={setItemList} />
         </div>
     )
 }
