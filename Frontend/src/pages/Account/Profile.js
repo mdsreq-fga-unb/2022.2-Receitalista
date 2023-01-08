@@ -2,10 +2,13 @@ import PasswordForm from '../../components/Form/PasswordForm';
 import ProfileForm from '../../components/Form/ProfileForm';
 import classes from '../Page.module.css'
 import classes2 from '../../components/Button/CardButton.module.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import axios from '../../api/axios';
+import { wait } from '@testing-library/user-event/dist/utils';
 
 function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) {
+  const navigate = useNavigate();
 
   const [showProfileForm, setShowProfileForm] = useState(false)
 //  const [showPasswordForm, setShowPasswordForm] = useState(false)
@@ -17,6 +20,22 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
 // function togglePasswordForm() {
 //   setShowPasswordForm(!showProfileForm)
 // }
+
+  const handleProfileDeletion = async () => {
+    axios.delete("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+      .then(response => {
+        console.log(response);
+        alert("Conta excluida com sucesso!");
+        localStorage.removeItem('acess_token');
+        navigate("/");
+        console.log("CHEGOU");
+        window.location.reload();
+      })
+      .catch(err => {
+        console.log(err);
+        alert("Não foi possível excluir sua conta.");
+      });
+  }
 
   return (
     <>
@@ -35,7 +54,7 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
           <button onClick={toggleProfileForm}>
             {!showProfileForm ? 'Editar perfil' : 'Fechar'}
           </button>
-          <button onClick="">Excluir conta</button>
+          <button onClick={handleProfileDeletion}>Excluir conta</button>
           <Link to="/novasenha">Nova senha</Link>
         </div>
       </div>
