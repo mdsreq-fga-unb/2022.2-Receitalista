@@ -16,6 +16,7 @@ function NewProduct() {
     let formatedItemList = [];
     let name = product.name;
     let description = product.description;
+    let totalPrice = 0;
 
     itemList.forEach(element => {
         formatedItemList.push({
@@ -25,7 +26,13 @@ function NewProduct() {
             price: element.price,
             usedQuantity: element.usedQuantity
         });
-    });    
+    });
+
+    formatedItemList.forEach((item) => {
+        if(item.price){
+            totalPrice = totalPrice + item.price;
+        }
+    })
 
 
     
@@ -40,7 +47,7 @@ function NewProduct() {
                 await axios.post("product/add", JSON.stringify({
                     name: name,
                     description: description,
-                    total_price: 40,
+                    total_price: totalPrice,
                     itens: formatedItemList
                 })).then(response => {
                     console.log(response);
@@ -59,9 +66,9 @@ function NewProduct() {
         else if(!name){ alert("Adicione um nome no produto") }
     }
     return (
-        <div className={classes.page} onClick={onSubmit} >
+        <div className={classes.page}  >
             <h1>Criar produto</h1>  
-            <ProductForm  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
+            <ProductForm onClick={onSubmit}  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
         </div>
     )
 }

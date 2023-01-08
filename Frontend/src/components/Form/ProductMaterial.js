@@ -11,14 +11,18 @@ const ProductMaterial = ({setItemList}) => {
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
     const [renderAux, setRenderAux] = useState(false);
 
-    useEffect(() => {
-        axios.get("item/list")
+    const getItems = async () => {
+        await axios.get("item/list",{ headers: {  "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
         .then(response => {
             setMaterialList(response.data.item);
         })
         .catch(err => {
             console.log(err);
         });
+    }
+    
+    useEffect(() => {
+        getItems();
     },[]);
 
     const handleProductSelection = (event) => {

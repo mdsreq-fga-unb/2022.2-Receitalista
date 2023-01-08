@@ -1,9 +1,9 @@
 import classes from './SubmitButton.module.css'
 
-function SubmitButton({text}) {
+function SubmitButton({text, onClick}) {
   return (
     <div>
-        <button className={classes.btn}>{text}</button>
+        <button onClick={onClick} className={classes.btn}>{text}</button>
     </div>
   )
 }

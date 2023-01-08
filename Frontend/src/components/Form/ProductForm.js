@@ -4,7 +4,7 @@ import SubmitButton from "../Button/SubmitButton"
 import "./ProductForm.css"
 import ProductMaterial from "./ProductMaterial"
 
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList }) {
+export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, onClick }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -77,7 +77,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         <text className='text-title'>Preço final do produto: R$ 12.00</text>
       </div>
 
-      <SubmitButton text="Criar" />
+      <SubmitButton text="Criar" onClick={onClick} />
     </form>
   )
 }
