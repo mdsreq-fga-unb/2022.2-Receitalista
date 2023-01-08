@@ -92,7 +92,7 @@ const ProductMaterial = ({setItemList}) => {
                     <React.Fragment key={item[0].id}>
                         {item ? <div className="list-product-material">
                                     <span>Nome do produto: {item[0].name}</span>
-                                    <span>Quantidade: {item[0].quantity}</span>
+                                    <span>Quantidade: {item[0].usedQuantity}</span>
                                     <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
                                 </div> : ""}
                     </React.Fragment>
