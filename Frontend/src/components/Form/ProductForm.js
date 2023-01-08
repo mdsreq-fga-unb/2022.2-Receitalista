@@ -4,8 +4,7 @@ import SubmitButton from "../Button/SubmitButton"
 import "./ProductForm.css"
 import ProductMaterial from "./ProductMaterial"
 
-export default function ProductForm({ handleSubmit, product, setProduct, setItemList }) {
-
+export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })

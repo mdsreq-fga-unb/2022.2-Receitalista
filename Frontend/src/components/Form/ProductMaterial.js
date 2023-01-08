@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import axios from "../../api/axios";
 
+import "./ProductMaterial.css";
+
 const ProductMaterial = ({setItemList}) => {
     const [materialList, setMaterialList] = useState([]);
     const [selectedMaterialList, setSelectedMaterialList] = useState([]);
@@ -68,21 +70,25 @@ const ProductMaterial = ({setItemList}) => {
     }
 
     return (
-        <div>
-            <select onChange={(event) => handleProductSelection(event)} >
-                { materialList ? materialList.map((material) => {
-                    return <option key={material.id} value={material.id}>{material.name}</option>
-                }) : ""}
-            </select>
-            <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
-            <button type="submit" onClick={(event) => handleMaterialIncrement(event)} >Add</button>
+        <div className="product-material">
+            <div className="add-product-material" >
+                <select onChange={(event) => handleProductSelection(event)} >
+                <option selected disabled >Escolha um material</option>
+                    { materialList ? materialList.map((material) => {
+                        return <option key={material.id} value={material.id}>{material.name}</option>
+                    }) : ""}
+                </select>
+                
+                <input className="" type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
+                <button className="" type="submit" onClick={(event) => handleMaterialIncrement(event)} >Add</button>
+            </div>
             {selectedMaterialList ? selectedMaterialList.map((item) => {
                 
                 return (
                     <React.Fragment key={item[0].id}>
-                        {item ? <div>
-                                    <span>{item[0].name}</span>
-                                    <span>{item.quantity}</span>
+                        {item ? <div className="list-product-material">
+                                    <span>Nome do produto: {item[0].name}</span>
+                                    <span>Quantidade: {item[0].quantity}</span>
                                     <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
                                 </div> : ""}
                     </React.Fragment>

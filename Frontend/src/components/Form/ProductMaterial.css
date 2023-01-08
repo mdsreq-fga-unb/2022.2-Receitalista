@@ -1,0 +1,40 @@
+.product-material {
+    padding: 10px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.add-product-material {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-material select {
+    min-width: 100px;
+    padding: 2px 10px;
+}
+
+
+.list-product-material {
+    position: relative;
+    padding: 6px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    border: solid black 2px;
+}
+
+.list-product-material button {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
