@@ -56,6 +56,7 @@ function NewProduct() {
             }
             setAux(false);
         }
+        else if(!name){ alert("Adicione um nome no produto") }
     }
     return (
         <div className={classes.page} onClick={onSubmit} >
