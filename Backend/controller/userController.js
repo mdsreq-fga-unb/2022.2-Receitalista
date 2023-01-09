@@ -166,6 +166,24 @@ exports.userUpdate = (req, res) => {
     }
 }
 
+exports.userGet = async function (req, res) {
+    User.findOne(
+        { where: { id: req.userData.id } }
+    )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                user: result.dataValues
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            })
+        });
+}
+
 exports.userDelete = async function (req, res) {
     User.destroy(
         { where: { id: req.userData.id } }
