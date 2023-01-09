@@ -11,6 +11,16 @@ import { useNavigate } from 'react-router';
 
 import "./Login.module.css";
 
+function stringLenght(string){
+	let count =0;
+
+	for(let i = 0; string[i]; i++){
+		count = count + 1;		
+	}
+
+	return count;
+}
+
 const Login = () => {
 	const [loginData, setLoginData] = useState({})
 	const { setAuth } = useContext(AuthContext);
@@ -18,21 +28,33 @@ const Login = () => {
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		try {
-			const response = await axios.post('/user/login', 
-				JSON.stringify({ email: loginData.email, password: loginData.password }),
-				{
-					headers: {'Content-Type': 'application/json'},				
-				});
 
-				const acessToken = response?.data?.token;
-				localStorage.setItem('acess_token', acessToken);
-				
-				navigate("/home");
-				setAuth(localStorage.getItem('acess_token', acessToken));
-
-		} catch (err) {
-			console.log(err);
+		if(!loginData.email) {
+			alert("O campo Email precisa estar preenchido!");
+		}
+		else if(!loginData.password) {
+			alert("O campo Email precisa estar preenchido!");
+		}
+		else if(stringLenght(loginData.password) < 8){
+			alert("A senha precisa ter no mínimo 8 caracteres!");
+		}
+		else {
+			try {
+				const response = await axios.post('/user/login', 
+					JSON.stringify({ email: loginData.email, password: loginData.password }),
+					{
+						headers: {'Content-Type': 'application/json'},				
+					});
+	
+					const acessToken = response?.data?.token;
+					localStorage.setItem('acess_token', acessToken);
+					
+					navigate("/home");
+					setAuth(localStorage.getItem('acess_token', acessToken));
+	
+			} catch (err) {
+				console.log(err);
+			}
 		}
 	}
 

@@ -49,7 +49,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
       </div>
 
       <div className='box-options'>
-
+{/* 
         <text className='text-title'>
           Inserir como material:
         </text>
@@ -59,9 +59,9 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
           name="active"
           handleOnChange={handleChange}
           value={product.active ? product.active : ''}
-        />
+        /> */}
 
-        <text className='text-title'>
+        {/* <text className='text-title'>
           Margem de lucro:
         </text>
 
@@ -70,7 +70,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
           type="number"
           name="profit"
           handleOnChange={handleChange}
-        />
+        /> */}
 
       </div>
 
