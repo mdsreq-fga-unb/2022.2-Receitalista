@@ -3,13 +3,14 @@ import ProfileForm from '../../components/Form/ProfileForm';
 import classes from '../Page.module.css'
 import classes2 from '../../components/Button/CardButton.module.css'
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from '../../api/axios';
 import { wait } from '@testing-library/user-event/dist/utils';
 
-function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) {
+function Profile() {
   const navigate = useNavigate();
 
+  const [user, setuser] = useState([]);
   const [showProfileForm, setShowProfileForm] = useState(false)
 //  const [showPasswordForm, setShowPasswordForm] = useState(false)
 
@@ -20,6 +21,16 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
 // function togglePasswordForm() {
 //   setShowPasswordForm(!showProfileForm)
 // }
+
+  useEffect(() => {
+    axios.get("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+      .then(response => {
+        setuser(response.data.user);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  },[]);
 
   const handleProfileDeletion = async () => {
     axios.delete("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
@@ -43,12 +54,12 @@ function Profile({ name = "Joao", email = "joao@joao.com", value = "R$20,00" }) 
         <h1>Seu perfil</h1>
         {!showProfileForm ? (
           <div>
-            <h4>{name}</h4>
-            <h4>{email}</h4>
-            <h4>Mão de obra: {value}</h4>
+            <h4>Nome: {user.name}</h4>
+            <h4>Email: {user.email}</h4>
+            <h4>Mão de obra: {user.price_per_hour}</h4>
           </div>
         ) : (
-          <ProfileForm />
+          <ProfileForm user={user} />
         )}
         <div className={classes2.btn}>
           <button onClick={toggleProfileForm}>

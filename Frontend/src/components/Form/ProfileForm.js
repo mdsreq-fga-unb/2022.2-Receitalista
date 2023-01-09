@@ -3,18 +3,30 @@ import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 
 import classes from './Form.module.css'
+import axios from '../../api/axios';
 
-function ProfileForm({ handleSubmit, accountData }) {
-  const [account, setAccount] = useState(accountData || {})
+function ProfileForm(props) {
+  const [account, setAccount] = useState({email:props.user.email, value: props.user.price_per_hour});
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
-    handleSubmit(account)
+    console.log(account);
+
+    await axios.put("/user/update", {name: null, email: account.email, price_per_hour: account.value, password: null },{headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+    .then(response => {
+      console.log(response);
+      window.location.reload();
+    })
+    .catch(err => {
+      console.log(err);
+    });
   }
 
   function handleChange(e) {
     setAccount({ ...account, [e.target.name]: e.target.value })
   }
+
+  
 
   return (
     <form onSubmit={submit} className={classes.form}>
