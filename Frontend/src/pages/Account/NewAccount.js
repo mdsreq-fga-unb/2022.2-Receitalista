@@ -32,7 +32,7 @@ function NewAccount() {
 		else if(!account.password){
 			alert("O campo senha precisa estar preenchido!");
 		}
-		else if(!account.price_per_hour){
+		else if(!account.pricePerHour){
 			alert("O campo preço por hora precisa estar preenchido!")
 		}
 		else {
