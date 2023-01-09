@@ -6,35 +6,36 @@ import Container from '../../components/Container/Container'
 import classes1 from '../Page.module.css'
 import classes from './Materials.module.css'
 import classes2 from '../../components/Button/LinkButton.module.css'
+import axios from "../../api/axios";
+import React, { useEffect, useState } from "react";
 
 function Materials() {
+	const [materialList, setMaterialList] = useState([]);
 
-	const itens = [
-		{
-			id: '1',
-			name: 'madeira',
-		},
-		{
-			id: '2',
-			name: 'pano',
-		},
-		{
-			id: '3',
-			name: 'madeira',
-		},
-		{
-			id: '4',
-			name: 'pano',
-		},
-		{
-			id: '5',
-			name: 'madeira',
-		},
-		{
-			id: '6',
-			name: 'pano',
-		},
-	]
+	useEffect(() => { 
+		axios.get("/item/list", {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+			setMaterialList(response.data.item);
+		}).catch(err => {
+			console.log(err);
+			if(materialList === 0){
+				alert("Não foi possível carregar a lista de produtos");
+			}
+		});
+	 },[]);
+
+	const handleDeleteMaterial = async (id,name) => {
+		await axios.delete(`item/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
+			.then(response => {
+				console.log(response);
+				alert(`Material ${name} excluido com sucesso!`);
+				return 201;
+				
+			})
+			.catch(err => {
+				console.log(err);
+			});
+		return 500;
+	}
 
 	return (
 		<>
@@ -50,12 +51,15 @@ function Materials() {
 			</div>
 			<div className={classes.itens}>
 				<Container customClass="start">
-					{itens.length > 0 &&
-						itens.map((item) =>
-							<MaterialCard
-								id={item.id}
-								name={item.name}
-							/>
+					{materialList.length > 0 &&
+						materialList.map((item) =>
+							<React.Fragment key={item.id}>
+								<MaterialCard
+									id={item.id}
+									name={item.name}
+									handleDeleteMaterial={handleDeleteMaterial}
+								/>
+							</React.Fragment>
 						)
 					}
 				</Container>

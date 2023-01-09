@@ -5,71 +5,46 @@ import ProductCard from '../../components/Card/ProductCard'
 import classes from './Products.module.css'
 import classes1 from '../Page.module.css'
 import classes2 from '../../components/Button/LinkButton.module.css'
+import React, { useEffect, useState } from "react";
+import axios from "../../api/axios";
 
 function Products() {
+	const [productList, setProductList] = useState([]);
 
-	const products = [
-		{
-			id: '1',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '2',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '3',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '4',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '5',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '6',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '1',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '2',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '3',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '4',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '5',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '6',
-			name: 'asas',
-			price: '1',
-		},
-	]
+	useEffect(() => { 
+		axios.get("/product/list", {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+			setProductList(response.data.products);
+		}).catch(err => {
+			console.log(err);
+			if(productList === 0){
+				alert("Não foi possível carregar a lista de produtos");
+			}
+		});
+	 },[]);
+
+	 const handleDeleteProduct = async (id, name) => {
+		let product = productList;
+		await axios.delete(`product/${id}`, {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+
+			let deletedItemId = product.filter((element, index) => {
+				if(element.id === id){
+					return index;
+				}
+			});
+			
+			
+			product.splice(deletedItemId, 1);
+			
+			console.log(response);
+			alert(`Produto ${name} deletado com sucesso!`);
+		}).catch(err => {
+			console.log(err);
+			if(!id){
+				alert("Produto já deletado!");
+			}
+		});
+		setProductList(product);
+	 }
 
 	return (
 		<>
@@ -85,13 +60,16 @@ function Products() {
 			</div>
 			<div className={classes.products}>
 				<ul>
-					{products.length > 0 &&
-						products.map((product) =>
-							<ProductCard
+					{productList.length > 0 &&
+						productList.map((product) =>
+							<React.Fragment key={product.id}>
+								<ProductCard
 								id={product.id}
 								name={product.name}
-								price={product.price}
-							/>
+								price={product.total_price}
+								handleDeleteProduct={handleDeleteProduct}
+								productList={productList} />
+							</React.Fragment>
 						)
 					}
 				</ul>
