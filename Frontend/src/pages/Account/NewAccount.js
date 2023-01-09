@@ -32,6 +32,9 @@ function NewAccount() {
 		else if(!account.password){
 			alert("O campo senha precisa estar preenchido!");
 		}
+		else if(!account.price_per_hour){
+			alert("O campo preço por hora precisa estar preenchido!")
+		}
 		else {
 			if(stringLenght(account.password) < 8){
 				alert("A senha deve conter no mínimo 8 caracteres");
