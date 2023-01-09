@@ -41,6 +41,7 @@ function AccountForm({ handleSubmit, account, setAccount }) {
 			/>
 
 			<Input
+				min={1}
 				type="number"
 				text="Preço por hora"
 				name="pricePerHour"
