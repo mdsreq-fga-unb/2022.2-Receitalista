@@ -23,6 +23,10 @@ const labelList = [{
 {
   key: 4,
   label: "Centímetro"
+},
+{
+  key: 4,
+  label: "Unidade"
 }];
 
 function MaterialForm({ handleSubmit, material, setMaterial }) {
