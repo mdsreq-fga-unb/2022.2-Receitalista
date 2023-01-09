@@ -1,17 +1,20 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Header from './components/Header';
-import Home from './pages/Home';
+import { Outlet } from "react-router-dom"
+//import { useState } from 'react';
+import Header from './components/Header/Header';
+import Navbar from "./components/Sidebar/NavBar";
+import React from 'react';
 
 function App() {
+  //  const [setCartIsShown] = useState(false);
+
+  //  function showCartHandler() {
+  //    setCartIsShown(true);
+  // }
   return (
-    <Router>
-      <>
-        <Header/>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-          </Routes>
-      </>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <Outlet />
+    </div>
   );
 }
 
