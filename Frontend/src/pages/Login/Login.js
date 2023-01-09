@@ -53,6 +53,7 @@ const Login = () => {
 					setAuth(localStorage.getItem('acess_token', acessToken));
 	
 			} catch (err) {
+				alert("Não foi possível realizar o login");
 				console.log(err);
 			}
 		}

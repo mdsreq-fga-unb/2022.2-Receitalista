@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios';
+import axios from '../../api/axios';
 
 import AccountForm from '../../components/Form/AccountForm'
 
@@ -40,7 +40,7 @@ function NewAccount() {
 				alert("A senha deve conter no mínimo 8 caracteres");
 			}
 			else {
-				axios.post('http://localhost:3000/user/signup', {
+				axios.post('/user/signup', {
 					name: account.name,
 					email: account.email,
 					password: account.password,
