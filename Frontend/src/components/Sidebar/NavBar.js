@@ -16,7 +16,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <h1 className='textHeader'>
-            <Link to="/home">Receitalista</Link>
+            {localStorage.getItem('acess_token') ? <Link to="/home">Receitalista</Link> : <Link to="/">Receitalista</Link>}
           </h1>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />

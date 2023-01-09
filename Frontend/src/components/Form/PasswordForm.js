@@ -6,6 +6,16 @@ import classes from './Form.module.css'
 import axios from '../../api/axios'
 import { useNavigate } from 'react-router-dom'
 
+function stringLenght(string){
+	let count =0;
+
+	for(let i = 0; string[i]; i++){
+		count = count + 1;		
+	}
+
+	return count;
+}
+
 function PasswordForm() {
   const navigate = useNavigate();
   const [account, setAccount] = useState({});
@@ -18,7 +28,7 @@ function PasswordForm() {
       })
       .catch(err => {
         console.log(err);
-      })
+      });
   },[]);
 
   console.log(account);
@@ -26,7 +36,13 @@ function PasswordForm() {
   //por hora isso aqui vai ficar errado, precisa que o backend envia a senha sem descriptgrafada pra comparar
   const submit = async (e) => {
     e.preventDefault();
-    // if(user && user.password === account.password){
+    if(!account.newPassword){
+      alert("O campo Nova Senha não pode estar vazio!");
+    }
+    else if(stringLenght(account.newPassword) < 8) {
+      alert("A nova senha precisa ter no mínimo 8 caracteres");
+    }
+    else { 
       await axios.put("/user/update", {name: null, email: null, price_per_hour: null, password: account.newPassword },{headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
         .then(response => {
           console.log(response);
@@ -35,7 +51,7 @@ function PasswordForm() {
         .catch(err => {
           console.log(err);
         }); 
-    // }
+    }
   }
 
   function handleChange(e) {
@@ -46,6 +62,7 @@ function PasswordForm() {
     <form onSubmit={submit} className={classes.form}>
 
       <Input
+        disabled={true}
         type="password"
         text="Senha atual"
         name="password"
