@@ -99,7 +99,7 @@ const ProductMaterial = ({setItemList, setTotalPrice}) => {
                     }) : ""}
                 </select>
                 
-                <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
+                <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)}/>
                 <button type="submit" onClick={(event) => handleMaterialIncrement(event)}>Add</button>
             </div>
             {selectedMaterialList ? selectedMaterialList.map((item) => {

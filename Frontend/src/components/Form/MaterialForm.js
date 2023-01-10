@@ -51,14 +51,14 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
       <Input
         type="number"
         min="1"
-        text="Preço do material"
+        text="Preço unitário do material"
         name="price"
         placeholder="Insira o preço que custou o material"
         handleOnChange={handleChange}
         value={material.price}
       />
 
-      <Input
+      {/* <Input
         type="number"
         min="1"
         text="Quantidade"
@@ -66,7 +66,7 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         placeholder="Insira a quantidade do material"
         handleOnChange={handleChange}
         value={material.amount}
-      />
+      /> */}
 
       <div>
         <h4>Medida:</h4>
