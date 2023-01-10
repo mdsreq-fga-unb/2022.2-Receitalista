@@ -31,7 +31,7 @@ const NewMaterial = () => {
 		else{
 			try {
 				await axios.post('/item/add', 
-					JSON.stringify({ name: material.name, price: material.price, quantity: 0, unit: material.unity }),
+					JSON.stringify({ name: material.name, price: material.price, quantity: 2, unit: material.unity }),
 					{
 						headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
 					}).then(() => {
