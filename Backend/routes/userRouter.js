@@ -8,7 +8,9 @@ router.post('/signup', UserController.userSignUp);
 
 router.post('/login', UserController.userLogIn);
 
-router.put('/update', checkAuth, UserController.userUpdate);
+router.put('/', checkAuth, UserController.userUpdate);
+
+router.put('/password', checkAuth, UserController.userUpdatePassword);
 
 router.get('/', checkAuth, UserController.userGet);
 

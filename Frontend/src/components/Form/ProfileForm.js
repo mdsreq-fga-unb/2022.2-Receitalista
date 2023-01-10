@@ -10,14 +10,13 @@ function ProfileForm(props) {
 
   const submit = async (e) => {
     e.preventDefault()
-    console.log(account);
-
+    
     if(!account.email){
       alert("O campo Trocar email não pode estar vazio!");
     }
-
+    
     else {
-      await axios.put("/user/update", {name: null, email: account.email, price_per_hour: account.value, password: null },{headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+      await axios.put("/user", { email: account.email, price_per_hour: account.value, },{ headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
       .then(response => {
         console.log(response);
         window.location.reload();

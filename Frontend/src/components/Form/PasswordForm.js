@@ -43,7 +43,7 @@ function PasswordForm() {
       alert("A nova senha precisa ter no mínimo 8 caracteres");
     }
     else { 
-      await axios.put("/user/update", {name: null, email: null, price_per_hour: null, password: account.newPassword },{headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+      await axios.put("/user/password", { password: account.newPassword },{headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
         .then(response => {
           console.log(response);
           navigate("/perfil");

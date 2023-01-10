@@ -93,32 +93,56 @@ exports.userLogIn = (req, res) => {
 
 exports.userUpdate = (req, res) => {
     const id = req.userData.id;
-    const { password, price_per_hour, email } = req.body;
+    const { price_per_hour, email } = req.body;
 
-    bcrypt.hash(password, 10, (err, hash) => { // troca a senha e o preco por hora
+    // troca email e o preco por hora
+    User.update(
+        {
+            email: email,
+            price_per_hour: price_per_hour
+        },
+        { where: { id: id } }
+    )
+        .then(result => {
+            console.log(result);
+            res.status(201).json({
+                messsage: 'User updated'
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            });
+        });
+}
+
+exports.userUpdatePassword = (req, res) => {
+    const id = req.userData.id;
+    const { password } = req.body;
+
+    bcrypt.hash(password, 10, (err, hash) => { // troca a senha
         if (err) {
             return res.status(500).json({
                 error: err
             });
         } else {
             User.update(
-                { email: email },
                 { password: hash },
-                { price_per_hour: price_per_hour },
                 { where: { id: id } }
             )
-            .then(result => {
-                console.log(result.dataValues);
-                res.status(201).json({
-                    messsage: 'User updated'
+                .then(result => {
+                    console.log(result);
+                    res.status(201).json({
+                        messsage: 'User updated'
+                    });
+                })
+                .catch(err => {
+                    console.log(err);
+                    res.status(500).json({
+                        err: err
+                    });
                 });
-            })
-            .catch(err => {
-                console.log(err);
-                res.status(500).json({
-                    err: err
-                });
-            });
         }
     });
 }

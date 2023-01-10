@@ -33,7 +33,7 @@ function NewAccount() {
 			alert("O campo senha precisa estar preenchido!");
 		}
 		else if(!account.pricePerHour){
-			alert("O campo preço por hora precisa estar preenchido!")
+			alert("O campo mão de obra precisa estar preenchido!")
 		}
 		else {
 			if(stringLenght(account.password) < 8){
