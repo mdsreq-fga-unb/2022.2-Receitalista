@@ -22,16 +22,16 @@ const NewMaterial = () => {
 		else if(!material.price){
 			alert("Preencha o campo Preço do Material!");
 		}
-		else if(!material.amount){
-			alert("Preencha o campo Quantidade!");
-		}
+		// else if(!material.amount){
+		// 	alert("Preencha o campo Quantidade!");
+		// }
 		else if(!material.unity){
 			alert("Preencha o campo Medida!");
 		}
 		else{
 			try {
 				await axios.post('/item/add', 
-					JSON.stringify({ name: material.name, price: material.price, quantity: material.amount, unit: material.unity }),
+					JSON.stringify({ name: material.name, price: material.price, quantity: 0, unit: material.unity }),
 					{
 						headers: {'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}`},				
 					}).then(() => {
