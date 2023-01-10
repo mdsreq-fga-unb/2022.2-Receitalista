@@ -41,13 +41,13 @@ function AccountForm({ handleSubmit, account, setAccount }) {
 			/>
 
 			<Input
-				min={1}
+				min={0}
 				type="number"
-				text="Preço por hora"
+				text="Custo de mão de obra"
 				name="pricePerHour"
-				placeholder="Preço por hora"
+				placeholder="Custo de mão de obra"
 				handleOnChange={handleChange}
-				value={account.pricePerHour ? account.pricePerHour : ''}
+				value={account.pricePerHour ? account.pricePerHour : 0}
 			/>
 
 			<SubmitButton text="Criar" type="button" />
