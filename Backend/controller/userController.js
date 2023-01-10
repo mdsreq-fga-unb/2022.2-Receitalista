@@ -93,77 +93,34 @@ exports.userLogIn = (req, res) => {
 
 exports.userUpdate = (req, res) => {
     const id = req.userData.id;
-    const { password, price_per_hour } = req.body;
+    const { password, price_per_hour, email } = req.body;
 
-    if (password === null && price_per_hour !== null) { // troca somente o preco por hora
-        User.update(
-            { price_per_hour: price_per_hour },
-            { where: { id: id } }
-        )
-        .then(result => {
-            console.log(result.dataValues);
-            res.status(201).json({
-                messsage: 'User updated'
+    bcrypt.hash(password, 10, (err, hash) => { // troca a senha e o preco por hora
+        if (err) {
+            return res.status(500).json({
+                error: err
             });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({
-                err: err
+        } else {
+            User.update(
+                { email: email },
+                { password: hash },
+                { price_per_hour: price_per_hour },
+                { where: { id: id } }
+            )
+            .then(result => {
+                console.log(result.dataValues);
+                res.status(201).json({
+                    messsage: 'User updated'
+                });
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    err: err
+                });
             });
-        });
-    } else if (price_per_hour === null && password !== null) { // troca somente a senha
-        bcrypt.hash(password, 10, (err, hash) => {
-            if (err) {
-                return res.status(500).json({
-                    error: err
-                });
-            } else {
-                User.update(
-                    { password: hash },
-                    { where: { id: id } }
-                )
-                .then(result => {
-                    console.log(result.dataValues);
-                    res.status(201).json({
-                        messsage: 'User updated'
-                    });
-                })
-                .catch(err => {
-                    console.log(err);
-                    res.status(500).json({
-                        err: err
-                    });
-                });
-            }
-        });
-    } else {
-        bcrypt.hash(password, 10, (err, hash) => { // troca a senha e o preco por hora
-            if (err) {
-                return res.status(500).json({
-                    error: err
-                });
-            } else {
-                User.update(
-                    { password: hash },
-                    { price_per_hour: price_per_hour },
-                    { where: { id: id } }
-                )
-                .then(result => {
-                    console.log(result.dataValues);
-                    res.status(201).json({
-                        messsage: 'User updated'
-                    });
-                })
-                .catch(err => {
-                    console.log(err);
-                    res.status(500).json({
-                        err: err
-                    });
-                });
-            }
-        });
-    }
+        }
+    });
 }
 
 exports.userGet = async function (req, res) {
