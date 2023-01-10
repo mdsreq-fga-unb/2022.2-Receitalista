@@ -14,10 +14,8 @@ function NewProduct() {
     const [aux, setAux] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    let formatedItemList = [];
     let name = product.name;
     let description = product.description;
-    // let totalPrice = 0;
 
     
 
@@ -31,7 +29,7 @@ function NewProduct() {
                     name: name,
                     description: description,
                     total_price: totalPrice,
-                    itens: formatedItemList
+                    itens: itemList
                 }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
                     alert("Produto criado com sucesso!");

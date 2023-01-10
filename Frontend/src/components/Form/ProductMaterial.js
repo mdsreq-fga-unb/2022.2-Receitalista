@@ -4,9 +4,9 @@ import axios from "../../api/axios";
 
 import "./ProductMaterial.css";
 
-const ProductMaterial = ({setItemList, setTotalPrice}) => {
+const ProductMaterial = ({setItemList, setTotalPrice, array = []}) => {
     const [materialList, setMaterialList] = useState([]);
-    const [selectedMaterialList, setSelectedMaterialList] = useState([]);
+    const [selectedMaterialList, setSelectedMaterialList] = useState(array);
     const [quantity, setQuantity] = useState(0);
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
     const [renderAux, setRenderAux] = useState(false);

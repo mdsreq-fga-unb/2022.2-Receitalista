@@ -16,7 +16,7 @@ function ProductCard({ id, name, price, handleDeleteProduct }) {
 					<span>Preço:</span> R${price}
 				</p>
 				<div className={classes1.btn}>
-					<Link to="/">
+					<Link to={`/produto/${id}`}>
 						<BsPencil /> Editar
 					</Link>
 					<button type='submit' onClick={() => {handleDeleteProduct(id, name); setExists(false)}}>
