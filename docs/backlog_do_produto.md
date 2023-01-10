@@ -12,63 +12,63 @@
 
    - [FEAT01] Autenticação de usuário para entrar na plataforma
       - [US01] Cadastrar no Receitalista
-         - Eu como usuário gostaria de me cadastrar no site para utilizar suas funcionalidades e ter acesso único às minhas informações. 
+         - Eu como usuário gostaria de me cadastrar para utilizar suas funcionalidades e ter acesso único às minhas informações. 
       - [US02] Login no Receitalista
-         - Eu como usuário gostaria de realizar o login no site para utilizar ao menos uma de suas funcionalidades e acessar as minhas informações.
+         - Eu como usuário gostaria de realizar o login para utilizar ao menos uma de suas funcionalidades e acessar as minhas informações.
       - [US03] Alterar senha
-         - Eu como usuário gostaria de alterar minha senha no site caso eu a esqueça ou por motivos de segurança.
+         - Eu como usuário gostaria de alterar minha senha para torná-la mais forte.
    
    - [FEAT02] Ações voltadas para o perfil de usuário
       - [US04] Editar usuário
-         - Eu como usuário gostaria de editar as minhas informações de cadastro do site para corrigir erros ou atualizá-las.
+         - Eu como usuário gostaria de editar as minhas informações de cadastro para corrigir erros ou atualizá-las.
       - [US05] Excluir conta
-         - Eu como usuário gostaria de excluir a minha conta do site para deletar todas as minhas informações.
+         - Eu como usuário gostaria de excluir a minha conta para não usar mais o site e remover todas as minhas informações fornecidas.
 
  
 ### [EP02] Automação do controle de estoque de materiais e de receita de produtos
   
   - [FEAT03] Gerenciamento de materiais
       - [US06] Cadastrar material
-         - Eu como usuário gostaria de cadastrar um material no site para utilizá-lo em um produto ou acompanhar o seu custo periódico.
+         - Eu como usuário gostaria de cadastrar um material para utilizá-lo em um produto ou acompanhar o seu custo periódico.
       - [US07] Editar material
          - Eu como usuário gostaria de editar as informações de um material para corrigir erros ou atualizá-las.
       - [US08] Excluir material
-         - Eu como usuário gostaria de excluir um material cadastrado no site caso eu não o utilize mais.
+         - Eu como usuário gostaria de excluir um material cadastrado para não utilizá-lo mais.
       - [US09] Visualizar materiais
-         - Eu como usuário gostaria de visualizar a listagem dos meus materiais cadastrados no site para manter o controle do estoque.
+         - Eu como usuário gostaria de visualizar a listagem dos meus materiais cadastrados para manter o controle do estoque.
   
   - [FEAT04] Gerenciamento de produto 
       - [US10] Cadastrar produto
-         - Eu como usuário gostaria de cadastrar um produto no site para definir o preço de venda com base nos materiais, acompanhar o seu lucro periódico e associar pedidos de clientes a ele.
+         - Eu como usuário gostaria de cadastrar um produto para definir o preço de venda com base nos materiais, acompanhar o seu lucro periódico e associar pedidos de clientes a ele.
       - [US11] Editar produto
          - Eu como usuário gostaria de editar as informações de um produto para corrigir erros ou atualizá-las.
       - [US12] Excluir produto
-         - Eu como usuário gostaria de excluir um produto cadastrado no site caso eu não o utilize mais.
+         - Eu como usuário gostaria de excluir um produto cadastrado para não utilizá-lo mais.
       - [US13] Visualizar produtos
-         - Eu como usuário gostaria de visualizar a listagem dos meus produtos cadastrados no site para manter o controle do estoque.
+         - Eu como usuário gostaria de visualizar a listagem dos meus produtos cadastrados para manter o controle do estoque.
 
           
 ### [EP03] Gerenciamento de pedidos por clientes e visualização de resultados das vendas
   
   - [FEAT05] Gerenciamento de cliente
       - [US14] Cadastrar cliente
-         - Eu como usuário gostaria de realizar o cadastro das informações dos meus clientes no site para saber seus pedidos e ter um repositório de clientes.
+         - Eu como usuário gostaria de realizar o cadastro das informações dos meus clientes para saber seus pedidos e ter um repositório de clientes.
       - [US15] Editar cliente
          - Eu como usuário gostaria de editar as informações de um cliente para corrigir erros ou atualizá-las.
       - [US16] Excluir cliente
-         - Eu como usuário gostaria de excluir as informações de um cliente cadastrado no site caso eu não as utilize mais.
+         - Eu como usuário gostaria de excluir as informações de um cliente cadastrado para não utilizá-lo mais.
       - [US17] Visualizar clientes
-         - Eu como usuário gostaria de visualizar a listagem dos meus clientes cadastrados no site para saber seus pedidos favoritos e acessar suas informações.
+         - Eu como usuário gostaria de visualizar a listagem dos meus clientes cadastrados para saber seus pedidos favoritos e acessar suas informações.
   
   - [FEAT06] Gerenciamento de pedido
       - [US18] Cadastrar pedido
-         - Eu como usuário gostaria de cadastrar pedidos no site para que eu posso controlar os prazos de entrega.
+         - Eu como usuário gostaria de cadastrar pedidos para que eu posso controlar os prazos de entrega.
       - [US19] Editar pedido
          - Eu como usuário gostaria de poder editar as informações de um pedido para corrigir erros ou atualizá-las.
       - [US20] Excluir pedido
-         - Eu como usuário gostaria de poder excluir um pedido cadastrado no site caso eu não o utilize mais.
+         - Eu como usuário gostaria de poder excluir um pedido cadastrado para não utilizá-lo mais.
       - [US21] Visualizar pedidos
-         - Eu como usuário gostaria de poder visualizar a listagem dos pedidos cadastrados no site para saber os produtos mais pedidos e a preferência de cada cliente.
+         - Eu como usuário gostaria de poder visualizar a listagem dos pedidos cadastrados para saber os produtos mais pedidos e a preferência de cada cliente.
   
   - [FEAT07] Gerenciamento de custos
       - [US22] Visualizar gastos de material
