@@ -1,5 +1,3 @@
-import { parse, v4 as uuidv4 } from 'uuid'
-
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -8,7 +6,7 @@ import classes from './Product.module.css'
 import Container from '../../components/Container/Container'
 import ProductForm from '../../components/Form/ProductForm'
 
-function Product() {
+function Product(totalPrice) {
 	let { id } = useParams()
 	
 	const [showProductForm, setShowProductForm] = useState(false)
@@ -16,68 +14,6 @@ function Product() {
 	function toggleProductForm() {
 		setShowProductForm(!showProductForm)
 	}
-	const product = [
-		{
-			id: '1',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '2',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '3',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '4',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '5',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '6',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '1',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '2',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '3',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '4',
-			name: 'asas',
-			price: '1',
-		},
-		{
-			id: '5',
-			name: 'tomate',
-			price: '1',
-		},
-		{
-			id: '6',
-			name: 'asas',
-			price: '1',
-		},
-	]
 
 	return (
 		<>
@@ -92,13 +28,7 @@ function Product() {
 							{!showProductForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Categoria:</span> {product.category.name}
-									</p>
-									<p>
-										<span>Total do orçamento:</span> R${product.budget}
-									</p>
-									<p>
-										<span>Total utilizado:</span> R${product.cost}
+										<span>Total</span> R${totalPrice}
 									</p>
 								</div>
 							) : (
