@@ -58,13 +58,13 @@ function Product() {
 		else if(!product.name){
 			alert("O nome do produto precisa ser preenchido!");
 		}
-		else if (getArraySize(product.itens) < 1){
+		else if (getArraySize(itemList) < 1){
 			alert("Você deve adicionar pelo menos um material ao produto!");
 		}
 		else {
 
 			console.log(itemList);
-			await axios.put(`/product/${id}`, { name: product.name, description:product.description, itens_id: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/product/${id}`, { name: product.name, description:product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
 				window.location.reload();
 			}).catch(err => {
