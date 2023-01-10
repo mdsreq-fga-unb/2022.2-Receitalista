@@ -55,10 +55,10 @@ exports.addProduct = async function (req, res) {
 
 exports.updateProduct = async function (req, res) {
     const id = req.params.id;
-    const { description, used_quantity, itens_price, total_price, item_id } = req.body;
+    const { description, name, itens } = req.body;
 
     Product.update(
-        { description: description, used_quantity: used_quantity, itens_price: itens_price, total_price: total_price, itens_id: item_id },
+        { name: name, description: description, itens: itens },
         { where: { id: id, user_id: req.userData.id } }
     )
         .then(result => {
