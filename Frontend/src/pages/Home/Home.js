@@ -2,7 +2,6 @@ import classes from './Home.module.css'
 import classes1 from '../../components/Button/LinkButton.module.css'
 import { Link } from 'react-router-dom';
 
-
 function Home(){
 	return(
 		<section className={classes.home}>

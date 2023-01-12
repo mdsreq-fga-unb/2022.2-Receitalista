@@ -3,7 +3,6 @@ import SubmitButton from "../Button/SubmitButton"
 
 import "./ProductForm.css"
 import ProductMaterial from "./ProductMaterial"
-import { useEffect, useState } from "react"
 
 export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice }) {
 

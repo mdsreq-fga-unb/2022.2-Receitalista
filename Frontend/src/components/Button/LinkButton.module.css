@@ -28,7 +28,7 @@
 }
 
 .btn a:hover,
-.btn button:hover {
+.btn button:hover {	
 	background-color: #222;
 	color: #ff7200;
 }

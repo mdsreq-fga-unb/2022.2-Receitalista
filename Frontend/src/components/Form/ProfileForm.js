@@ -6,17 +6,12 @@ import classes from './Form.module.css'
 import axios from '../../api/axios';
 
 function ProfileForm(props) {
-  const [account, setAccount] = useState({email:props.user.email, value: props.user.price_per_hour});
+  const [account, setAccount] = useState({ email: props.user.email, value: props.user.price_per_hour });
 
   const submit = async (e) => {
     e.preventDefault()
-    
-    if(!account.email){
-      alert("O campo Trocar email não pode estar vazio!");
-    }
-    
-    else {
-      await axios.put("/user", { email: account.email, price_per_hour: account.value, },{ headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+
+    await axios.put("/user", { email: account.email, price_per_hour: account.value, }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
       .then(response => {
         console.log(response);
         window.location.reload();
@@ -24,14 +19,13 @@ function ProfileForm(props) {
       .catch(err => {
         console.log(err);
       });
-    }
   }
 
   function handleChange(e) {
     setAccount({ ...account, [e.target.name]: e.target.value })
   }
 
-  
+
 
   return (
     <form onSubmit={submit} className={classes.form}>
@@ -43,16 +37,20 @@ function ProfileForm(props) {
         placeholder="Insira o novo email"
         handleOnChange={handleChange}
         value={account.newEmail ? account.newEmail : account.email}
+        required="required"
       />
 
       <Input
         type="number"
-        min="1"
+        min="0"
+        max="1000000"
+        step={".01"}
         text="Alterar mão de obra"
         name="value"
         placeholder="Insira novo valor da mão de obra"
         handleOnChange={handleChange}
         value={account.newValue ? account.newValue : account.value}
+        required="required"
       />
 
       <SubmitButton text="Enviar" />

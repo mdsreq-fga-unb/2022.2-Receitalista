@@ -1,5 +1,5 @@
 .product_details {
-	padding: 2em;
+	padding: 7em;
 }
 
 .product_details h1,
@@ -9,9 +9,11 @@
 }
 
 .product_details h1 {
-	background-color: #222;
-	color: #ffbb33;
+	background-color: #8b2b05;
+	color: #ff7200;
+	;
 	padding: 0.4em;
+	border-radius: 4em;
 }
 
 .product_details span {
@@ -28,8 +30,8 @@
 	flex-wrap: wrap;
 }
 
-.btn {
-	background-color: #222;
+.btn{
+	background-color: #8a2b06;
 	color: #fff;
 	padding: 0.5em 1em;
 	text-decoration: none;
@@ -37,10 +39,11 @@
 	border: none;
 	cursor: pointer;
 	max-height: 40px;
+	border-radius: 14px;
 }
 
-.btn:hover {
-	color: #ffbb33;
+.btn:hover{
+	color: #ff7200;
 }
 
 .form {

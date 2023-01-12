@@ -19,6 +19,7 @@ function LoginForm({ handleSubmit, loginData, setLoginData }) {
         placeholder="Insira o seu email"
         handleOnChange={handleChange}
         value={loginData.email ? loginData.email : ''}
+        required="required"
       />
 
       <Input
@@ -28,6 +29,7 @@ function LoginForm({ handleSubmit, loginData, setLoginData }) {
         placeholder="Insira sua senha"
         handleOnChange={handleChange}
         value={loginData.password ? loginData.password : ''}
+        required="required"
       />
 
       <SubmitButton text="Entrar" />

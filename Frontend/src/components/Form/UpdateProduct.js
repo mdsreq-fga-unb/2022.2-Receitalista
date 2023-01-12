@@ -1,16 +1,8 @@
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
-
-import "./UpdateProduct.css"
+import classes from "./UpdateProduct.css"
+//import "./UpdateProduct.css"
 import ProductMaterial from "./ProductMaterial"
-import { useEffect } from "react";
-
-function teste (lista) {
-  let salvar = [];
-  for(let i =0; lista[i]; i++){
-    salvar = [...salvar, lista[i][0]];
-  }
-}
 
 export default function UpdateProduct({handleSubmit, product, setProduct, totalPrice, setTotalPrice, itemList, setItemList}) {
 
@@ -19,7 +11,7 @@ export default function UpdateProduct({handleSubmit, product, setProduct, totalP
   }
 
   return (
-    <form  className="form">
+    <form  className={classes.form}>
 
       <Input
         type="text"
@@ -28,6 +20,7 @@ export default function UpdateProduct({handleSubmit, product, setProduct, totalP
         placeholder="Insira o nome do produto"
         handleOnChange={handleChange}
         value={product.name ? product.name : ''}
+        required="required"
       />
 
       <text className='text-title'>

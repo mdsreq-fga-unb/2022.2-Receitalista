@@ -1,26 +1,21 @@
-import PasswordForm from '../../components/Form/PasswordForm';
+//import PasswordForm from '../../components/Form/PasswordForm';
 import ProfileForm from '../../components/Form/ProfileForm';
 import classes from '../Page.module.css'
 import classes2 from '../../components/Button/CardButton.module.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from '../../api/axios';
-import { wait } from '@testing-library/user-event/dist/utils';
+//import { wait } from '@testing-library/user-event/dist/utils';
 
 function Profile() {
   const navigate = useNavigate();
 
   const [user, setuser] = useState([]);
   const [showProfileForm, setShowProfileForm] = useState(false)
-//  const [showPasswordForm, setShowPasswordForm] = useState(false)
-
+  
   function toggleProfileForm() {
     setShowProfileForm(!showProfileForm)
   }
-
-// function togglePasswordForm() {
-//   setShowPasswordForm(!showProfileForm)
-// }
 
   useEffect(() => {
     axios.get("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })

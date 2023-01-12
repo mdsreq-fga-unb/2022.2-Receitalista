@@ -46,17 +46,22 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         placeholder="Insira o nome do material"
         handleOnChange={handleChange}
         value={material.name}
+        required="required"
       />
 
       <Input
         type="number"
-        min="1"
-        text="Preço unitário do material"
+        min="0.01"
+        max="1000000"
+        step={".01"}
+        text="Preço unitário do material em reais"
         name="price"
         placeholder="Insira o preço que custou o material"
         handleOnChange={handleChange}
         value={material.price}
+        required="required"
       />
+      
 
       {/* <Input
         type="number"

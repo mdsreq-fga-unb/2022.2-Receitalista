@@ -3,11 +3,12 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import './NavBar.css';
+import "./NavBar.css";
 import { IconContext } from 'react-icons';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const [auth] = useState(localStorage.getItem('acess_token'))
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -16,10 +17,10 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <h1 className='textHeader'>
-            {localStorage.getItem('acess_token') ? <Link to="/home">Receitalista</Link> : <Link to="/">Receitalista</Link>}
+            {auth ? <Link to="/home">Receitalista</Link> : <Link to="/">Receitalista</Link>}
           </h1>
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
+            {auth ? <FaIcons.FaBars onClick={showSidebar} /> : ""}
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

@@ -49,7 +49,7 @@ function NewProduct() {
     }
     return (
         <div className={classes.page}  >
-            <h1>Criar produto</h1>  
+            <h1>Inserir novo produto</h1>  
             <ProductForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit}  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
         </div>
     )

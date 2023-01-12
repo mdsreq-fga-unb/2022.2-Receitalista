@@ -2,8 +2,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import classes from './Product.module.css'
+import classes1 from '../../components/Button/CardButton.module.css'
 
 import Container from '../../components/Container/Container'
+import Message from '../../components/Message/Message'
 
 import axios from '../../api/axios'
 import UpdateProduct from '../../components/Form/UpdateProduct'
@@ -16,16 +18,6 @@ function getArraySize(array) {
 	return counter;
 }
 
-function stringLenght(string){
-	let count =0;
-
-	for(let i = 0; string[i]; i++){
-		count = count + 1;		
-	}
-
-	return count;
-}
-
 function Product() {
 	let { id } = useParams()
 	let itemArray = [];
@@ -35,6 +27,8 @@ function Product() {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const navigate = useNavigate();
 	const [itemList, setItemList] = useState([]);
+	const [message, setMessage] = useState('')
+	const [type, setType] = useState('success')
 	
 	useEffect(() => {
 		axios.get(`/product/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then((response) => {
@@ -56,10 +50,12 @@ function Product() {
 			console.log("NÃO ESTÁ PASSANDO ID NO PARÂMETRO");
 		}
 		else if(!product.name){
-			alert("O nome do produto precisa ser preenchido!");
+			setMessage('O nome do produto precisa ser preenchido!')
+			setType('error')
 		}
 		else if (getArraySize(itemList) < 1){
-			alert("Você deve adicionar pelo menos um material ao produto!");
+			setMessage('Você deve adicionar pelo menos um material ao produto!')
+			setType('error')
 		}
 		else {
 
@@ -76,17 +72,17 @@ function Product() {
 
 	return (
 		<>
-		<div>.</div>
-		<div>.</div>
-		<div>.</div>
-			{product && product.name ? (
+			{product || product.name ? (
 				<div className={classes.product_details}>
 					<Container customClass="column">
+						{message && <Message type={type} msg={message} />}
 						<div className={classes.details_container}>
 							<h1>Produto: {product.name}</h1>
-							<button className={classes.btn} onClick={toggleProductForm}>
-								{!showProductForm ? 'Editar produto' : 'Fechar'}
-							</button>
+							<div className={classes1.btn}>
+								<button onClick={toggleProductForm}>
+									{!showProductForm ? 'Editar produto' : 'Fechar'}
+								</button>
+							</div>
 							{!showProductForm ? (
 								<div className={classes.form}>
 									<p>
