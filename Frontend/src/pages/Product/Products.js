@@ -1,50 +1,56 @@
-
-import { Link } from "react-router-dom"
-import * as AiIcons from 'react-icons/ai';
-import ProductCard from '../../components/Card/ProductCard'
-import classes from './Products.module.css'
-import classes1 from '../Page.module.css'
-import classes2 from '../../components/Button/LinkButton.module.css'
 import React, { useEffect, useState } from "react";
 import axios from "../../api/axios";
+import { Link, useLocation } from "react-router-dom"
+import * as AiIcons from 'react-icons/ai';
+
+import ProductCard from '../../components/Card/ProductCard'
+import classes2 from '../../components/Button/LinkButton.module.css'
+
+import classes from './Products.module.css'
+import classes1 from '../Page.module.css'
+import Message from "../../components/Message/Message";
 
 function Products() {
 	const [productList, setProductList] = useState([]);
 
-	useEffect(() => { 
-		axios.get("/product/list", {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+	const [productMessage, setProductMessage] = useState('')
+
+	const location = useLocation()
+	let message = ''
+
+	if (location.state) {
+		message = location.state.message
+	}
+
+	useEffect(() => {
+		axios.get("/product/list", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 			setProductList(response.data.products);
 		}).catch(err => {
 			console.log(err);
-			if(productList === 0){
+			if (productList === 0) {
 				alert("Não foi possível carregar a lista de produtos");
 			}
 		});
-	 },[]);
+	}, []);
 
-	 const handleDeleteProduct = async (id, name) => {
+	const handleDeleteProduct = async (id, name) => {
 		let product = productList;
-		await axios.delete(`product/${id}`, {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }  }).then(response => {
+		await axios.delete(`product/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
+		.then(response => {
 
-			let deletedItemId = product.filter((element, index) => {
-				if(element.id === id){
-					return index;
-				}
-			});
-			
-			
-			product.splice(deletedItemId, 1);
-			
 			console.log(response);
-			alert(`Produto ${name} deletado com sucesso!`);
+
+			setProductMessage(`Produto ${name} excluído`)
+
+			return 201;
 		}).catch(err => {
 			console.log(err);
-			if(!id){
+			if (!id) {
 				alert("Produto já deletado!");
 			}
 		});
 		setProductList(product);
-	 }
+	}
 
 	return (
 		<>
@@ -57,6 +63,8 @@ function Products() {
 						</Link>
 					</div>
 				</div>
+				{message && <Message type="success" msg={message} />}
+				{productMessage && <Message type="success" msg={productMessage} />}
 			</div>
 			<div className={classes.products}>
 				<ul>
@@ -64,11 +72,12 @@ function Products() {
 						productList.map((product) =>
 							<React.Fragment key={product.id}>
 								<ProductCard
-								id={product.id}
-								name={product.name}
-								price={product.total_price}
-								handleDeleteProduct={handleDeleteProduct}
-								productList={productList} />
+									id={product.id}
+									name={product.name}
+									price={product.total_price}
+									handleDeleteProduct={handleDeleteProduct}
+									productList={productList}
+								/>
 							</React.Fragment>
 						)
 					}

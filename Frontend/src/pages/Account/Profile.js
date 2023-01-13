@@ -10,25 +10,25 @@ import axios from '../../api/axios';
 function Profile() {
   const navigate = useNavigate();
 
-  const [user, setuser] = useState([]);
+  const [user, setUser] = useState([]);
   const [showProfileForm, setShowProfileForm] = useState(false)
-  
+
   function toggleProfileForm() {
     setShowProfileForm(!showProfileForm)
   }
 
   useEffect(() => {
-    axios.get("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+    axios.get("/user/", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
       .then(response => {
-        setuser(response.data.user);
+        setUser(response.data.user);
       })
       .catch(err => {
         console.log(err);
       })
-  },[]);
+  }, []);
 
   const handleProfileDeletion = async () => {
-    axios.delete("/user/", {headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}`} })
+    axios.delete("/user/", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
       .then(response => {
         console.log(response);
         alert("Conta excluida com sucesso!");
@@ -60,8 +60,12 @@ function Profile() {
           <button onClick={toggleProfileForm}>
             {!showProfileForm ? 'Editar perfil' : 'Fechar'}
           </button>
-          <button onClick={handleProfileDeletion}>Excluir conta</button>
-          <Link to="/novasenha">Nova senha</Link>
+          <button onClick={handleProfileDeletion}>
+            Excluir conta
+          </button>
+          <Link to="/novasenha">
+            Nova senha
+          </Link>
         </div>
       </div>
     </>

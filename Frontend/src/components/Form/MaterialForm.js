@@ -62,7 +62,6 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         required="required"
       />
       
-
       {/* <Input
         type="number"
         min="1"
@@ -77,7 +76,13 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         <h4>Medida:</h4>
         {labelList.map((item) => (
           <React.Fragment key={item.key}>
-            <input type="radio" name="unity" onChange={handleChange} value={item.label} />
+            <input 
+              type="radio" 
+              name="unity" 
+              onChange={handleChange} 
+              value={item.label} 
+              required
+            />
             <label>{item.label}</label>
           </React.Fragment>
         ))}

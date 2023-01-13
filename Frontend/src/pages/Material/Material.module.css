@@ -1,0 +1,51 @@
+.material_details {
+	padding: 7em;
+}
+
+.material_details h1,
+.material_details h2,
+.material_details p {
+	margin-bottom: 0.5em;
+}
+
+.material_details h1 {
+	background-color: #ff7200;
+	color: #fff;
+	;
+	padding: 0.4em;
+	border-radius: 4em;
+}
+
+.material_details span {
+	font-weight: bold;
+}
+
+.details_container,
+.service_form_container {
+	border-bottom: 1px solid #7a7a7a;
+	padding-bottom: 1.2em;
+	margin-bottom: 1.2em;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.btn{
+	background-color: #8a2b06;
+	color: #fff;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	transition: 0.5s;
+	border: none;
+	cursor: pointer;
+	max-height: 40px;
+	border-radius: 14px;
+}
+
+.btn:hover{
+	color: #ff7200;
+}
+
+.form {
+	width: 100%;
+}

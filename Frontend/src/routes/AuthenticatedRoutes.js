@@ -7,6 +7,7 @@ import UpdateProduct from "../components/Form/UpdateProduct";
 import NewPassword from "../pages/Account/NewPassword";
 import Profile from "../pages/Account/Profile";
 import Home from "../pages/Home/Home";
+import Material from "../pages/Material/Material";
 import Materials from "../pages/Material/Materials";
 import NewMaterial from "../pages/Material/NewMaterial";
 import NewProduct from "../pages/Product/NewProduct";
@@ -24,6 +25,7 @@ const AuthenticatedRoutes = () => {
                 <Route path="/materiais" element={<Materials />} />
                 <Route path="/produtos" element={<Products />} />
                 <Route path="/produto/:id" element={<Product />} />
+                <Route path="/material/:id" element={<Material />} />
                 <Route path="/perfil" element={<Profile />} />
                 <Route path="/novasenha" element={<NewPassword />} />
                 {/* <Route path="/alterarproduto" element={<UpdateProduct />} /> */}

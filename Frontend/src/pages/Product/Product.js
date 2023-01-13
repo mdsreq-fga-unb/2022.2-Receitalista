@@ -12,7 +12,7 @@ import UpdateProduct from '../../components/Form/UpdateProduct'
 
 function getArraySize(array) {
 	let counter = 0;
-	for(const item in array){
+	for (const item in array) {
 		counter = counter + 1;
 	}
 	return counter;
@@ -20,8 +20,7 @@ function getArraySize(array) {
 
 function Product() {
 	let { id } = useParams()
-	let itemArray = [];
-	
+
 	const [product, setProduct] = useState({});
 	const [showProductForm, setShowProductForm] = useState(false);
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -29,40 +28,38 @@ function Product() {
 	const [itemList, setItemList] = useState([]);
 	const [message, setMessage] = useState('')
 	const [type, setType] = useState('success')
-	
+
 	useEffect(() => {
 		axios.get(`/product/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then((response) => {
 			setProduct(response.data.product);
 		}).catch(err => {
 			console.log(err);
 		})
-	},[]);
+	}, []);
 
 	function toggleProductForm() {
 		setShowProductForm(!showProductForm);
-		// navigate("/alterarproduto");
 	}
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		
-		if(!id){
-			console.log("NÃO ESTÁ PASSANDO ID NO PARÂMETRO");
-		}
-		else if(!product.name){
-			setMessage('O nome do produto precisa ser preenchido!')
-			setType('error')
-		}
-		else if (getArraySize(itemList) < 1){
-			setMessage('Você deve adicionar pelo menos um material ao produto!')
-			setType('error')
-		}
-		else {
 
+		if (!id) {
+			console.log("Não está passando o id como parâmetro");
+		}else if (!product.name) {
+			setMessage('O nome do produto não pode estar vazio')
+			setType('error')
+		}else if (getArraySize(itemList) < 1) {
+			setMessage('Adicione ao menos um material ao produto')
+			setType('error')
+		}else {
 			console.log(itemList);
-			await axios.put(`/product/${id}`, { name: product.name, description:product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/product/${id}`, { name: product.name, description: product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
-				window.location.reload();
+				setMessage('Produto atualizado com sucesso!')
+				setType('success')
+				setShowProductForm(!showProductForm)
+				
 			}).catch(err => {
 				console.log(err);
 				alert("Não foi possível atualizar o produto!");
@@ -72,10 +69,11 @@ function Product() {
 
 	return (
 		<>
+		window.location.reload();
 			{product || product.name ? (
 				<div className={classes.product_details}>
 					<Container customClass="column">
-						{message && <Message type={type} msg={message} />}
+					{message && <Message type={type} msg={message} />}
 						<div className={classes.details_container}>
 							<h1>Produto: {product.name}</h1>
 							<div className={classes1.btn}>
@@ -105,7 +103,7 @@ function Product() {
 						</div>
 					</Container>
 				</div>
-			):(<p>Sem nada</p>)}
+			) : (<p>Sem nada</p>)}
 		</>
 	)
 }

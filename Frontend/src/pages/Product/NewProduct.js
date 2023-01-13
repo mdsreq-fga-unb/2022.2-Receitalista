@@ -17,8 +17,6 @@ function NewProduct() {
     let name = product.name;
     let description = product.description;
 
-    
-
     const onSubmit = async (e) => {
         setAux(true);
 
@@ -32,8 +30,7 @@ function NewProduct() {
                     itens: itemList
                 }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
-                    alert("Produto criado com sucesso!");
-                    navigate("/home");
+                    navigate('/produtos', {state: {message: `Produto ${name} criado com sucesso`}});
                 }).catch( err => {
                     console.log(err);
                     alert("Erro na criação do produto");

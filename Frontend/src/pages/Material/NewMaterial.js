@@ -22,7 +22,7 @@ const NewMaterial = () => {
 				{
 					headers: { 'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}` },
 				}).then(() => {
-					navigate('/materiais', {state: {message: `Material ${material.name} criado`}});
+					navigate('/materiais', {state: {message: `Material ${material.name} criado com sucesso`}});
 				});
 		} catch (err) {
 			alert("Erro interno!");

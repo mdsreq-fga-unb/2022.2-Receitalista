@@ -23,7 +23,7 @@ function MaterialCard({ id, name, handleDeleteMaterial }) {
 			<div className={classes.item_card}>
 				<h4>{name}</h4>
 				<div className={classes1.btn}>
-					<Link to="/">
+					<Link to={`/material/${id}`}>
 						<BsPencil /> Editar
 					</Link>
 					<button onClick={() => handleClick(handleDeleteMaterial(id, name))}>

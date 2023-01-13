@@ -25,8 +25,6 @@ function ProfileForm(props) {
     setAccount({ ...account, [e.target.name]: e.target.value })
   }
 
-
-
   return (
     <form onSubmit={submit} className={classes.form}>
 

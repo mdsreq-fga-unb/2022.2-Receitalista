@@ -43,7 +43,6 @@ export const SidebarData = [
     //     icon: <BiIcons.BiUserCircle />,
     //     cName: 'nav-text'
     // }
-
 ]
 
 export default SidebarData;

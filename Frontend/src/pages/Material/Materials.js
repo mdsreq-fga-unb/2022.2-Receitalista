@@ -56,10 +56,10 @@ function Materials() {
 						</Link>
 					</div>
 				</div>
-			</div>
-			<div className={classes.itens}>
 				{message && <Message type="success" msg={message} />}
 				{materialMessage && <Message type="success" msg={materialMessage} />}
+			</div>
+			<div className={classes.itens}>
 				<Container customClass="start">
 					{materialList.length > 0 &&
 						materialList.map((item) =>

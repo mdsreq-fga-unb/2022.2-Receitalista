@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import * as GiIcons from "react-icons/gi";
+import { Link, useNavigate } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import "./NavBar.css";
 import { IconContext } from 'react-icons';
@@ -11,6 +12,16 @@ function Navbar() {
   const [auth] = useState(localStorage.getItem('acess_token'))
 
   const showSidebar = () => setSidebar(!sidebar);
+
+
+  const navigate = useNavigate()
+
+  function handleLogoutClick() {
+    localStorage.removeItem('acess_token');
+    localStorage.clear()
+    navigate("/")
+    window.location.reload();
+  }
 
   return (
     <>
@@ -40,6 +51,11 @@ function Navbar() {
                 </li>
               );
             })}
+            <div className='nav-text'>
+              <Link onClick={handleLogoutClick}>
+                <GiIcons.GiExitDoor /><span>Sair</span>
+              </Link>
+            </div>
           </ul>
         </nav>
       </IconContext.Provider>

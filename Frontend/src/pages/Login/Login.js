@@ -11,15 +11,6 @@ import { useNavigate } from 'react-router';
 
 import "./Login.module.css";
 
-function stringLenght(string) {
-	let count = 0;
-
-	for (let i = 0; string[i]; i++) {
-		count = count + 1;
-	}
-
-	return count;
-}
 
 const Login = () => {
 	const [loginData, setLoginData] = useState({})
