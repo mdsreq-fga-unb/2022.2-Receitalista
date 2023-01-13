@@ -46,20 +46,19 @@ function Product() {
 
 		if (!id) {
 			console.log("Não está passando o id como parâmetro");
-		}else if (!product.name) {
+		} else if (!product.name) {
 			setMessage('O nome do produto não pode estar vazio')
 			setType('error')
-		}else if (getArraySize(itemList) < 1) {
+		} else if (getArraySize(itemList) < 1) {
 			setMessage('Adicione ao menos um material ao produto')
 			setType('error')
-		}else {
+		} else {
 			console.log(itemList);
 			await axios.put(`/product/${id}`, { name: product.name, description: product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
-				setMessage('Produto atualizado com sucesso!')
+				setMessage('Produto atualizado com sucesso')
 				setType('success')
 				setShowProductForm(!showProductForm)
-				
 			}).catch(err => {
 				console.log(err);
 				alert("Não foi possível atualizar o produto!");
@@ -69,11 +68,10 @@ function Product() {
 
 	return (
 		<>
-		window.location.reload();
 			{product || product.name ? (
 				<div className={classes.product_details}>
 					<Container customClass="column">
-					{message && <Message type={type} msg={message} />}
+						{message && <Message type={type} msg={message} />}
 						<div className={classes.details_container}>
 							<h1>Produto: {product.name}</h1>
 							<div className={classes1.btn}>
@@ -84,7 +82,20 @@ function Product() {
 							{!showProductForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Total</span> R${product.total_price}
+										<span>Preço de venda:</span> R$ 0,00
+									</p>
+									<p>
+										<span>Lucro:</span> R$ 0,00
+										<span>Margem de lucro:</span> 0,00%
+									</p>
+									<p>
+										<span>Valor dos materiais:</span> R$ {product.total_price},00
+									</p>
+									<p>
+										<span>Custo de produção:</span> R$ 0,00
+									</p>
+									<p>
+										<span>Descrição:</span> {product.description}
 									</p>
 								</div>
 							) : (

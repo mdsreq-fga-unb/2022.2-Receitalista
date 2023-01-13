@@ -40,7 +40,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         <textarea
           className='textarea-description'
           name="description"
-          placeholder='Ex.: Receita do produto'
+          placeholder='Exemplo: Modo de fazer'
           onChange={handleChange}
           value={product.description}
         />

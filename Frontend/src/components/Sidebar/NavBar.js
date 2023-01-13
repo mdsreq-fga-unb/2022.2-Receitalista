@@ -5,6 +5,7 @@ import * as GiIcons from "react-icons/gi";
 import { Link, useNavigate } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import "./NavBar.css";
+import NavBarButton from '../Button/NavBarButton';
 import { IconContext } from 'react-icons';
 
 function Navbar() {
@@ -12,7 +13,6 @@ function Navbar() {
   const [auth] = useState(localStorage.getItem('acess_token'))
 
   const showSidebar = () => setSidebar(!sidebar);
-
 
   const navigate = useNavigate()
 
@@ -30,6 +30,11 @@ function Navbar() {
           <h1 className='textHeader'>
             {auth ? <Link to="/home">Receitalista</Link> : <Link to="/">Receitalista</Link>}
           </h1>
+          <div className='button'>
+            <Link to="/perfil">
+              {auth ? <NavBarButton /> : ""}
+            </Link>
+          </div>
           <Link to='#' className='menu-bars'>
             {auth ? <FaIcons.FaBars onClick={showSidebar} /> : ""}
           </Link>

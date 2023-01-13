@@ -99,16 +99,29 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
                     }) : ""}
                 </select>
 
-                <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
-                <button type="submit" onClick={(event) => handleMaterialIncrement(event)}>Add</button>
+                <input 
+                    type="number"
+                    min="0"
+                    step="1"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)} 
+                    required
+                />
+                <button 
+                    type="submit" 
+                    onClick={(event) => handleMaterialIncrement(event)}
+                >
+                    Adicionar
+                </button>
             </div>
             {selectedMaterialList ? selectedMaterialList.map((item) => {
 
                 return (
                     <React.Fragment key={item[0].id}>
                         {item ? <div className="list-product-material">
-                            <span>Nome do produto: {item[0].name}</span>
-                            <span>Quantidade: {item[0].usedQuantity}</span>
+                            <span>{item[0].name}</span>
+                            <span>(Medida)</span>
+                            <span>Quantidade adicionada: {item[0].usedQuantity}</span>
                             <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
                         </div> : ""}
                     </React.Fragment>

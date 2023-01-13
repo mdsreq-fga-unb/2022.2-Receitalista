@@ -82,6 +82,11 @@
   float: right;
 }
 
+.button{
+  text-decoration: none;
+  margin-left: 55em;
+}
+
 span {
   margin-left: 16px;
 }

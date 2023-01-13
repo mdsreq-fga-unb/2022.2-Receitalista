@@ -27,7 +27,9 @@ function Profile() {
       })
   }, []);
 
+
   const handleProfileDeletion = async () => {
+
     axios.delete("/user/", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
       .then(response => {
         console.log(response);

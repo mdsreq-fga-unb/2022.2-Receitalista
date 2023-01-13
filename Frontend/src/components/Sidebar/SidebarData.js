@@ -8,15 +8,9 @@ import * as GiIcons from "react-icons/gi";
 
 export const SidebarData = [
     {
-        title: 'Home',
+        title: 'Início',
         path: "/home",
         icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Perfil',
-        path: "/perfil",
-        icon: <BsIcons.BsFillFilePersonFill />,
         cName: 'nav-text'
     },
     {
@@ -31,18 +25,18 @@ export const SidebarData = [
         icon: <GiIcons.GiPaperBagOpen />,
         cName: 'nav-text'
     },
-    // {
-    //     title: 'Pedidos',
-    //     path: "/pedidos",
-    //     icon: <FaIcons.FaCartPlus />,
-    //     cName: 'nav-text'
-    // },
-    // {
-    //     title: 'Clientes',
-    //     path: "/clientes",
-    //     icon: <BiIcons.BiUserCircle />,
-    //     cName: 'nav-text'
-    // }
+    {
+        title: 'Pedidos',
+        path: "/pedidos",
+        icon: <FaIcons.FaCartPlus />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Clientes',
+        path: "/clientes",
+        icon: <BiIcons.BiUserCircle />,
+        cName: 'nav-text'
+    }
 ]
 
 export default SidebarData;

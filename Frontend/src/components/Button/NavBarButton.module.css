@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: #4d1601;
+  color: white;
+  padding: 0.70rem 0.70rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button:hover,
+.button:active {
+  background-color: #ff7200;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+

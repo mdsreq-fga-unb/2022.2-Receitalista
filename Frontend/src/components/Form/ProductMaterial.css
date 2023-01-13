@@ -1,9 +1,8 @@
 .product-material {
     padding: 10px;
-
-   display: flex;
-   flex-direction: column;
-   gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .add-product-material {
@@ -12,6 +11,8 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
 }
 
 .product-material select {
@@ -22,15 +23,12 @@
 
 .list-product-material {
     position: relative;
-    padding: 6px;
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
-
-    border: solid black 2px;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
 }
 
 .list-product-material button {
