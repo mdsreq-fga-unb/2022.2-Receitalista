@@ -4,6 +4,7 @@
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	width: 24%;
+	min-width: min-content;
 	margin: 0.5%;
 }
 

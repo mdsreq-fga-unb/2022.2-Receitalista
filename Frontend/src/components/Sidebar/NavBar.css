@@ -83,8 +83,8 @@
 }
 
 .button{
-  text-decoration: none;
-  margin-left: 55em;
+  position: relative;
+  left: 24%; 
 }
 
 span {

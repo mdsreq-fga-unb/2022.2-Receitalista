@@ -14,15 +14,15 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Produtos',
-        path: "/produtos",
-        icon: <IoIcons.IoIosPaper />,
-        cName: 'nav-text'
-    },
-    {
         title: 'Materiais',
         path: "/materiais",
         icon: <GiIcons.GiPaperBagOpen />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Produtos',
+        path: "/produtos",
+        icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
     },
     {
