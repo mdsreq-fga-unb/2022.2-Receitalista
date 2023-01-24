@@ -27,7 +27,8 @@ N° | Backlog do Sprint |
 #### Retrospectiva do Sprint
 N° | Feedback do Sprint |
 :-----:|---------|
-1 | Requer maior participação de todos os membros do projeto |
+1 | Responsabilidade de cada membro do projeto separada de acordo com a tabela <a href="https://mdsreq-fga-unb.github.io/2022.2-Receitalista/visao-produto/">2.1 - Organização do Projeto</a>. |
+2 | Requer maior participação de todos os membros do projeto. |
 
 
 ## Sprint 3
@@ -38,7 +39,8 @@ N° | Backlog do Sprint |
 #### Retrospectiva do Sprint
 N° | Feedback do Sprint |
 :-----:|---------|
-1 | Precisa fazer as atividades com mais antecedência|
+1 | Atribuição de tasks para cada membro no Trello |
+2 | Precisa fazer as atividades com mais antecedência |
 
 
 ## Sprint 4
@@ -56,8 +58,7 @@ N° | Backlog do Sprint |
 #### Retrospectiva do Sprint
 N° | Feedback do Sprint |
 :-----:|---------|
-1 | Melhorar a comunicação entre os membros da equipe |
-
+1 | Mudança do ambiente das tasks para o GitHub Issues e instituição de prazos de entrega |
 
 
 ## Sprint 5
@@ -76,7 +77,7 @@ N° | Backlog do Sprint |
 #### Retrospectiva do Sprint
 N° | Feedback do Sprint |
 :-----:|---------|
-1 | Deve-se fazer todas as reuniões semanais como foi acordado no Visão |
+1 | A equipe cumpriu com o que foi planejado para a sprint |
 
 
 ## Sprint 6
@@ -108,4 +109,82 @@ N° | Backlog do Sprint |
 #### Retrospectiva do Sprint
 N° | Feedback do Sprint |
 :-----:|---------|
-1 | As reuniões precisam ser feitas no dia determinado|
+1 | Nessa sprint ocorreu um melhor cumprimento dos prazos em detrimento da divisão das tasks de forma igualitária aos membros da equipe |
+2 | As reuniões precisam ser feitas no dia determinado |
+
+
+## Sprint 8
+N° | Backlog do Sprint |
+:-----:|---------|
+1 | Simplificar e corrigir as histórias de usuário |
+2 | Criar o backlog User Story Map |
+3 | Criar critérios de aceitação |
+4 | Implementação da US03 e US05 |
+
+### Issue
+![image](https://user-images.githubusercontent.com/65057466/214194647-6cf873c6-c9f9-42b9-ac20-f79e87a71260.png)
+
+#### Retrospectiva do Sprint
+N° | Feedback do Sprint |
+:-----:|---------|
+1 | Como melhoria da sprint passada, para essa sprint foi estipulado um dia em que todos os membros puderam participar |
+
+
+## Sprint 9
+N° | Backlog do Sprint |
+:-----:|---------|
+1 | Implementação da US12 e US08 |
+
+### Issue
+![image](https://user-images.githubusercontent.com/65057466/214195104-25781457-f22a-4c40-a433-ddbfd496bdee.png)
+
+#### Retrospectiva do Sprint
+N° | Feedback do Sprint |
+:-----:|---------|
+1 | Nessa sprint tudo ocorreu como planejado |
+
+
+
+<i>A fazer </i>
+
+## Sprint 10
+N° | Backlog do Sprint |
+:-----:|---------|
+1 |  |
+
+### Issue
+![image]()
+
+#### Retrospectiva do Sprint
+N° | Feedback do Sprint |
+:-----:|---------|
+1 |  |
+
+
+## Sprint 11
+N° | Backlog do Sprint |
+:-----:|---------|
+1 |  |
+
+### Issue
+![image]()
+
+#### Retrospectiva do Sprint
+N° | Feedback do Sprint |
+:-----:|---------|
+1 |  |
+
+
+
+## Sprint 12
+N° | Backlog do Sprint |
+:-----:|---------|
+1 |  |
+
+### Issue
+![image]()
+
+#### Retrospectiva do Sprint
+N° | Feedback do Sprint |
+:-----:|---------|
+1 |  |
