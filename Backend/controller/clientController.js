@@ -41,11 +41,33 @@ exports.addClient = async function (req, res) {
         })
 }
 
+exports.updateClient = async function (req, res) {
+    const id = req.params.id;
+    const { name, email } = req.body;
+
+    Client.update(
+        { name: name, email: email },
+        { where: { id: id, user_id: req.userData.id } }
+    )
+        .then(result => {
+            console.log(result.dataValues);
+            res.status(201).json({
+                message: 'Client updated'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                err: err
+            })
+        });
+}
+
 exports.deleteClient = async function (req, res) {
     const id = req.params.id;
 
     try {
-        const order = await Order.findAll( { where: { client_id: id } } );
+        const order = await Order.findAll( { where: { client_id: id, user_id: req.userData.id } } );
 
         if (order === null) {
             Client.destroy(
