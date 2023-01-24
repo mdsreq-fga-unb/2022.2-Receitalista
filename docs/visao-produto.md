@@ -35,11 +35,11 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 
 |Papel|Atribuições|Responsável|Participantes|
 |:-----:|:------:|:------:|:------:|
-|Desenvolvedor Frontend|Codificar o design do produto e conectar com o *backend*|Pedro Lucas| Pedro Henrique, Pedro Lucas, Matheus Raphael|
-|Desenvolvedor Backend|Codificar e implementar funcionalidades e fluxo de controle da aplicação|Lucas Gomes|Lucas Gomes, Valderson Pontes|
-|Devops|Configuração do ambiente para deploy e conexão com banco de dados|Lucas Gomes|Lucas Gomes e Valderson Pontes|
+|Desenvolvedor Frontend|Codificar o design do produto e conectar com o *backend*|Pedro Lucas| Pedro Henrique, <br> Pedro Lucas, <br> Matheus Raphael, <br> Valderson Pontes|
+|Desenvolvedor Backend|Codificar e implementar funcionalidades e fluxo de controle da aplicação|Lucas Gomes|Lucas Gomes, <br> Valderson Pontes|
+|Devops|Configuração do ambiente para deploy e conexão com banco de dados|Lucas Gomes|Lucas Gomes|
 |Product Owner|Responsável por comunicar o projeto com os *stakeholders* e também selecionar quais itens do Product Backlog o time de desenvolvimento irá trabalhar primeiro|Pedro Henrique|Pedro Henrique|
-|Scrum Master|Instruir o time em princípios e valores do Scrum e XP|Valderson Pontes|Valderson Pontes|
+|Scrum Master|Instruir o time em princípios e valores do Scrum e XP|Matheus Raphael|Pedro Lucas, <br> Pedro Henrique, <br> Matheus Raphael, <br> Valderson Pontes, <br> Lucas Gomes|
 
 ### 2.2 - Planejamento das Fases e/ou Iterações do Projeto
 |Sprint|Produto(Entrega)|Data de Início|Data de Fim|
