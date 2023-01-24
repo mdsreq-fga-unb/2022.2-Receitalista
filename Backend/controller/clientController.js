@@ -1,6 +1,20 @@
 const Client = require('../model/client');
 const Order = require('../model/order');
 
+exports.getAllClients = async function (req, res) {
+    Client.findAll({ where: { user_id: req.userData.id } })
+        .then(client => {
+            return res.status(200).json({
+                client: client
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err: err
+            });
+        });
+}
+
 exports.addClient = async function (req, res) {
 
     console.log(req.body);
@@ -11,9 +25,9 @@ exports.addClient = async function (req, res) {
             user_id: req.userData.id
         }
     })
-        .then(item => {
+        .then(client => {
             console.log()
-            if (item !== null) {
+            if (client !== null) {
                 return res.status(409).json({
                     message: 'Client already exist'
                 });
