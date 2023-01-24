@@ -6,4 +6,6 @@ const ClientController = require('../controller/clientController');
 
 router.post('/add', checkAuth, ClientController.addClient);
 
+router.delete('/:id', checkAuth, ClientController.deleteClient);
+
 module.exports = router;
