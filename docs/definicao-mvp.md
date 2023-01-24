@@ -1,6 +1,6 @@
 ## MVP1
 
- - **Objetivo**: Disponibilizar para o cliente funcionalidade básicas para o cliente navegar na plataforma.
+ - **Objetivo**: Garantir ao usuário que ele consiga gerenciar sua conta, materiais e produtos. 
 
 N° | User story | Sprint |
 :-----:|---------|:----------------------:|
@@ -22,7 +22,7 @@ N° | User story | Sprint |
 
 ## MVP2
 
-  - **Objetivo**: Disponibilizar funcionalidades adicionais para melhorar a navegação do usuário dentro da plataforma.
+  - **Objetivo**: Garantir ao usuário o gerenciamento de clientes, pedidos e a visualização dos seus lucros.
 
 N° | User story | Sprint |
 :-----:|---------|:----------------------:|
