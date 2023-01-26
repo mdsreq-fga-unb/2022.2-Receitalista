@@ -30,4 +30,6 @@
 
 - [Diagrama de Casos de Uso](https://drive.google.com/file/d/1ctAOOcyrGbv0_EMNVbEZUuqkaI3MKtAq/view?usp=sharing)
 
-- ![image](/docs/assets/user_case_receitalista.png)
+<br>
+
+- <img width="550px" src="../assets/user_case_receitalista.png" alt="diagrama uc"/>
