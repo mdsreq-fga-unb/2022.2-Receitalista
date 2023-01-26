@@ -9,3 +9,6 @@ mkdocs-material==8.5.9
 
 # Comando para realizar a instalação das dependências
     # pip install -r requirements.txt
+
+# Deploy
+    # $ mkdocs gh-deploy
