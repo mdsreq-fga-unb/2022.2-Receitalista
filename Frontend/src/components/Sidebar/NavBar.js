@@ -30,11 +30,13 @@ function Navbar() {
           <h1 className='textHeader'>
             {auth ? <Link to="/home">Receitalista</Link> : <Link to="/">Receitalista</Link>}
           </h1>
+          {/* Removido botao na navbar
           <div className='button'>
             <Link to="/perfil">
               {auth ? <NavBarButton /> : ""}
             </Link>
           </div>
+          */}
           <Link to='#' className='menu-bars'>
             {auth ? <FaIcons.FaBars onClick={showSidebar} /> : ""}
           </Link>
