@@ -20,7 +20,7 @@ function NewClient() {
 			.then(function (response) {
 				console.log(response);
 				alert("Cliente cadastrado!");
-				navigate("/novocliente");
+				navigate("/clientes", {state: {message: `Cliente ${client.name} cadastrado com sucesso`}});
 			})
 			.catch(function (error) {
 				if (error.response.status === 409) {
@@ -28,7 +28,6 @@ function NewClient() {
 					setClient({});
 				}
 			});
-
 	}
 
 	return (

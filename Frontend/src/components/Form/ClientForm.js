@@ -26,7 +26,7 @@ function ClientForm({ handleSubmit, client, setClient }) {
 			<Input
 				type="text"
 				text="Telefone"
-                pattern="[0-9]{8,11}"
+        pattern="[0-9]{8,11}"
 				name="phone"
 				placeholder="Insira o numero de telefone do cliente"
 				handleOnChange={handleChange}
