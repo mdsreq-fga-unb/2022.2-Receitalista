@@ -15,6 +15,20 @@ exports.getAllClients = async function (req, res) {
         });
 }
 
+exports.getClient = async function (req, res) {
+    Client.findOne({ where: { user_id: req.userData.id } })
+        .then(client => {
+            return res.status(200).json({
+                client: client
+            });
+        })
+        .catch(err => {
+            return res.status(500).json({
+                err: err
+            });
+        });
+}
+
 exports.addClient = async function (req, res) {
 
     console.log(req.body);
@@ -82,9 +96,8 @@ exports.deleteClient = async function (req, res) {
 
     try {
         const order = await Order.findAll( { where: { client_id: id, user_id: req.userData.id } } );
-
-        if (order === null) {
-            Client.destroy(
+        if (order[0] === undefined) {
+            await Client.destroy(
                 { where: { id: id, user_id: req.userData.id } }
             )
                 .then(result => {
@@ -99,11 +112,12 @@ exports.deleteClient = async function (req, res) {
                         err: err
                     })
                 });
+        } else {
+            res.status(500).json({
+                 message: 'Client not deleted, becuse already has an order'
+             });
         }
 
-        res.status(500).json({
-            message: 'Client not deleted, becuse already has an order'
-        });
     } catch (err) {
         console.log(err);
         res.status(500).json({

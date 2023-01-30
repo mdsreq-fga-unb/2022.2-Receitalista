@@ -10,17 +10,21 @@ function NewClient() {
 	const [client, setClient] = useState({});
 	const navigate = useNavigate();
 
-	const onSubmit = (e) => {
+	const onSubmit = async (e) => {
 		e.preventDefault();
 
-		axios.post('/client/add', {
-			name: client.name,
-			phone: client.phone
-		})
+		await axios.post('/client/add',
+			{
+				name: client.name,
+				phone: client.phone
+			},
+			{
+				headers: { 'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}` },
+			})
 			.then(function (response) {
 				console.log(response);
 				alert("Cliente cadastrado!");
-				navigate("/clientes", {state: {message: `Cliente ${client.name} cadastrado com sucesso`}});
+				navigate("/clientes", { state: { message: `Cliente ${client.name} cadastrado com sucesso` } });
 			})
 			.catch(function (error) {
 				if (error.response.status === 409) {
