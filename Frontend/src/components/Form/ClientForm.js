@@ -17,20 +17,20 @@ function ClientForm({ handleSubmit, client, setClient }) {
 				type="text"
 				text="Nome"
 				name="name"
-				placeholder="Insira o seu nome do cliente"
+				placeholder="Insira o nome do cliente"
 				handleOnChange={handleChange}
-				value={client.name ? client.name : ''}
+				value={client.name}
 				required="required"
 			/>
 
 			<Input
-				type="text"
+				type="tel"
 				text="Telefone"
-        pattern="[0-9]{8,11}"
+                pattern="[0-9]{8,11}"
 				name="phone"
 				placeholder="Insira o numero de telefone do cliente"
 				handleOnChange={handleChange}
-				value={client.phone ? client.phone : ''}
+				value={client.phone}
 				required="required"
 			/>
 

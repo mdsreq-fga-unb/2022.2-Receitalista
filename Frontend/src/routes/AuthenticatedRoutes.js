@@ -14,6 +14,7 @@ import Product from "../pages/Product/Product";
 import Products from "../pages/Product/Products";
 import NewClient from "../pages/Client/NewClient";
 import Clients from "../pages/Client/Clients";
+import Client from "../pages/Client/Client";
 
 
 const AuthenticatedRoutes = () => {
@@ -31,6 +32,7 @@ const AuthenticatedRoutes = () => {
                 <Route path="/perfil" element={<Profile />} />
                 <Route path="/novasenha" element={<NewPassword />} />
                 <Route path="/novocliente" element={<NewClient />} />
+                <Route path="/cliente/:id" element={<Client />}/>
             </Route>
         </Routes>
     )
