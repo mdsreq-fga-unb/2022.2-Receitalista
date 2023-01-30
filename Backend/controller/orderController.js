@@ -66,9 +66,8 @@ exports.updateOrder = async function(req, res) {
 exports.getAllOrders = async function(req, res) {
      Order.findAll({ where: { user_id: req.userData.id }})
         .then(orders => {
-            console.log(result.dataValues);
             res.status(201).json({
-                order: orders
+                orders: orders
             })
         })
         .catch(err => {
