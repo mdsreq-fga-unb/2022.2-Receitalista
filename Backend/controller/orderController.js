@@ -44,9 +44,11 @@ exports.deleteOrder = async function (req, res) {
 
 exports.updateOrder = async function(req, res) {
     const id = req.params.id;
-    const { price } = req.body;
+    const { client_id, product_id ,total_price } = req.body;
 
-    Order.update({ total_price: price }, { where: { id: id, user_id: req.userData.id }})
+    console.log(client_id, product_id, total_price);
+
+    Order.update({ client_id: client_id, product_id:product_id, total_price: total_price }, { where: { id: id, user_id: req.userData.id }})
         .then(result => {
             console.log(result.dataValues);
             res.status(201).json({
@@ -64,9 +66,8 @@ exports.updateOrder = async function(req, res) {
 exports.getAllOrders = async function(req, res) {
      Order.findAll({ where: { user_id: req.userData.id }})
         .then(orders => {
-            console.log(result.dataValues);
             res.status(201).json({
-                order: orders
+                orders: orders
             })
         })
         .catch(err => {
