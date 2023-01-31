@@ -79,6 +79,37 @@
          - Eu como usuário gostaria de visualizar a margem de lucro de todos os pedidos mensalmente para ter controle da minha margem de lucro
 <br>
 
+## Requisitos funcionais
+
+| N°  | Descrição |
+| :-: | :-----------: | 
+| RF01 | Cadastro de usuário |
+| RF02 | Edição de usuário |
+| RF03 | Exclusão de usuário | 
+| RF04 | Login de usuário | 
+| RF05 | Cadastro de cliente |
+| RF06 | Edição de cliente |
+| RF07 | Exclusão de clientes |
+| RF08 | Listar todos os clientes do sistema |
+| RF09 | Busca por cliente cadastrado |
+| RF10 | Cadastrar ingredientes/materiais |
+| RF11 | Editar ingredientes/materiais |
+| RF12 | Exclusão de ingredientes/materiais |
+| RF13 | Listar todos os ingredientes/materiais do sistema |
+| RF14 | Busca por ingredientes/materiais cadastrado |
+| RF15 | Cadastrar um produto (ex.: bolo, mesa...) |
+| RF16 | Editar um produto |
+| RF17 | Exclusão de produto |
+| RF18 | Listar todos os produtos do sistema |
+| RF19 | Busca por produto cadastrado |
+| RF20 | Cadastrar pedido |
+| RF21 | Editar pedido |
+| RF22 | Exclusão de pedido |
+| RF23 | Listar todos os pedidos do sistema |
+| RF24 | Busca por pedido cadastrado |
+| RF25 | Gerar gráfico de preço x lucro |
+| RF26 | Exportar relatório via PDF |
+
 ## Requisitos não funcionais
 
 N° | Classificação | Requisitos Não Funcionais

@@ -1,0 +1,24 @@
+.card {
+
+	background-color: #ffff;
+	padding: 1.7em;
+	border: 1px solid #ccc;
+  display: flex;
+	padding-bottom: 1%;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+	margin: 1%;
+}
+
+.card h4 {
+	color: black;
+	font-size: 1.3em;
+}
+
+.card p {
+	color: #7a7a7a;
+}
+
+.card p span {
+	font-weight: bold;
+}

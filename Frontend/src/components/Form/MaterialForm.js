@@ -54,15 +54,18 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         required="required"
       />
       
-      {/* <Input
+      <Input
         type="number"
-        min="1"
+        min="0.01"
+        max="1000000"
+        step={".01"}
         text="Quantidade"
         name="amount"
-        placeholder="Insira a quantidade do material"
+        placeholder="Insira a quantidade da medida"
         handleOnChange={handleChange}
         value={material.amount}
-      /> */}
+        required="required"
+      /> 
 
       <div>
         <h4>Medida:</h4>

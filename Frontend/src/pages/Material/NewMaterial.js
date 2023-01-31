@@ -6,7 +6,7 @@ import axios from "../../api/axios";
 
 import MaterialForm from '../../components/Form/MaterialForm'
 
-import classes1 from "../Page.module.css"
+import classes from "../Page.module.css"
 
 
 const NewMaterial = () => {
@@ -31,7 +31,7 @@ const NewMaterial = () => {
 	}
 
 	return (
-		<div className={classes1.page}>
+		<div className={classes.page}>
 			<h1>Inserir novo material</h1>
 			<MaterialForm handleSubmit={onSubmit} material={material} setMaterial={setMaterial} />
 		</div>

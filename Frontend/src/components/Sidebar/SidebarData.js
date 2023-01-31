@@ -14,6 +14,12 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
+        title: 'Perfil',
+        path: "/perfil",
+        icon: <BsIcons.BsFillFilePersonFill/>,
+        cName: 'nav-text'
+    },
+    {
         title: 'Materiais',
         path: "/materiais",
         icon: <GiIcons.GiPaperBagOpen />,
@@ -26,17 +32,18 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Pedidos',
-        path: "/pedidos",
-        icon: <FaIcons.FaCartPlus />,
-        cName: 'nav-text'
-    },
-    {
         title: 'Clientes',
         path: "/clientes",
         icon: <BiIcons.BiUserCircle />,
         cName: 'nav-text'
+    },
+    {
+        title: 'Pedidos',
+        path: "/pedidos",
+        icon: <FaIcons.FaCartPlus />,
+        cName: 'nav-text'
     }
+
 ]
 
 export default SidebarData;
