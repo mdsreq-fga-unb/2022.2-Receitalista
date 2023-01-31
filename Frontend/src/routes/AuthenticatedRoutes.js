@@ -12,6 +12,9 @@ import NewMaterial from "../pages/Material/NewMaterial";
 import NewProduct from "../pages/Product/NewProduct";
 import Product from "../pages/Product/Product";
 import Products from "../pages/Product/Products";
+import NewOrder from "../pages/Order/NewOrder";
+import Order from "../pages/Order/Order";
+import Orders from "../pages/Order/Orders";
 
 
 const AuthenticatedRoutes = () => {
@@ -27,6 +30,9 @@ const AuthenticatedRoutes = () => {
                 <Route path="/produto/:id" element={<Product />} />
                 <Route path="/perfil" element={<Profile />} />
                 <Route path="/novasenha" element={<NewPassword />} />
+                <Route path="/criarpedido" element={<NewOrder/>}/>
+                <Route path="/pedido/:id" element={<Order/>}/>
+                <Route path="/pedidos" element={<Orders/>}/>
             </Route>
         </Routes>
     )
