@@ -16,7 +16,7 @@ function ClientCard({ id, name, phone, handleDeleteClient }) {
 					<span>Telefone:</span> {phone}
 				</p>
 				<div className={classes1.btn}>
-					<Link to={`/client/${id}`}>
+					<Link to={`/cliente/${id}`}>
 						<BsPencil /> Editar
 					</Link>
 					<button type='submit' onClick={() => {handleDeleteClient(id, name); setExists(false)}}>

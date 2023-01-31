@@ -24,9 +24,9 @@ function Client() {
 	}
 
 	useEffect(() => {
-		axios.get(`/item/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
+		axios.get(`/client/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
 			.then((response) => {
-				setClient(response.data.item);
+				setClient(response.data.client);
 			}).catch(err => {
 				console.log(err);
 			})
@@ -41,7 +41,7 @@ function Client() {
 			setMessage('O nome do cliente não pode estar vazio')
 			setType('error')
 		} else {
-			await axios.put(`/item/${id}`, { name: client.name, phone: client.phone }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/client/${id}`, { name: client.name, phone: client.phone }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
 				setMessage('Cliente atualizado com sucesso!')
 				setType('success')

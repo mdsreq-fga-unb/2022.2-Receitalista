@@ -6,6 +6,8 @@ const ClientController = require('../controller/clientController');
 
 router.get('/list', checkAuth, ClientController.getAllClients);
 
+router.get('/:id', checkAuth, ClientController.getClient);
+
 router.post('/add', checkAuth, ClientController.addClient);
 
 router.put('/:id', checkAuth, ClientController.updateClient);
