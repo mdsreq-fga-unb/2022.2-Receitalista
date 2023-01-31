@@ -121,7 +121,7 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
                         {item ? <div className="list-product-material">
                             <span>{item[0].name}</span>
                             <span>(Medida)</span>
-                            <span>Quantidade adicionada: {item[0].usedQuantity}</span>
+                            <span>Quantidade: {item[0].usedQuantity}</span>
                             <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
                         </div> : ""}
                     </React.Fragment>
