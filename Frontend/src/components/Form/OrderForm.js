@@ -2,6 +2,7 @@ import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 import "./OrderForm.css"
 import OrderProduct from "./OrderProduct"
+import OrderClient from "./OrderClient"
 
 
 export default function OrderForm({handleSubmit, order, setOrder, itemList, setItemList, totalPrice, setTotalPrice}){
@@ -22,11 +23,23 @@ export default function OrderForm({handleSubmit, order, setOrder, itemList, setI
             />
 
             <text className='text-title'>
-                Insira os produtos do pedido:
+                Insira um cliente:
             </text>
 
             <div className="box-add-product">
-                <OrderProduct totalPrice={totalPrice} setTotalPrice={setTotalPrice} setItemList={setItemList}/>
+                <OrderClient
+                    setItemList={setItemList}/>
+            </div>
+
+            <text className='text-title'>
+                Insira os produtos:
+            </text>
+
+            <div className="box-add-product">
+                <OrderProduct 
+                    totalPrice={totalPrice} 
+                    setTotalPrice={setTotalPrice} 
+                    setItemList={setItemList}/>
             </div>
 
             <div className="box-description">
