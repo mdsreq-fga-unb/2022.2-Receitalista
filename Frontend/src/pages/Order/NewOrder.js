@@ -7,7 +7,7 @@ import OrderForm from '../../components/Form/OrderForm';
 function NewOrder() {
     const navigate = useNavigate();
     const [order, setOrder] = useState({});
-    const [productList, setProductList] = useState({});  
+    const [orderList, setOrderList] = useState({});  
     const [aux, setAux] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -18,13 +18,13 @@ function NewOrder() {
         setAux(true);
 
         e.preventDefault();
-        if(productList.length !== 0 && name && aux){
+        if(orderList.length !== 0 && name && aux){
             try{
                 await axios.post("order/add", JSON.stringify({
                     name: name,
                     description: description,
                     total_price: totalPrice,
-                    products: productList
+                    products: orderList
                 }),{headers: {"Authoriization": `Bearer ${localStorage.getItem("acess_token")}`}}).then(response => {
                     console.log(response);
                     navigate("/pedidos", {state: {message: `Pedido ${name} criado com sucesso`}});   
@@ -41,13 +41,13 @@ function NewOrder() {
         }
 
         else if (!name){alert("Adicione um nome para o pedido"); setAux(false)}
-        else if (productList.length === 0){alert("Adicione no mínimo 1 produto ao seu pedido"); setAux(false)}
+        else if (orderList.length === 0){alert("Adicione no mínimo 1 produto ao seu pedido"); setAux(false)}
     
     }
     return(
         <div className={classes.page}>
             <h1>Inserir novo pedido</h1>
-            <OrderForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit} order = {order} setOrder={setOrder} itemList = {productList} setItemList={setProductList}/>
+            <OrderForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit} order = {order} setOrder={setOrder} itemList = {orderList} setItemList={setOrderList}/>
         </div>
     )
 }
