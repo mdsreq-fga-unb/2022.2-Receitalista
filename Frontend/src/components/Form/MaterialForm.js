@@ -14,18 +14,10 @@ const labelList = [{
 },
 {
   key: 2,
-  label: "Mililitro"
-},
-{
-  key: 3,
   label: "Metro"
 },
 {
-  key: 4,
-  label: "Centímetro"
-},
-{
-  key: 5,
+  key: 3,
   label: "Unidade"
 }];
 

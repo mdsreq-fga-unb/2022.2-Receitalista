@@ -1,0 +1,55 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card h4 {
+      border-radius: 4em;
+      background-color: #8b2b05;
+      color: #ff7200;
+      padding: 0.4em;
+      margin-bottom: 1.3em;
+      font-size: 1.3em;
+  }
+  
+  .card p {
+      color: #7a7a7a;
+      margin-bottom: 1em;
+  }
+  
+  .card p span {
+      font-weight: bold;
+  }
+  
+  .category_text {
+      display: flex;
+      align-items: center;
+  }
+  
+  .category_text span {
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-right: 5px;
+  }
+  
+  .category_text .infra {
+      background-color: #ffaebc;
+  }
+  
+  .category_text .desenvolvimento {
+      background-color: #a0e7e5;
+  }
+  
+  .category_text .design {
+      background-color: #b4f8c8;
+  }
+  
+  .category_text .planejamento {
+      background-color: #fbe7c6;
+  }
