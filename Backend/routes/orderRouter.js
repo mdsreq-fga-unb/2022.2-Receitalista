@@ -14,6 +14,6 @@ router.get('/list', checkAuth, orderController.getAllOrders);
 
 router.put('/:id', checkAuth, orderController.getOrder);
 
-router.get('/report', checkAuth, orderController.getReport);
+router.post('/report', checkAuth, orderController.getReport);
 
 module.exports = router;
