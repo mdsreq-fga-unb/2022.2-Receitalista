@@ -10,15 +10,19 @@ exports.addProduct = async function (req, res) {
                     message: 'Product already exist'
                 });
             } else {
+                const { time_spent, profit_margin, base_price } = req.body;
+
+                const profit = req.userData.price_per_hour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
+
                 const newProduct = {
                     name: req.body.name,
                     description: req.body.description,
                     itens: req.body.itens,
-                    base_price: req.body.base_price,
-                    product_price: req.body.product_price,
+                    base_price: base_price,
+                    product_price: base_price + profit,
                     profit_margin: req.body.profit_margin,
-                    profit: req.body.profit,
-                    time_spent: req.body.time_spent,
+                    profit: profit,
+                    time_spent: time_spent,
                     user_id: req.userData.id,
                 };
 
