@@ -100,8 +100,8 @@ exports.getReport = async function (req, res) {
         .then(orders => {
             let csv = '';
 
-            // Get the headers (keys of the first object in the JSON array)
-            const headers = Object.keys(orders[0]);
+            // Get the headers (keys of the first object in the JSON array)]
+            const headers = Object.keys(orders[0].dataValues);
 
             // Add headers to the CSV string
             csv += headers.join(',') + '\n';
@@ -109,8 +109,10 @@ exports.getReport = async function (req, res) {
             // Loop through each object in the JSON array
             orders.forEach(function (row) {
                 // Loop through each header and add the corresponding value for the current object
+                console.log(row);
+
                 headers.forEach(function (header, index) {
-                    csv += row[header];
+                    csv += row.dataValues[header];
                     if (index < headers.length - 1) {
                         csv += ',';
                     }
