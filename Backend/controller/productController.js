@@ -18,6 +18,7 @@ exports.addProduct = async function (req, res) {
                     product_price: req.body.product_price,
                     profit_margin: req.body.profit_margin,
                     profit: req.body.profit,
+                    time_spent: req.body.time_spent,
                     user_id: req.userData.id,
                 };
 

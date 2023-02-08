@@ -37,6 +37,10 @@ const Product = database.define('product', {
     profit: {
         type: Sequelize.DECIMAL,
         allowNull: false
+    },
+    time_spent: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
     }
 });
 
