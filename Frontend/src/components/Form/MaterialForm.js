@@ -60,10 +60,10 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         max="1000000"
         step={".01"}
         text="Quantidade"
-        name="amount"
+        name="quantity"
         placeholder="Insira a quantidade da medida"
         handleOnChange={handleChange}
-        value={material.amount}
+        value={material.quantity}
         required="required"
       /> 
 
