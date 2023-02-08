@@ -8,7 +8,7 @@ import Container from '../../components/Container/Container'
 import Message from '../../components/Message/Message'
 
 import axios from '../../api/axios'
-import UpdateProduct from '../../components/Form/UpdateProduct'
+import ProductForm from '../../components/Form/ProductForm'
 
 function getArraySize(array) {
 	let counter = 0;
@@ -100,7 +100,7 @@ function Product() {
 								</div>
 							) : (
 								<div className={classes.form}>
-									<UpdateProduct
+									<ProductForm
 										product={product}
 										setProduct={setProduct}
 										totalPrice={totalPrice}

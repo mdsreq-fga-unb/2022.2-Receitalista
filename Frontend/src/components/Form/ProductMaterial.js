@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "../../api/axios";
 
-import "./ProductMaterial.css";
+import classes from "./ProductForm.module.css"
 
 const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
     const [materialList, setMaterialList] = useState([]);
@@ -90,35 +90,47 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
     setItemList(selectedMaterialList);
 
     return (
-        <div className="product-material">
-            <div className="add-product-material" >
-                <select onChange={(event) => handleProductSelection(event)} >
-                    <option selected disabled >Escolha um material</option>
+        <div className={classes['product-material']}>
+
+            <div className={classes['add-product-material']}>
+                <select
+                    onChange={(event) => handleProductSelection(event)}
+                >
+
+                    <option selected disabled >
+                        Escolha um material
+                    </option>
+
                     {materialList ? materialList.map((material) => {
-                        return <option key={material.id} value={material.id}>{material.name}</option>
+                        return <option
+                            key={material.id}
+                            value={material.id}>
+                            {material.name}
+                        </option>
                     }) : ""}
                 </select>
 
-                <input 
+                <input
                     type="number"
                     min="0"
                     step="1"
                     value={quantity}
-                    onChange={(e) => setQuantity(e.target.value)} 
+                    onChange={(e) => setQuantity(e.target.value)}
                     required
                 />
-                <button 
-                    type="submit" 
-                    onClick={(event) => handleMaterialIncrement(event)}
-                >
-                    Adicionar
+
+                <button
+                    type="submit"
+                    onClick={(event) => handleMaterialIncrement(event)}>Adicionar
                 </button>
+
             </div>
+
             {selectedMaterialList ? selectedMaterialList.map((item) => {
 
                 return (
                     <React.Fragment key={item[0].id}>
-                        {item ? <div className="list-product-material">
+                        {item ? <div className={classes['list-product-material']}>
                             <span>{item[0].name}</span>
                             <span>(Medida)</span>
                             <span>Quantidade: {item[0].usedQuantity}</span>
@@ -129,6 +141,8 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
             }) : ""}
         </div>
     )
+
 }
+
 
 export default ProductMaterial;
