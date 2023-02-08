@@ -1,9 +1,9 @@
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
-import "./ProductForm.css"
+import classes from "./ProductForm.module.css"
 import ProductMaterial from "./ProductMaterial"
 
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice }) {
+export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice, basePrice }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -11,7 +11,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
 
   return (
 
-    <form  className="form">
+    <form onSubmit={handleSubmit} className={classes['form']}>
 
       <Input
         type="text"
@@ -20,24 +20,28 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         placeholder="Insira o nome do produto"
         handleOnChange={handleChange}
         value={product.name ? product.name : ''}
+        required="required"
       />
 
-      <text className='text-title'>
+      <text className={classes['text-title']}>
         Insira os materiais do produto:
       </text>
 
-      <div className='box-add-material'>
-        <ProductMaterial totalPrice={totalPrice} setTotalPrice={setTotalPrice} setItemList={setItemList} />
+      <div className={classes['box-add-material']}>
+        <ProductMaterial
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+          setItemList={setItemList}
+        />
       </div>
 
-      <div className='box-description'>
+      <div className={classes['box-description']}>
 
-        <text className='text-title'>
+        <text className={classes['text-title']}>
           Descrição do produto:
         </text>
 
-        <textarea
-          className='textarea-description'
+        <textarea className={classes['textarea-description']}
           name="description"
           placeholder='Exemplo: Modo de fazer'
           onChange={handleChange}
@@ -46,9 +50,9 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
 
       </div>
 
-      <div className='box-options'>
+      <div className={classes['box-options']}>
 
-        <text className='text-title'>
+        <text className={classes['text-title']}>
           Inserir como material:
         </text>
 
@@ -57,26 +61,29 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
           name="active"
           handleOnChange={handleChange}
           value={product.active ? product.active : ''}
-        /> 
+        />
 
-        <text className='text-title'>
+        <text className={classes['text-title']}>
           Margem de lucro:
         </text>
 
-        <input
-          className="input-profit"
+        <input className={classes['input-profit']}
           type="number"
           name="profit"
+          min="0.01"
+          max="1000000"
+          step=".01"
           handleOnChange={handleChange}
-        /> 
+          required="required"
+        />
 
       </div>
 
-      <div className='final-price'>
-        <text className='text-title'>Preço final do produto: R$ {totalPrice}</text>
+      <div className={classes['final-price']}>
+        <text className={classes['text-title']}>Preço final do produto: R$ {totalPrice}</text>
       </div>
 
-      <SubmitButton text="Criar" onClick={handleSubmit} />
+      <SubmitButton text="Criar" />
     </form>
   )
 }
