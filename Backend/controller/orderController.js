@@ -6,7 +6,7 @@ exports.addOrder = async function (req, res) {
     const newOrder = {
         user_id: req.userData.id,
         client_id: req.body.client_id,
-        product_id: req.body.client_id,
+        products: req.body.products,
         total_price: req.body.total_price,
         date: req.body.date
     };
@@ -103,8 +103,8 @@ exports.getReport = async function (req, res) {
             let csv = '';
             let csvOrders = [];
 
-            for(const row of orders){
-                     const client = await Client.findOne({ where: { id: row.dataValues.client_id } });  
+            for (const row of orders) {
+                const client = await Client.findOne({ where: { id: row.dataValues.client_id } });
                 const product = await Product.findOne({ where: { id: row.dataValues.product_id } });
 
                 const order = {
@@ -115,7 +115,7 @@ exports.getReport = async function (req, res) {
                     preco: product.dataValues.product_price
                 }
 
-               csvOrders.push(order);
+                csvOrders.push(order);
             }
 
             // Get the headers (keys of the first object in the JSON array)]

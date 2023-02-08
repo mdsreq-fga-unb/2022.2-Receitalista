@@ -8,6 +8,10 @@ const Order = database.define('order', {
         allowNull: false,
         primaryKey: true
     },
+    products: {
+        type: Sequelize.ARRAY(Sequelize.JSON),
+        allowNull: true
+    },
     total_price: {
         type: Sequelize.DECIMAL,
         allowNull: false
