@@ -1,5 +1,4 @@
 const Product = require('../model/product');
-const Item = require('../model/item');
 
 exports.addProduct = async function (req, res) {
     console.log(req.body);
@@ -11,33 +10,25 @@ exports.addProduct = async function (req, res) {
                     message: 'Product already exist'
                 });
             } else {
+                const { time_spent, profit_margin, base_price } = req.body;
+
+                const profit = req.userData.price_per_hour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
+
                 const newProduct = {
                     name: req.body.name,
                     description: req.body.description,
-                    total_price: req.body.total_price,
+                    itens: req.body.itens,
+                    base_price: base_price,
+                    product_price: base_price + profit,
+                    profit_margin: req.body.profit_margin,
+                    profit: profit,
+                    time_spent: time_spent,
                     user_id: req.userData.id,
-                    itens: req.body.itens
                 };
 
                 // Cria o produto
                 Product.create(newProduct)
                     .then(result => {
-                        // Atualzia a aquantidae disponivel do item apos utilizar ele no produto
-                        for (const item of newProduct.itens) {
-                            console.log(item);
-                            const quantity = item.quantity - item.used_quantity;
-                            Item.update(
-                                { quantity: quantity },
-                                { where: { id: item.id, user_id: req.userData.id } }
-                            )
-                                .then(r => {
-                                    console.log(`Quantidades do item ${item.name} atualizada para ${quantity}`);
-                                })
-                                .catch(item_err => {
-                                    console.log(item_err);
-                                });
-                        }
-
                         console.log(result.dataValues);
                         res.status(201).json({
                             messsage: 'Product created'

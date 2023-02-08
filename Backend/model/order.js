@@ -11,7 +11,11 @@ const Order = database.define('order', {
     total_price: {
         type: Sequelize.DECIMAL,
         allowNull: false
-    }
+    },
+    date: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
 });
 
 module.exports = Order;

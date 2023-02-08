@@ -22,7 +22,23 @@ const Product = database.define('product', {
         type: Sequelize.ARRAY(Sequelize.JSON),
         allowNull: true
     },
-    total_price: {
+    base_price: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+    },
+    product_price: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+    },
+    profit_margin: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+    },
+    profit: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+    },
+    time_spent: {
         type: Sequelize.DECIMAL,
         allowNull: false
     }
