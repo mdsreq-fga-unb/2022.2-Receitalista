@@ -1,4 +1,6 @@
 const Order = require('../model/order');
+const Client = require('../model/client');
+const Product = require('../model/product');
 
 exports.addOrder = async function (req, res) {
     const newOrder = {
@@ -97,22 +99,37 @@ exports.getOrder = async function (req, res) {
 
 exports.getReport = async function (req, res) {
     Order.findAll({ where: { user_id: req.userData.id, date: req.body.date } })
-        .then(orders => {
+        .then(async orders => {
             let csv = '';
+            let csvOrders = [];
+
+            for(const row of orders){
+                     const client = await Client.findOne({ where: { id: row.dataValues.client_id } });  
+                const product = await Product.findOne({ where: { id: row.dataValues.product_id } });
+
+                const order = {
+                    id: row.dataValues.id,
+                    cliente: client.dataValues.name,
+                    produto: product.dataValues.name,
+                    data: row.dataValues.date,
+                    preco: product.dataValues.product_price
+                }
+
+               csvOrders.push(order);
+            }
 
             // Get the headers (keys of the first object in the JSON array)]
-            const headers = Object.keys(orders[0].dataValues);
+            const headers = Object.keys(csvOrders[0]);
 
             // Add headers to the CSV string
             csv += headers.join(',') + '\n';
 
             // Loop through each object in the JSON array
-            orders.forEach(function (row) {
+            csvOrders.forEach(function (row) {
                 // Loop through each header and add the corresponding value for the current object
-                console.log(row);
 
                 headers.forEach(function (header, index) {
-                    csv += row.dataValues[header];
+                    csv += row[header];
                     if (index < headers.length - 1) {
                         csv += ',';
                     }
