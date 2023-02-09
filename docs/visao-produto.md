@@ -54,8 +54,8 @@ O Receitalista é um projeto desenvolvido por alunos da disciplina de Requisitos
 |Sprint 8|Implementação das US03, US05 e entrega da PC1|29/12/2022|05/01/2023|
 |Sprint 9|Implementação das US08, US12 e entrega da MVP1|06/01/2023|12/01/2023|
 |Sprint 10|Implementação das US14, US18, US19, US20|13/01/2023|19/01/2023|
-|Sprint 11|Implementação das US15, US16, US17, US21, US22 e entrega da PC2|20/01/2023|31/01/2023|
-|Sprint 12|Implementação das US23, US24, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
+|Sprint 11|Implementação das US15, US16, US17, US21 e entrega da PC2|20/01/2023|31/01/2023|
+|Sprint 12|Implementação da US22, ajustes finais no projeto e entrega da MVP2|01/02/2022|09/02/2022|
 
 ### 2.3 - Matriz de Comunicação
 |Descrição|Área/envolvidos|Periodicidade|Produtos Gerados|
