@@ -16,7 +16,7 @@ function NewOrder() {
 
         try {
             await axios.post("order/add", JSON.stringify({
-                client: client['0'].name,
+                client: client[0][0].name,
                 products: orderList,
                 date: order.date
             }), { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
