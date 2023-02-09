@@ -7,44 +7,35 @@ import OrderForm from '../../components/Form/OrderForm';
 function NewOrder() {
     const navigate = useNavigate();
     const [order, setOrder] = useState({});
-    const [orderList, setOrderList] = useState({});  
+    const [orderList, setOrderList] = useState({});
     const [aux, setAux] = useState(false);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [client, setClient] = useState({});
 
     const onSubmit = async (e) => {
-        setAux(true);
-
         e.preventDefault();
-        if(orderList.length !== 0 && name && aux){
-            try{
-                await axios.post("order/add", JSON.stringify({
-                    description: order.description,
-                    total_price: order.total_price,
-                    date: order.date,
-                    products: orderList
-                }), {headers: {"Authorization": `Bearer ${localStorage.getItem('acess_token')}`}}).then(response => {
-                    console.log(response);
-                    navigate("/pedidos", {state: {message: `Pedido ${name} criado com sucesso`}});   
-                }).catch( err => {
-                    console.log(err);
-                    alert("Erro na criação do pedido");
-                });
-            }
-            catch(err){
-                console.log(err);
-            }
-            setAux(false);
-            
-        }
 
-        else if (!name){alert("Adicione um nome para o pedido"); setAux(false)}
-        else if (orderList.length === 0){alert("Adicione no mínimo 1 produto ao seu pedido"); setAux(false)}
-    
+        try {
+            await axios.post("order/add", JSON.stringify({
+                client: client['0'].name,
+                products: orderList,
+                date: order.date
+            }), { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+                console.log(response);
+                navigate("/pedidos", { state: { message: `Pedido criado com sucesso` } });
+            }).catch(err => {
+                console.log(err);
+                alert("Erro na criação do pedido");
+            });
+        }
+        catch (err) {
+            console.log(err);
+        }
     }
-    return(
+
+    return (
         <div className={classes.page}>
             <h1>Inserir novo pedido</h1>
-            <OrderForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit} order = {order} setOrder={setOrder} itemList = {orderList} setItemList={setOrderList}/>
+            <OrderForm setClient={setClient} handleSubmit={onSubmit} order={order} setOrder={setOrder} itemList={orderList} setItemList={setOrderList} />
         </div>
     )
 }

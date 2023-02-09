@@ -3,11 +3,19 @@ const Client = require('../model/client');
 const Product = require('../model/product');
 
 exports.addOrder = async function (req, res) {
+    console.log(req.body)
+
+    let total_price = 0;
+    for (const item of req.body.products) {
+        console.log(item)
+        total_price += Number(item['0'].product_price);
+    }
+
     const newOrder = {
         user_id: req.userData.id,
-        client_id: req.body.client_id,
+        client: req.body.client,
         products: req.body.products,
-        total_price: req.body.total_price,
+        total_price: total_price,
         date: req.body.date
     };
 

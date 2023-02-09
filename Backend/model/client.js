@@ -1,8 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../db/connect');
 
-const Order = require('./order');
-
 const Client = database.define('client', {
     id: {
         type: Sequelize.INTEGER,
@@ -19,11 +17,5 @@ const Client = database.define('client', {
         allowNull: false
     }
 });
-
-Order.belongsTo(Client, {
-    constraints: true,
-    foreignKey: 'client_id'
-});
-
 
 module.exports = Client;

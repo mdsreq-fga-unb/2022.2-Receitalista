@@ -8,6 +8,10 @@ const Order = database.define('order', {
         allowNull: false,
         primaryKey: true
     },
+    client: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
     products: {
         type: Sequelize.ARRAY(Sequelize.JSON),
         allowNull: true

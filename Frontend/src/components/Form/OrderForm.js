@@ -5,12 +5,11 @@ import OrderProduct from "./OrderProduct"
 import OrderClient from "./OrderClient"
 
 
-export default function OrderForm({ handleSubmit, order, setOrder, itemList, setItemList, setClientList,totalPrice, setTotalPrice }) {
+export default function OrderForm({ setClient, handleSubmit, order, setOrder, itemList, setItemList, setClientList,totalPrice, setTotalPrice }) {
 
     function handleChange(e) {
         setOrder({ ...order, [e.target.name]: e.target.value })
-    }
-
+    } 
     return (
         <form className="form">
 
@@ -18,9 +17,9 @@ export default function OrderForm({ handleSubmit, order, setOrder, itemList, set
                 Insira um cliente:
             </text>
 
-            <div className="box-add-product">
+            <div className="box-add-client">
                 <OrderClient
-                    setItemList={setItemList}
+                    setItemList={setClient}
                 />
             </div>
 
@@ -30,8 +29,6 @@ export default function OrderForm({ handleSubmit, order, setOrder, itemList, set
 
             <div className="box-add-product">
                 <OrderProduct
-                    totalPrice={order.totalPrice}
-                    setTotalPrice={setTotalPrice}
                     setItemList={setItemList} />
             </div>
 
