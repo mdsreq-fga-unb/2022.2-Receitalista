@@ -25,10 +25,10 @@ function NewOrder() {
                     description: description,
                     total_price: totalPrice,
                     products: orderList
-                }),{headers: {"Authoriization": `Bearer ${localStorage.getItem("acess_token")}`}}).then(response => {
+                }), {headers: {"Authorization": `Bearer ${localStorage.getItem('acess_token')}`}}).then(response => {
                     console.log(response);
                     navigate("/pedidos", {state: {message: `Pedido ${name} criado com sucesso`}});   
-                }).catch( err=> {
+                }).catch( err => {
                     console.log(err);
                     alert("Erro na criação do pedido");
                 });
