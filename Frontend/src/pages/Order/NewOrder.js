@@ -11,9 +11,6 @@ function NewOrder() {
     const [aux, setAux] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    let name = order.name;
-    let description = order.description
-
     const onSubmit = async (e) => {
         setAux(true);
 
@@ -21,9 +18,9 @@ function NewOrder() {
         if(orderList.length !== 0 && name && aux){
             try{
                 await axios.post("order/add", JSON.stringify({
-                    name: name,
-                    description: description,
-                    total_price: totalPrice,
+                    description: order.description,
+                    total_price: order.total_price,
+                    date: order.date,
                     products: orderList
                 }), {headers: {"Authorization": `Bearer ${localStorage.getItem('acess_token')}`}}).then(response => {
                     console.log(response);

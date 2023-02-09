@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import classes from './Product.module.css'
@@ -22,11 +22,13 @@ function Product() {
 	let { id } = useParams()
 
 	const [product, setProduct] = useState({});
-	const [showProductForm, setShowProductForm] = useState(false);
-	const navigate = useNavigate();
 	const [itemList, setItemList] = useState([]);
+	
+	const [showProductForm, setShowProductForm] = useState(false);
 	const [message, setMessage] = useState('')
 	const [type, setType] = useState('success')
+	//const navigate = useNavigate();
+
 
 	useEffect(() => {
 		axios.get(`/product/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then((response) => {
@@ -64,6 +66,7 @@ function Product() {
 				setMessage('Produto atualizado com sucesso')
 				setType('success')
 				setShowProductForm(!showProductForm)
+				//navigate(-1)
 			}).catch(err => {
 				console.log(err);
 				alert("Não foi possível atualizar o produto!");
@@ -98,6 +101,9 @@ function Product() {
 									</p>
 									<p>
 										<span>Descrição:</span> {product.description}
+									</p>
+									<p>
+										<span>Hora</span> {product.time_spent}
 									</p>
 								</div>
 							) : (

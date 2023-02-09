@@ -25,8 +25,8 @@ function NewProduct() {
                     name: product.name,
                     description: product.description,
                     itens: itemList,
-                    profit_margin: Number(product.profitMargin),
-                    time_spent: Number(product.timeSpent)
+                    profit_margin: Number(product.profit_margin),
+                    time_spent: Number(product.time_spent)
                 }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
                     navigate('/produtos', {state: {message: `Produto ${product.name} criado com sucesso`}});

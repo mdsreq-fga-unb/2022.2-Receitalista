@@ -5,22 +5,14 @@ import OrderProduct from "./OrderProduct"
 import OrderClient from "./OrderClient"
 
 
-export default function OrderForm({handleSubmit, order, setOrder, itemList, setItemList, totalPrice, setTotalPrice}){
+export default function OrderForm({ handleSubmit, order, setOrder, itemList, setItemList, setClientList,totalPrice, setTotalPrice }) {
 
-    function handleChange(e){
-        setOrder({...order, [e.target.name]: e.target.value})
+    function handleChange(e) {
+        setOrder({ ...order, [e.target.name]: e.target.value })
     }
 
     return (
         <form className="form">
-            <Input
-                type="text"
-                text="Nome do pedido"
-                name="name"
-                placeholder="Insira o nome do pedido"
-                handleOnChange={handleChange}
-                value={order.name ? order.name : ''}
-            />
 
             <text className='text-title'>
                 Insira um cliente:
@@ -28,7 +20,8 @@ export default function OrderForm({handleSubmit, order, setOrder, itemList, setI
 
             <div className="box-add-product">
                 <OrderClient
-                    setItemList={setItemList}/>
+                    setItemList={setItemList}
+                />
             </div>
 
             <text className='text-title'>
@@ -36,32 +29,27 @@ export default function OrderForm({handleSubmit, order, setOrder, itemList, setI
             </text>
 
             <div className="box-add-product">
-                <OrderProduct 
-                    totalPrice={totalPrice} 
-                    setTotalPrice={setTotalPrice} 
-                    setItemList={setItemList}/>
+                <OrderProduct
+                    totalPrice={order.totalPrice}
+                    setTotalPrice={setTotalPrice}
+                    setItemList={setItemList} />
             </div>
 
-            <div className="box-description">
+            <Input
+                type="date"
+                text="Data do pedido"
+                name="date"
+                placeholder="Insira a data"
+                value={order.date}
+                handleOnChange={handleChange}
+                required="required"
+            />
 
-                <text className="text-title">
-                    Descrição do pedido:
-                </text>
-
-                <textarea 
-                    className="textarea-description"
-                    name="description"
-                    placeholder="Exemplo: Alguma observação que queira fazer"
-                    onChange={handleChange}
-                    value={order.description}
-                />
-            </div>
-
-            <div className="final-price">
+            {/*             <div className="final-price">
                 <text className="text-title">Preço final do pedido: R$ {totalPrice}</text>
-            </div>
-            
-            <SubmitButton text="Criar" onClick={handleSubmit}/>
+            </div> */}
+
+            <SubmitButton text="Salvar" onClick={handleSubmit} />
         </form>
     )
 

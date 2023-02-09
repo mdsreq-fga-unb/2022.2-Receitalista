@@ -71,10 +71,10 @@ exports.addClient = async function (req, res) {
 
 exports.updateClient = async function (req, res) {
     const id = req.params.id;
-    const { name, email } = req.body;
+    const { name, phone } = req.body;
 
     Client.update(
-        { name: name, email: email },
+        { name: name, phone: phone },
         { where: { id: id, user_id: req.userData.id } }
     )
         .then(result => {
