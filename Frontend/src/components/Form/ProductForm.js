@@ -1,9 +1,9 @@
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
 import classes from "./ProductForm.module.css"
-import ProductMaterial from "./ProductMaterial"
+import ProductMaterialForm from "./ProductMaterialForm"
 
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice, basePrice }) {
+export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, productPrice, setProductPrice, basePrice }) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -28,9 +28,9 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
       </text>
 
       <div className={classes['box-add-material']}>
-        <ProductMaterial
-          totalPrice={totalPrice}
-          setTotalPrice={setTotalPrice}
+        <ProductMaterialForm
+          productPrice={productPrice}
+          setProductPrice={setProductPrice}
           setItemList={setItemList}
         />
       </div>
@@ -43,7 +43,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
 
         <textarea className={classes['textarea-description']}
           name="description"
-          placeholder='Exemplo: Modo de fazer'
+          placeholder='Exemplo: Modo de fazer, receita'
           onChange={handleChange}
           value={product.description}
         />
@@ -51,37 +51,40 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
       </div>
 
       <div className={classes['box-options']}>
-
-        <text className={classes['text-title']}>
-          Inserir como material:
-        </text>
-
-        <input
-          type="checkbox"
-          name="active"
+        
+        <Input
+          type="number"
+          text="Hora de trabalho (h)"
+          name="profit"
+          placeholder='Insira a hora'
+          min="0"
+          max="1000000"
+          step=".1"
+          value={product.timeSpent}
           handleOnChange={handleChange}
-          value={product.active ? product.active : ''}
+          required="required"
         />
 
-        <text className={classes['text-title']}>
-          Margem de lucro:
-        </text>
-
-        <input className={classes['input-profit']}
+        <Input
           type="number"
+          text="Margem de lucro (%)"
           name="profit"
+          placeholder='Insira a margem '
           min="0.01"
           max="1000000"
           step=".01"
+          value={product.profitMargin}
           handleOnChange={handleChange}
           required="required"
         />
 
       </div>
 
+      {/*    
       <div className={classes['final-price']}>
-        <text className={classes['text-title']}>Preço final do produto: R$ {totalPrice}</text>
-      </div>
+        <text className={classes['text-title']}>Preço final do produto: R$ {productPrice}</text>
+      </div> 
+    */}
 
       <SubmitButton text="Criar" />
     </form>
