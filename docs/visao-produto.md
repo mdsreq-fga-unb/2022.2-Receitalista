@@ -132,6 +132,12 @@ Essa unidade contribuiu com o aprendizado a respeito da estruturação do backlo
 Uma lição aprendida nesta unidade foi a utilização de diferentes frameworks para organização de requisitos, como o PBB, BDD e o User Story Mapping. Por meio do USM, foi possível ver com mais clareza as ideias e necessidades do projeto, pois cada card do backbone (necessidades e passos dentro delas) tinha sua "espinha", que são detalhes de cada item respectivo do backbone. Esses detalhes fornecem de fato uma visão mais abrangente sobre cada necessidade do projeto e ainda "geram" histórias de usuários mais facilmente.
 </p>
 
+### 4.4 - Unidade 4
+<p align="justify">
+Durante o decorrer dessa unidade tivemos algumas dificuldades quanto ao entendimento de Caso de Uso, porém, após muitos erros, podemos dizer que aprendemos pelo menos o básico dessa área tão extensa. De forma geral, gostamos bastante da dinâmica de ensino do professor, entretanto, o que mais chamou a atenção e contribuiu bastante para a revisão e o aprendizado foi a competição final valendo os PAX finais (muito divertido).
+</p>
+
+
 ## 5 - Referências Bibliográficas
 - VALENTE, Marco Tulio. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 395 páginas, 2020.
 - SOMMERVILLE, Ian. Engenharia de software. 10 ed. Tradução Luiz Cláudio Queiroz; revisão técnica Fábio Levy Siqueira. São Paulo: Pearson Education do Brasil, 2018.
