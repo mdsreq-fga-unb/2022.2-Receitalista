@@ -12,8 +12,9 @@ router.put('/:id', checkAuth, orderController.updateOrder);
 
 router.get('/list', checkAuth, orderController.getAllOrders);
 
-router.put('/:id', checkAuth, orderController.getOrder);
+router.get('/:id', checkAuth, orderController.getOrder);
 
 router.post('/report', checkAuth, orderController.getReport);
+
 
 module.exports = router;
