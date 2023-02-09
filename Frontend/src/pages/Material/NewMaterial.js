@@ -6,7 +6,7 @@ import axios from "../../api/axios";
 
 import MaterialForm from '../../components/Form/MaterialForm'
 
-import classes1 from "../Page.module.css"
+import classes from "../Page.module.css"
 
 
 const NewMaterial = () => {
@@ -17,12 +17,16 @@ const NewMaterial = () => {
 		e.preventDefault();
 
 		try {
-			await axios.post('/item/add',
-				JSON.stringify({ name: material.name, price: material.price, quantity: 2, unit: material.unity }),
+			await axios.post('/item/add', JSON.stringify({
+				name: material.name,
+				price: material.price,
+				quantity: material.quantity,
+				unit: material.unity
+			}),
 				{
 					headers: { 'Content-Type': 'application/json', "Authorization": `Bearer ${localStorage.getItem('acess_token')}` },
 				}).then(() => {
-					navigate('/materiais', {state: {message: `Material ${material.name} criado com sucesso`}});
+					navigate('/materiais', { state: { message: `Material ${material.name} criado com sucesso` } });
 				});
 		} catch (err) {
 			alert("Erro interno!");
@@ -31,9 +35,13 @@ const NewMaterial = () => {
 	}
 
 	return (
-		<div className={classes1.page}>
+		<div className={classes.page}>
 			<h1>Inserir novo material</h1>
-			<MaterialForm handleSubmit={onSubmit} material={material} setMaterial={setMaterial} />
+			<MaterialForm 
+				handleSubmit={onSubmit} 
+				material={material} 
+				setMaterial={setMaterial} 
+			/>
 		</div>
 	)
 }

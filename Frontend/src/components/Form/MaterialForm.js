@@ -14,18 +14,10 @@ const labelList = [{
 },
 {
   key: 2,
-  label: "Mililitro"
-},
-{
-  key: 3,
   label: "Metro"
 },
 {
-  key: 4,
-  label: "Centímetro"
-},
-{
-  key: 5,
+  key: 3,
   label: "Unidade"
 }];
 
@@ -54,23 +46,26 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         min="0.01"
         max="1000000"
         step={".01"}
-        text="Preço unitário do material em reais"
+        text="Preço da unidade em reais"
         name="price"
-        placeholder="Insira o preço que custou o material"
+        placeholder="Insira o preço da unidade do material"
         handleOnChange={handleChange}
         value={material.price}
         required="required"
       />
       
-      {/* <Input
+      <Input
         type="number"
-        min="1"
-        text="Quantidade"
-        name="amount"
-        placeholder="Insira a quantidade do material"
+        min="0.01"
+        max="1000000"
+        step={".01"}
+        text="Quantidade da medida"
+        name="quantity"
+        placeholder="Insira a quantidade da medida"
         handleOnChange={handleChange}
-        value={material.amount}
-      /> */}
+        value={material.quantity}
+        required="required"
+      /> 
 
       <div>
         <h4>Medida:</h4>

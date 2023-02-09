@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
+import * as AiIcons from 'react-icons/ai';
 import axios from "../../api/axios";
 import { Link, useLocation } from "react-router-dom"
-import * as AiIcons from 'react-icons/ai';
 
 import ProductCard from '../../components/Card/ProductCard'
-import classes2 from '../../components/Button/LinkButton.module.css'
-
+import Message from "../../components/Message/Message";
 import classes from './Products.module.css'
 import classes1 from '../Page.module.css'
-import Message from "../../components/Message/Message";
+import classes2 from '../../components/Button/LinkButton.module.css'
 
 function Products() {
 	const [productList, setProductList] = useState([]);
@@ -23,7 +22,8 @@ function Products() {
 	}
 
 	useEffect(() => {
-		axios.get("/product/list", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+		axios.get("/product/list", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
+		.then(response => {
 			setProductList(response.data.products);
 		}).catch(err => {
 			console.log(err);
@@ -74,7 +74,7 @@ function Products() {
 								<ProductCard
 									id={product.id}
 									name={product.name}
-									price={product.total_price}
+									productPrice={product.product_price}
 									handleDeleteProduct={handleDeleteProduct}
 									productList={productList}
 								/>

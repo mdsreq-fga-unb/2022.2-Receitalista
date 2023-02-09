@@ -1,87 +1,83 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import classes from './Material.module.css'
+import classes from '../Material/Material.module.css'
 import classes1 from '../../components/Button/CardButton.module.css'
 
 import Container from '../../components/Container/Container'
 import Message from '../../components/Message/Message'
 
 import axios from '../../api/axios'
-import MaterialForm from '../../components/Form/MaterialForm'
+import ClientForm from '../../components/Form/ClientForm'
 
-function Material() {
+function Client() {
 	let { id } = useParams()
 
-	const [material, setMaterial] = useState({});
-	const [showMaterialForm, setShowMaterialForm] = useState(false);
+	const [client, setClient] = useState({});
+	const [showClientForm, setShowClientForm] = useState(false);
 	const navigate = useNavigate();
 	const [message, setMessage] = useState('')
 	const [type, setType] = useState('success')
 
-	function toggleMaterialForm() {
-		setShowMaterialForm(!showMaterialForm);
+	function toggleClientForm() {
+		setShowClientForm(!showClientForm);
 	}
 
 	useEffect(() => {
-		axios.get(`/item/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
+		axios.get(`/client/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
 			.then((response) => {
-				setMaterial(response.data.item);
+				setClient(response.data.client);
 			}).catch(err => {
 				console.log(err);
 			})
 	}, [id]);
-
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
 		if (!id) {
 			console.log("Não está passando o id como parâmetro");
-		} else if (!material.name) {
-			setMessage('O nome do material não pode estar vazio')
+		} else if (!client.name) {
+			setMessage('O nome do cliente não pode estar vazio')
 			setType('error')
 		} else {
-			await axios.put(`/item/${id}`, { name: material.name, price: material.price, quantity: material.quantity, unit: material.unity}, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/client/${id}`, { name: client.name, phone: client.phone }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
-				setMessage('Material atualizado com sucesso!')
+				setMessage('Cliente atualizado com sucesso!')
 				setType('success')
-				setShowMaterialForm(!showMaterialForm)
+				setShowClientForm(!showClientForm)
 			}).catch(err => {
 				console.log(err);
-				alert("Não foi possível atualizar o material!");
+				alert("Não foi possível atualizar o cliente!");
 			});
 		}
 	}
 
 	return (
 		<>
-			{material || material.name ? (
+			{client || client.name ? (
 				<div className={classes.material_details}>
 					<Container customClass="column">
 						{message && <Message type={type} msg={message} />}
 						<div className={classes.details_container}>
-							<h1>Material: {material.name}</h1>
+							<h1>Cliente: {client.name}</h1>
 							<div className={classes1.btn}>
-								<button onClick={toggleMaterialForm}>
-									{!showMaterialForm ? 'Editar material' : 'Fechar'}
+								<button onClick={toggleClientForm}>
+									{!showClientForm ? 'Editar cliente' : 'Fechar'}
 								</button>
 							</div>
-							{!showMaterialForm ? (
+							{!showClientForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Preço do material</span> R$ {material.price}
+										<span>Telefone do cliente: </span> {client.phone}
 									</p>
-{/* 									<p>
-										<span>Unidade</span> {material.unity}
-									</p> */}
 								</div>
 							) : (
 								<div className={classes.form}>
-									<MaterialForm
+									<ClientForm
 										handleSubmit={handleSubmit}
-										material={material}
-										setMaterial={setMaterial}
+										client={client}
+										setClient={setClient}
 									/>
 								</div>
 							)}
@@ -93,4 +89,4 @@ function Material() {
 	)
 }
 
-export default Material
+export default Client

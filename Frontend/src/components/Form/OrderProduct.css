@@ -1,0 +1,49 @@
+.request-product {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.request-client {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.add-request-product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
+}
+
+.request-product select {
+    min-width: 100px;
+    padding: 2px 10px;
+}
+
+.request-client select {
+    min-width: 350px;
+    padding: 2px 10px;
+}
+
+.list-request-product {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
+}
+
+.list-request-product button {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}

@@ -1,11 +1,18 @@
-.product-material {
+.request-client {
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.add-product-material {
+.request-client {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.add-request-client {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,13 +22,17 @@
     border-bottom: 1px solid #ccc;
 }
 
-.product-material select {
+.request-client select {
     min-width: 100px;
     padding: 2px 10px;
 }
 
+.request-client select {
+    min-width: 350px;
+    padding: 2px 10px;
+}
 
-.list-product-material {
+.list-request-client {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -31,7 +42,7 @@
     border-bottom: 1px solid #ccc;
 }
 
-.list-product-material button {
+.list-request-client button {
     position: absolute;
     right: 0;
     margin-right: 10px;

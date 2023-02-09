@@ -2,30 +2,18 @@ import React, { useEffect, useState } from "react";
 
 import axios from "../../api/axios";
 
-import "./ProductMaterial.css";
+import classes from "./ProductForm.module.css"
 
-const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
+const ProductMaterialForm = ({ setItemList, array = [] }) => {
+
     const [materialList, setMaterialList] = useState([]);
     const [selectedMaterialList, setSelectedMaterialList] = useState(array);
-    const [quantity, setQuantity] = useState(0);
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
+
+    const [quantity, setQuantity] = useState(0);
+
+
     const [renderAux, setRenderAux] = useState(false);
-
-    useEffect(() => {
-        let newPrice = 0;
-
-        if (selectedMaterialList.length !== 0) {
-            selectedMaterialList.forEach(element => {
-                if (element[0].price) {
-                    newPrice = newPrice + (Number(element[0].price) * element[0].usedQuantity);
-                    setTotalPrice(newPrice);
-                }
-            });
-        }
-        else {
-            setTotalPrice(0);
-        }
-    }, [selectedMaterialList, renderAux]);
 
     const getItems = async () => {
         await axios.get("item/list", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
@@ -90,45 +78,60 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
     setItemList(selectedMaterialList);
 
     return (
-        <div className="product-material">
-            <div className="add-product-material" >
-                <select onChange={(event) => handleProductSelection(event)} >
-                    <option selected disabled >Escolha um material</option>
+        <div className={classes['product-material']}>
+
+            <div className={classes['add-product-material']}>
+                <select
+                    onChange={(event) => handleProductSelection(event)}
+                >
+
+                    <option selected disabled >
+                        Escolha um material
+                    </option>
+
                     {materialList ? materialList.map((material) => {
-                        return <option key={material.id} value={material.id}>{material.name}</option>
+                        return <option
+                            key={material.id}
+                            value={material.id}>
+                            {material.name}
+                            {material.unity}
+                        </option>
                     }) : ""}
                 </select>
 
-                <input 
+                <input
                     type="number"
-                    min="0"
+                    min="1"
                     step="1"
                     value={quantity}
-                    onChange={(e) => setQuantity(e.target.value)} 
+                    onChange={(e) => setQuantity(e.target.value)}
                     required
                 />
-                <button 
-                    type="submit" 
-                    onClick={(event) => handleMaterialIncrement(event)}
-                >
-                    Adicionar
+
+                <button
+                    type="submit"
+                    onClick={(event) => handleMaterialIncrement(event)}>Adicionar
                 </button>
+
             </div>
+
             {selectedMaterialList ? selectedMaterialList.map((item) => {
 
                 return (
                     <React.Fragment key={item[0].id}>
-                        {item ? <div className="list-product-material">
+                        {item ? <div className={classes['list-product-material']}>
                             <span>{item[0].name}</span>
                             <span>(Medida)</span>
-                            <span>Quantidade adicionada: {item[0].usedQuantity}</span>
+                            <span>Quantidade: {item[0].usedQuantity}</span>
                             <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
-                        </div> : ""}
+                        </div> : "Material não encontrado"}
                     </React.Fragment>
                 )
-            }) : ""}
+            }) : "Carregando..."}
         </div>
     )
+
 }
 
-export default ProductMaterial;
+
+export default ProductMaterialForm;

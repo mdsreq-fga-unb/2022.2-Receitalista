@@ -1,8 +1,10 @@
 .card {
   display: flex;
   justify-content: space-between;
-  padding-top: 1%;
+  padding-top: 2%;
+	padding-left: 3%;
   padding-bottom: 1%;
+	margin: 1%;
   border-bottom: 1px solid #ccc;
 }
 

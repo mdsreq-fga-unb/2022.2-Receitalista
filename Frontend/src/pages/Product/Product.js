@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import classes from './Product.module.css'
@@ -8,7 +8,7 @@ import Container from '../../components/Container/Container'
 import Message from '../../components/Message/Message'
 
 import axios from '../../api/axios'
-import UpdateProduct from '../../components/Form/UpdateProduct'
+import ProductForm from '../../components/Form/ProductForm'
 
 function getArraySize(array) {
 	let counter = 0;
@@ -22,12 +22,13 @@ function Product() {
 	let { id } = useParams()
 
 	const [product, setProduct] = useState({});
-	const [showProductForm, setShowProductForm] = useState(false);
-	const [totalPrice, setTotalPrice] = useState(0);
-	const navigate = useNavigate();
 	const [itemList, setItemList] = useState([]);
+	
+	const [showProductForm, setShowProductForm] = useState(false);
 	const [message, setMessage] = useState('')
 	const [type, setType] = useState('success')
+	//const navigate = useNavigate();
+
 
 	useEffect(() => {
 		axios.get(`/product/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then((response) => {
@@ -54,11 +55,18 @@ function Product() {
 			setType('error')
 		} else {
 			console.log(itemList);
-			await axios.put(`/product/${id}`, { name: product.name, description: product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/product/${id}`, {
+				name: product.name,
+				description: product.description,
+				itens: itemList,
+				profit_margin: Number(product.profitMargin),
+				time_spent: Number(product.timeSpent)
+			}, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
 				setMessage('Produto atualizado com sucesso')
 				setType('success')
 				setShowProductForm(!showProductForm)
+				//navigate(-1)
 			}).catch(err => {
 				console.log(err);
 				alert("Não foi possível atualizar o produto!");
@@ -82,29 +90,27 @@ function Product() {
 							{!showProductForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Preço de venda:</span> R$ 0,00
+										<span>Preço de venda:</span> R$ {product.product_price}
 									</p>
 									<p>
-										<span>Lucro:</span> R$ 0,00
-										<span>Margem de lucro:</span> 0,00%
+										<span>Lucro:</span> R$ {product.profit}
+										<span>Margem de lucro:</span> {product.profit_margin} %
 									</p>
 									<p>
-										<span>Valor dos materiais:</span> R$ {product.total_price},00
-									</p>
-									<p>
-										<span>Custo de produção:</span> R$ 0,00
+										<span>Custo de produção:</span> R$ {product.base_price}
 									</p>
 									<p>
 										<span>Descrição:</span> {product.description}
 									</p>
+									<p>
+										<span>Hora</span> {product.time_spent}
+									</p>
 								</div>
 							) : (
 								<div className={classes.form}>
-									<UpdateProduct
+									<ProductForm
 										product={product}
 										setProduct={setProduct}
-										totalPrice={totalPrice}
-										setTotalPrice={setTotalPrice}
 										itemList={itemList}
 										setItemList={setItemList}
 										handleSubmit={handleSubmit}

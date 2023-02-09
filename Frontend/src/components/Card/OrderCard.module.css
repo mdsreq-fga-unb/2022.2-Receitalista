@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card h4 {
+      color: #ff7200;
+      padding: 0.4em;
+      margin-bottom: 1.3em;
+      font-size: 1.3em;
+  }
+  
+  .card p {
+      color: #7a7a7a;
+      margin-bottom: 1em;
+  }
+  
+  .card p span {
+      font-weight: bold;
+  }

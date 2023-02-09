@@ -1,10 +1,9 @@
 import Input from "../Input/Input"
 import SubmitButton from "../Button/SubmitButton"
+import classes from "./ProductForm.module.css"
+import ProductMaterialForm from "./ProductMaterialForm"
 
-import "./ProductForm.css"
-import ProductMaterial from "./ProductMaterial"
-
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, totalPrice, setTotalPrice }) {
+export default function ProductForm({ product, setProduct, itemList, setItemList, productPrice, setProductPrice, handleSubmit}) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -12,7 +11,7 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
 
   return (
 
-    <form  className="form">
+    <form onSubmit={handleSubmit} className={classes['form']}>
 
       <Input
         type="text"
@@ -21,63 +20,74 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         placeholder="Insira o nome do produto"
         handleOnChange={handleChange}
         value={product.name ? product.name : ''}
+        required="required"
       />
 
-      <text className='text-title'>
+      <text className={classes['text-title']}>
         Insira os materiais do produto:
       </text>
 
-      <div className='box-add-material'>
-        <ProductMaterial totalPrice={totalPrice} setTotalPrice={setTotalPrice} setItemList={setItemList} />
+      <div className={classes['box-add-material']}>
+        <ProductMaterialForm
+          array={product.itens}
+          productPrice={productPrice}
+          setProductPrice={setProductPrice}
+          setItemList={setItemList}
+        />
       </div>
 
-      <div className='box-description'>
+      <div className={classes['box-description']}>
 
-        <text className='text-title'>
+        <text className={classes['text-title']}>
           Descrição do produto:
         </text>
 
-        <textarea
-          className='textarea-description'
+        <textarea className={classes['textarea-description']}
           name="description"
-          placeholder='Exemplo: Modo de fazer'
+          placeholder='Exemplo: Modo de fazer, receita'
           onChange={handleChange}
           value={product.description}
         />
 
       </div>
 
-      <div className='box-options'>
-{/* 
-        <text className='text-title'>
-          Inserir como material:
-        </text>
-
-        <input
-          type="checkbox"
-          name="active"
-          handleOnChange={handleChange}
-          value={product.active ? product.active : ''}
-        /> */}
-
-        {/* <text className='text-title'>
-          Margem de lucro:
-        </text>
-
-        <input
-          className="input-profit"
+      <div className={classes['box-options']}>
+        
+        <Input
           type="number"
-          name="profit"
+          text="Hora de trabalho"
+          name="time_spent"
+          placeholder='Insira a hora'
+          min="0"
+          max="1000000"
+          step=".1"
+          value={product.time_spent}
           handleOnChange={handleChange}
-        /> */}
+          required="required"
+        />
+
+        <Input
+          type="number"
+          text="Margem de lucro (%)"
+          name="profit_margin"
+          placeholder='Insira a margem '
+          min="0.01"
+          max="1000000"
+          step=".01"
+          value={product.profit_margin}
+          handleOnChange={handleChange}
+          required="required"
+        />
 
       </div>
 
-      <div className='final-price'>
-        <text className='text-title'>Preço final do produto: R$ {totalPrice}</text>
-      </div>
+      {/*    
+      <div className={classes['final-price']}>
+        <text className={classes['text-title']}>Preço final do produto: R$ {productPrice}</text>
+      </div> 
+    */}
 
-      <SubmitButton text="Criar" onClick={handleSubmit} />
+      <SubmitButton text="Salvar" />
     </form>
   )
 }

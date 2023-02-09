@@ -67,6 +67,7 @@ function Materials() {
 								<MaterialCard
 									id={item.id}
 									name={item.name}
+									quantity={item.quantity}
 									handleDeleteMaterial={handleDeleteMaterial}
 								/>
 							</React.Fragment>

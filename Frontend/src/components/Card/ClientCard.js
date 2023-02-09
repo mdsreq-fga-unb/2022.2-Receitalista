@@ -1,25 +1,25 @@
 import { Link } from 'react-router-dom'
 
-import classes from './ProductCard.module.css'
+import classes from './ClientCard.module.css'
 import classes1 from '../../components/Button/CardButton.module.css'
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 import { useState } from 'react'
 
-function ProductCard({ id, name, productPrice, handleDeleteProduct }) {
+function ClientCard({ id, name, phone, handleDeleteClient }) {
 	const [exists, setExists] = useState(true);
 
 	if(exists){
 		return (
 			<div className={classes.card}>
 				<h4>{name}</h4>
-				<p><span>
-					Preço:
-				</span> R${productPrice}</p>
+				<p>
+					<span>Telefone:</span> {phone}
+				</p>
 				<div className={classes1.btn}>
-					<Link to={`/produto/${id}`}>
+					<Link to={`/cliente/${id}`}>
 						<BsPencil /> Editar
 					</Link>
-					<button type='submit' onClick={() => {handleDeleteProduct(id, name); setExists(false)}}>
+					<button type='submit' onClick={() => {handleDeleteClient(id, name); setExists(false)}}>
 						<BsFillTrashFill /> Excluir
 					</button>
 				</div>
@@ -30,4 +30,4 @@ function ProductCard({ id, name, productPrice, handleDeleteProduct }) {
 	return <></>
 }
 
-export default ProductCard
+export default ClientCard

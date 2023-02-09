@@ -1,68 +1,76 @@
 const Product = require('../model/product');
-const Item = require('../model/item');
 
 exports.addProduct = async function (req, res) {
-    console.log(req.body);
-    Product.findOne({ where: { name: req.body.name, user_id: req.userData.id } })
-        .then(product => {
-            console.log()
-            if (product !== null) {
-                return res.status(409).json({
-                    message: 'Product already exist'
+    const product = await Product.findOne({ where: { name: req.body.name, user_id: req.userData.id } });
+
+    if (product !== null) {
+        return res.status(409).json({
+            message: 'Product already exist'
+        });
+    } else {
+        const { time_spent, profit_margin, itens } = req.body;
+
+        let base_price = 0;
+        for (const item of itens) {
+            console.log(item)
+            base_price += Number(item['0'].price) * Number(item['0'].usedQuantity);
+        }
+
+        const profit = req.userData.pricePerHour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
+
+        const newProduct = {
+            name: req.body.name,
+            description: req.body.description,
+            itens: itens,
+            base_price: base_price.toFixed(2),
+            product_price: (base_price + profit).toFixed(2),
+            profit_margin: req.body.profit_margin.toFixed(2),
+            profit: profit.toFixed(2),
+            time_spent: time_spent,
+            user_id: req.userData.id,
+        };
+
+        // Cria o produto
+        await Product.create(newProduct)
+            .then(result => {
+                res.status(201).json({
+                    messsage: 'Product created',
+                    product: result.dataValues
                 });
-            } else {
-                const newProduct = {
-                    name: req.body.name,
-                    description: req.body.description,
-                    total_price: req.body.total_price,
-                    user_id: req.userData.id,
-                    itens: req.body.itens
-                };
-
-                // Cria o produto
-                Product.create(newProduct)
-                    .then(result => {
-                        // Atualzia a aquantidae disponivel do item apos utilizar ele no produto
-                        for (const item of newProduct.itens) {
-                            console.log(item);
-                            const quantity = item.quantity - item.used_quantity;
-                            Item.update(
-                                { quantity: quantity },
-                                { where: { id: item.id, user_id: req.userData.id } }
-                            )
-                                .then(r => {
-                                    console.log(`Quantidades do item ${item.name} atualizada para ${quantity}`);
-                                })
-                                .catch(item_err => {
-                                    console.log(item_err);
-                                });
-                        }
-
-                        console.log(result.dataValues);
-                        res.status(201).json({
-                            messsage: 'Product created'
-                        });
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        res.status(500).json({
-                            err: err
-                        });
-                    });
-            }
-        })
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    err: err
+                });
+            });
+    }
 }
 
 exports.updateProduct = async function (req, res) {
+    console.log(req.body)
     const id = req.params.id;
-    const { description, name, itens } = req.body;
+    const { time_spent, profit_margin, description, name, itens } = req.body;
+
+    let base_price = 0;
+    for (const item of itens) {
+        console.log(item)
+        base_price += Number(item['0'].price) * Number(item['0'].usedQuantity);
+    }
+
+    const profit = req.userData.pricePerHour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
+
 
     Product.update(
-        { name: name, description: description, itens: itens },
+        { 
+            name: name, description: description, 
+            itens: itens, profit: profit.toFixed(2), time_spent: time_spent,  
+            base_price: base_price.toFixed(2), profit_margin: profit_margin.toFixed(2),
+            product_price: (base_price + profit).toFixed(2)
+        },
         { where: { id: id, user_id: req.userData.id } }
     )
         .then(result => {
-            console.log(result.dataValues);
             return res.status(201).json({
                 message: 'Product updated'
             });

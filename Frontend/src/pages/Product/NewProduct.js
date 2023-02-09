@@ -1,53 +1,56 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import axios from "../../api/axios";
 
 import ProductForm from '../../components/Form/ProductForm'
+import Message from '../../components/Message/Message';
 
 import classes from "../Page.module.css"
 
 function NewProduct() {
     const navigate = useNavigate();
+    const [message, setMessage] = useState('')
+    
     const [product, setProduct] = useState({});
+    
     const [itemList, setItemList] = useState([]);
-    const [aux, setAux] = useState(false);
-    const [totalPrice, setTotalPrice] = useState(0);
-
-    let name = product.name;
-    let description = product.description;
 
     const onSubmit = async (e) => {
-        setAux(true);
-
         e.preventDefault();
-        if(itemList.length !== 0 && name && aux){
+
+        if(itemList.length !== 0 && product.name ){
             try {
                 await axios.post("product/add",  JSON.stringify({
-                    name: name,
-                    description: description,
-                    total_price: totalPrice,
-                    itens: itemList
+                    name: product.name,
+                    description: product.description,
+                    itens: itemList,
+                    profit_margin: Number(product.profit_margin),
+                    time_spent: Number(product.time_spent)
                 }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
-                    navigate('/produtos', {state: {message: `Produto ${name} criado com sucesso`}});
+                    navigate('/produtos', {state: {message: `Produto ${product.name} criado com sucesso`}});
                 }).catch( err => {
                     console.log(err);
-                    alert("Erro na criação do produto");
+                    setMessage("Erro na criação de produto.");
                 });
             }
             catch(err) {
                 console.log(err);   
             }
-            setAux(false);
         }
-        else if(!name){ alert("Adicione um nome no produto");   setAux(false)}
-        else if (itemList.length === 0) { alert("Adicione no mínimo um material ao seu produto");  setAux(false) }
     }
     return (
-        <div className={classes.page}  >
-            <h1>Inserir novo produto</h1>  
-            <ProductForm totalPrice={totalPrice} setTotalPrice={setTotalPrice} handleSubmit={onSubmit}  product={product} setProduct={setProduct} itemList={itemList} setItemList={setItemList} />
+        <div className={classes.page} >
+            <h1>Inserir novo produto</h1> 
+            {message && <Message type="error" msg={message} />} 
+            <ProductForm 
+                itemList={itemList}
+                setItemList={setItemList} 
+                product={product}
+                setProduct={setProduct} 
+                handleSubmit={onSubmit}
+            />
         </div>
     )
 }
