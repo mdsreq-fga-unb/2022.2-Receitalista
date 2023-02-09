@@ -81,7 +81,7 @@ const OrderClient = ({setItemList, array = []}) => {
                     type="submit"
                     onClick={(event) => handleProductIncrement(event)}
                 > Adicionar 
-								</button>
+				</button>
             </div>
 
             {selectedClientList ? selectedClientList.map((item) => {

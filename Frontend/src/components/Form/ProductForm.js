@@ -3,7 +3,7 @@ import SubmitButton from "../Button/SubmitButton"
 import classes from "./ProductForm.module.css"
 import ProductMaterialForm from "./ProductMaterialForm"
 
-export default function ProductForm({ itemList, setItemList, productPrice, setProductPrice, product, setProduct,handleSubmit}) {
+export default function ProductForm({ product, setProduct, itemList, setItemList, productPrice, setProductPrice, handleSubmit}) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -29,6 +29,7 @@ export default function ProductForm({ itemList, setItemList, productPrice, setPr
 
       <div className={classes['box-add-material']}>
         <ProductMaterialForm
+          array={product.itens}
           productPrice={productPrice}
           setProductPrice={setProductPrice}
           setItemList={setItemList}
@@ -54,13 +55,13 @@ export default function ProductForm({ itemList, setItemList, productPrice, setPr
         
         <Input
           type="number"
-          text="Hora de trabalho (h)"
-          name="timeSpent"
+          text="Hora de trabalho"
+          name="time_spent"
           placeholder='Insira a hora'
           min="0"
           max="1000000"
           step=".1"
-          value={product.timeSpent ? product.timeSpent : 0}
+          value={product.time_spent}
           handleOnChange={handleChange}
           required="required"
         />
@@ -68,12 +69,12 @@ export default function ProductForm({ itemList, setItemList, productPrice, setPr
         <Input
           type="number"
           text="Margem de lucro (%)"
-          name="profitMargin"
+          name="profit_margin"
           placeholder='Insira a margem '
           min="0.01"
           max="1000000"
           step=".01"
-          value={product.profitMargin ? product.profitMargin : 0}
+          value={product.profit_margin}
           handleOnChange={handleChange}
           required="required"
         />
@@ -86,7 +87,7 @@ export default function ProductForm({ itemList, setItemList, productPrice, setPr
       </div> 
     */}
 
-      <SubmitButton text="Criar" />
+      <SubmitButton text="Salvar" />
     </form>
   )
 }

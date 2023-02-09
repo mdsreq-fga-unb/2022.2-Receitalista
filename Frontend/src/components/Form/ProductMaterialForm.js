@@ -4,12 +4,14 @@ import axios from "../../api/axios";
 
 import classes from "./ProductForm.module.css"
 
-const ProductMaterialForm = ({ setItemList, setProductPrice, array = [] }) => {
-    const [materialList, setMaterialList] = useState([]);
+const ProductMaterialForm = ({ itemList, setItemList, array = [] }) => {
 
+    const [materialList, setMaterialList] = useState([]);
     const [selectedMaterialList, setSelectedMaterialList] = useState(array);
-    const [quantity, setQuantity] = useState(0);
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
+
+    const [quantity, setQuantity] = useState(0);
+
 
     const [renderAux, setRenderAux] = useState(false);
 

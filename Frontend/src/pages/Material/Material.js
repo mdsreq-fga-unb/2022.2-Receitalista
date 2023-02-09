@@ -42,7 +42,7 @@ function Material() {
 			setMessage('O nome do material não pode estar vazio')
 			setType('error')
 		} else {
-			await axios.put(`/item/${id}`, { name: material.name, price: material.price, quantity: 2, unit: material.unity}, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/item/${id}`, { name: material.name, price: material.price, quantity: material.quantity, unit: material.unity}, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
 				setMessage('Material atualizado com sucesso!')
 				setType('success')
@@ -72,9 +72,9 @@ function Material() {
 									<p>
 										<span>Preço do material</span> R$ {material.price}
 									</p>
-									<p>
+{/* 									<p>
 										<span>Unidade</span> {material.unity}
-									</p>
+									</p> */}
 								</div>
 							) : (
 								<div className={classes.form}>
