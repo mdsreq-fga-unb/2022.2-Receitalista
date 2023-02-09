@@ -15,10 +15,6 @@ function NewProduct() {
     const [product, setProduct] = useState({});
     
     const [itemList, setItemList] = useState([]);
-    const [productPrice, setProductPrice] = useState(0);
-    const [basePrice, setBasePrice] = useState(0);
-    const [profitMargin, setProfitMargin] = useState(0);
-    const [timeSpent, setTimeSpent] = useState(0);
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -29,10 +25,8 @@ function NewProduct() {
                     name: product.name,
                     description: product.description,
                     itens: itemList,
-                    base_price: basePrice,
-                    product_price: productPrice,
-                    profit_margin: profitMargin,
-                    time_spent: timeSpent
+                    profit_margin: Number(product.profitMargin),
+                    time_spent: Number(product.timeSpent)
                 }), {headers:{ "Authorization": `Bearer ${localStorage.getItem('acess_token')}` }}).then(response => {
                     console.log(response);
                     navigate('/produtos', {state: {message: `Produto ${product.name} criado com sucesso`}});
@@ -53,12 +47,9 @@ function NewProduct() {
             <ProductForm 
                 itemList={itemList}
                 setItemList={setItemList} 
-                productPrice={productPrice}
-                setProductPrice={setProductPrice}
-                basePrice={basePrice}
-                handleSubmit={onSubmit}
                 product={product}
                 setProduct={setProduct} 
+                handleSubmit={onSubmit}
             />
         </div>
     )

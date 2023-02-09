@@ -23,7 +23,6 @@ function Product() {
 
 	const [product, setProduct] = useState({});
 	const [showProductForm, setShowProductForm] = useState(false);
-	const [totalPrice, setTotalPrice] = useState(0);
 	const navigate = useNavigate();
 	const [itemList, setItemList] = useState([]);
 	const [message, setMessage] = useState('')
@@ -54,7 +53,13 @@ function Product() {
 			setType('error')
 		} else {
 			console.log(itemList);
-			await axios.put(`/product/${id}`, { name: product.name, description: product.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			await axios.put(`/product/${id}`, {
+				name: product.name,
+				description: product.description,
+				itens: itemList,
+				profit_margin: Number(product.profitMargin),
+				time_spent: Number(product.timeSpent)
+			}, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
 				console.log(response);
 				setMessage('Produto atualizado com sucesso')
 				setType('success')
@@ -82,17 +87,14 @@ function Product() {
 							{!showProductForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Preço de venda:</span> R$ 0,00
+										<span>Preço de venda:</span> R$ {product.product_price}
 									</p>
 									<p>
-										<span>Lucro:</span> R$ 0,00
-										<span>Margem de lucro:</span> 0,00%
+										<span>Lucro:</span> R$ {product.profit}
+										<span>Margem de lucro:</span> {product.profit_margin} %
 									</p>
 									<p>
-										<span>Valor dos materiais:</span> R$ {product.total_price},00
-									</p>
-									<p>
-										<span>Custo de produção:</span> R$ 0,00
+										<span>Custo de produção:</span> R$ {product.base_price}
 									</p>
 									<p>
 										<span>Descrição:</span> {product.description}
@@ -103,8 +105,6 @@ function Product() {
 									<ProductForm
 										product={product}
 										setProduct={setProduct}
-										totalPrice={totalPrice}
-										setTotalPrice={setTotalPrice}
 										itemList={itemList}
 										setItemList={setItemList}
 										handleSubmit={handleSubmit}

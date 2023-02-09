@@ -1,7 +1,6 @@
 const Product = require('../model/product');
 
 exports.addProduct = async function (req, res) {
-    console.log(req.body);
     const product = await Product.findOne({ where: { name: req.body.name, user_id: req.userData.id } });
 
     if (product !== null) {
@@ -9,18 +8,24 @@ exports.addProduct = async function (req, res) {
             message: 'Product already exist'
         });
     } else {
-        const { time_spent, profit_margin, base_price } = req.body;
+        const { time_spent, profit_margin, itens } = req.body;
+
+        let base_price = 0;
+        for (const item of itens) {
+            console.log(item)
+            base_price += Number(item['0'].price) * Number(item['0'].usedQuantity);
+        }
 
         const profit = req.userData.pricePerHour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
 
         const newProduct = {
             name: req.body.name,
             description: req.body.description,
-            itens: req.body.itens,
-            base_price: base_price,
-            product_price: base_price + profit,
-            profit_margin: req.body.profit_margin,
-            profit: profit,
+            itens: itens,
+            base_price: base_price.toFixed(2),
+            product_price: (base_price + profit).toFixed(2),
+            profit_margin: req.body.profit_margin.toFixed(2),
+            profit: profit.toFixed(2),
             time_spent: time_spent,
             user_id: req.userData.id,
         };
@@ -43,15 +48,29 @@ exports.addProduct = async function (req, res) {
 }
 
 exports.updateProduct = async function (req, res) {
+    console.log(req.body)
     const id = req.params.id;
-    const { description, name, itens } = req.body;
+    const { time_spent, profit_margin, description, name, itens } = req.body;
+
+    let base_price = 0;
+    for (const item of itens) {
+        console.log(item)
+        base_price += Number(item['0'].price) * Number(item['0'].usedQuantity);
+    }
+
+    const profit = req.userData.pricePerHour * time_spent + (((100 + profit_margin) * base_price) / 100) - base_price;
+
 
     Product.update(
-        { name: name, description: description, itens: itens },
+        { 
+            name: name, description: description, 
+            itens: itens, profit: profit.toFixed(2), time_spent: time_spent,  
+            base_price: base_price.toFixed(2), profit_margin: profit_margin.toFixed(2),
+            product_price: (base_price + profit).toFixed(2)
+        },
         { where: { id: id, user_id: req.userData.id } }
     )
         .then(result => {
-            console.log(result.dataValues);
             return res.status(201).json({
                 message: 'Product updated'
             });

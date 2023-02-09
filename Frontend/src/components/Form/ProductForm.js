@@ -3,7 +3,7 @@ import SubmitButton from "../Button/SubmitButton"
 import classes from "./ProductForm.module.css"
 import ProductMaterialForm from "./ProductMaterialForm"
 
-export default function ProductForm({ handleSubmit, product, setProduct, itemList, setItemList, productPrice, setProductPrice, basePrice }) {
+export default function ProductForm({ itemList, setItemList, productPrice, setProductPrice, product, setProduct,handleSubmit}) {
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value })
@@ -55,12 +55,12 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         <Input
           type="number"
           text="Hora de trabalho (h)"
-          name="profit"
+          name="timeSpent"
           placeholder='Insira a hora'
           min="0"
           max="1000000"
           step=".1"
-          value={product.timeSpent}
+          value={product.timeSpent ? product.timeSpent : 0}
           handleOnChange={handleChange}
           required="required"
         />
@@ -68,12 +68,12 @@ export default function ProductForm({ handleSubmit, product, setProduct, itemLis
         <Input
           type="number"
           text="Margem de lucro (%)"
-          name="profit"
+          name="profitMargin"
           placeholder='Insira a margem '
           min="0.01"
           max="1000000"
           step=".01"
-          value={product.profitMargin}
+          value={product.profitMargin ? product.profitMargin : 0}
           handleOnChange={handleChange}
           required="required"
         />
