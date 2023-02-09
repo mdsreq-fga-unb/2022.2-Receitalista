@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import classes from './OrderCard.module.css'
 import classes1 from '../../components/Button/CardButton.module.css'
@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 function OrderCard({ id, name, price, handleDeleteOrder }) {
 	const [exists, setExists] = useState(true);
+	const navigate = useNavigate();
 
 	if(exists){
 		return (
@@ -16,7 +17,7 @@ function OrderCard({ id, name, price, handleDeleteOrder }) {
 					<span>Preço:</span> R${price}
 				</p>
 				<div className={classes1.btn}>
-{/* 					<Link to={`/pedido/${id}`}>
+					{/* <Link to={`/pedido/${id}`}>
 						<BsPencil /> Editar
 					</Link> */}
 					<button type='submit' onClick={() => {handleDeleteOrder(id, name); setExists(false)}}>

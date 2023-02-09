@@ -31,7 +31,7 @@ function Order() {
 
 	useEffect(() => {
 		axios.get(`/order/${id}`, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then((response) => {
-			setOrder(response.data.order);
+			console.log(response.data.orders);
 		}).catch(err => {
 			console.log(err);
 		})
@@ -44,36 +44,33 @@ function Order() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		if (!id) {
-			console.log("Não está passando o id como parâmetro");
-		} else if (!order.name) {
-			setMessage('O nome do pedido não pode estar vazio')
-			setType('error')
-		} else if (getArraySize(itemList) < 1) {
-			setMessage('Adicione ao menos um produto ao pedido')
-			setType('error')
-		} else {
-			console.log(itemList);
-			await axios.put(`/order/${id}`, { name: order.name, description: order.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
-				console.log(response);
-				setMessage('Pedido atualizado com sucesso')
-				setType('success')
-				setShowOrderForm(!showOrderForm)
-			}).catch(err => {
-				console.log(err);
-				alert("Não foi possível atualizar o pedido!");
-			});
-		}
+		// if (!id) {
+		// 	console.log("Não está passando o id como parâmetro");
+		// } else if (getArraySize(itemList) < 1) {
+		// 	setMessage('Adicione ao menos um produto ao pedido')
+		// 	setType('error')
+		// } else {
+		console.log(itemList);
+		await axios.put(`/order/${id}`, { name: order.name, description: order.description, itens: itemList }, { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } }).then(response => {
+			console.log(response);
+			setMessage('Pedido atualizado com sucesso')
+			setType('success')
+			setShowOrderForm(!showOrderForm)
+		}).catch(err => {
+			console.log(err);
+			alert("Não foi possível atualizar o pedido!");
+		});
+		// }
 	}
 
 	return (
 		<>
-			{order || order.name ? (
+			{order ? (
 				<div className={classes.order_details}>
 					<Container customClass="column">
 						{message && <Message type={type} msg={message} />}
 						<div className={classes.details_container}>
-							<h1>Pedido: {order.name}</h1>
+							<h1>Pedido: dawd</h1>
 							<div className={classes1.btn}>
 								<button onClick={toggleOrderForm}>
 									{!showOrderForm ? 'Editar pedido' : 'Fechar'}

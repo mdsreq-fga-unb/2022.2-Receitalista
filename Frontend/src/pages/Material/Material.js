@@ -70,7 +70,8 @@ function Material() {
 							{!showMaterialForm ? (
 								<div className={classes.form}>
 									<p>
-										<span>Preço do material</span> R$ {material.price}
+										<span>Custo do material</span> R$ {material.price}
+										<span>Quantidade do material</span> {material.quantity} ({material.unit})
 									</p>
 {/* 									<p>
 										<span>Unidade</span> {material.unity}

@@ -27,6 +27,14 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
     setMaterial({ ...material, [e.target.name]: e.target.value })
   }
 
+  const handleChecked = (value) => {
+   if(value === "Quilo"){ return true };
+   if(value === "Litro"){ return true };
+   if(value === "Metro"){ return true };
+   if(value === "Unidade"){ return true };
+   return false;
+  }
+
   return (
 
     <form onSubmit={handleSubmit} className={classes.form}>
@@ -46,9 +54,9 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         min="0.01"
         max="1000000"
         step={".01"}
-        text="Preço da unidade em reais"
+        text="Custo unitário da unidade em reais"
         name="price"
-        placeholder="Insira o preço da unidade do material"
+        placeholder="Insira o custo da unidade"
         handleOnChange={handleChange}
         value={material.price}
         required="required"
@@ -69,9 +77,10 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
 
       <div>
         <h4>Medida:</h4>
-        {labelList.map((item) => (
+        {labelList.map((item, index) => (
           <React.Fragment key={item.key}>
             <input 
+              checked={handleChecked(item.label)}
               type="radio" 
               name="unity" 
               onChange={handleChange} 
@@ -84,7 +93,7 @@ function MaterialForm({ handleSubmit, material, setMaterial }) {
         <p></p>
       </div>
 
-      <SubmitButton text="Criar" />
+      <SubmitButton text="Salvar" />
     </form>
   )
 }

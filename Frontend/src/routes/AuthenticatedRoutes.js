@@ -39,7 +39,7 @@ const AuthenticatedRoutes = () => {
                 <Route path="/novasenha" element={<NewPassword />} />
 
                 <Route path="/criarpedido" element={<NewOrder/>}/>
-                <Route path="/pedido/:id" element={<Order/>}/>
+                {/* <Route path="/pedido/:id" element={<Order/>}/> */}
                 <Route path="/pedidos" element={<Orders/>}/>
 
                 <Route path="/novocliente" element={<NewClient />} />

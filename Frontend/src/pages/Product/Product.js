@@ -103,7 +103,7 @@ function Product() {
 										<span>Descrição:</span> {product.description}
 									</p>
 									<p>
-										<span>Hora</span> {product.time_spent}
+										<span>Hora de trabalho</span> {product.time_spent} h
 									</p>
 								</div>
 							) : (

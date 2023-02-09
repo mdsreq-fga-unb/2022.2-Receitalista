@@ -5,7 +5,7 @@ import classes1 from '../../components/Button/CardButton.module.css'
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 import { useState } from 'react'
 
-function MaterialCard({ id, name, quantity, handleDeleteMaterial }) {
+function MaterialCard({ id, name, price, handleDeleteMaterial }) {
 	const [exists, setExists] = useState(true);
 
 	const handleClick = (sucessfull) => {
@@ -25,7 +25,7 @@ function MaterialCard({ id, name, quantity, handleDeleteMaterial }) {
 					{name}
 				</h4>
 				<p>
-					Quantidade: {quantity}
+					Custo: R$ {price}
 				</p>
 				<div className={classes1.btn}>
 					<Link to={`/material/${id}`}>
