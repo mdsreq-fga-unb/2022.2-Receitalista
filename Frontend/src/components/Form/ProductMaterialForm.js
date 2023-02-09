@@ -4,28 +4,14 @@ import axios from "../../api/axios";
 
 import classes from "./ProductForm.module.css"
 
-const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
+const ProductMaterialForm = ({ setItemList, setProductPrice, array = [] }) => {
     const [materialList, setMaterialList] = useState([]);
+
     const [selectedMaterialList, setSelectedMaterialList] = useState(array);
     const [quantity, setQuantity] = useState(0);
     const [selectedMaterialIndex, setSelectedMaterialIndex] = useState();
+
     const [renderAux, setRenderAux] = useState(false);
-
-    useEffect(() => {
-        let newPrice = 0;
-
-        if (selectedMaterialList.length !== 0) {
-            selectedMaterialList.forEach(element => {
-                if (element[0].price) {
-                    newPrice = newPrice + (Number(element[0].price) * element[0].usedQuantity);
-                    setTotalPrice(newPrice);
-                }
-            });
-        }
-        else {
-            setTotalPrice(0);
-        }
-    }, [selectedMaterialList, renderAux]);
 
     const getItems = async () => {
         await axios.get("item/list", { headers: { "Authorization": `Bearer ${localStorage.getItem('acess_token')}` } })
@@ -106,13 +92,14 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
                             key={material.id}
                             value={material.id}>
                             {material.name}
+                            {material.unity}
                         </option>
                     }) : ""}
                 </select>
 
                 <input
                     type="number"
-                    min="0"
+                    min="1"
                     step="1"
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
@@ -135,14 +122,14 @@ const ProductMaterial = ({ setItemList, setTotalPrice, array = [] }) => {
                             <span>(Medida)</span>
                             <span>Quantidade: {item[0].usedQuantity}</span>
                             <button onClick={(event) => handleMaterialDelete(event, item[0].id)}>Deletar</button>
-                        </div> : ""}
+                        </div> : "Material não encontrado"}
                     </React.Fragment>
                 )
-            }) : ""}
+            }) : "Carregando..."}
         </div>
     )
 
 }
 
 
-export default ProductMaterial;
+export default ProductMaterialForm;

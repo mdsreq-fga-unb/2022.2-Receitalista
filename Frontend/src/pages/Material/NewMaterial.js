@@ -37,7 +37,11 @@ const NewMaterial = () => {
 	return (
 		<div className={classes.page}>
 			<h1>Inserir novo material</h1>
-			<MaterialForm handleSubmit={onSubmit} material={material} setMaterial={setMaterial} />
+			<MaterialForm 
+				handleSubmit={onSubmit} 
+				material={material} 
+				setMaterial={setMaterial} 
+			/>
 		</div>
 	)
 }
