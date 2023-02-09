@@ -40,7 +40,7 @@ function Orders() {
 
 			console.log(response);
 
-			setOrderMessage(`Pedido ${name} excluído`)
+			setOrderMessage(`Pedido excluído`)
 
 			return 201;
 		}).catch(err => {

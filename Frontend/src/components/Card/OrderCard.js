@@ -11,14 +11,14 @@ function OrderCard({ id, name, price, handleDeleteOrder }) {
 	if(exists){
 		return (
 			<div className={classes.card}>
-				<h4>{name}</h4>
+				<h4>#{id}</h4>
 				<p>
 					<span>Preço:</span> R${price}
 				</p>
 				<div className={classes1.btn}>
-					<Link to={`/pedido/${id}`}>
+{/* 					<Link to={`/pedido/${id}`}>
 						<BsPencil /> Editar
-					</Link>
+					</Link> */}
 					<button type='submit' onClick={() => {handleDeleteOrder(id, name); setExists(false)}}>
 						<BsFillTrashFill /> Excluir
 					</button>
