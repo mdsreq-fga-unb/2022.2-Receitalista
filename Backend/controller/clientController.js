@@ -93,35 +93,28 @@ exports.updateClient = async function (req, res) {
 
 exports.deleteClient = async function (req, res) {
     const id = req.params.id;
-
     try {
-        const order = await Order.findAll( { where: { client_id: id, user_id: req.userData.id } } );
-        if (order[0] === undefined) {
-            await Client.destroy(
-                { where: { id: id, user_id: req.userData.id } }
-            )
-                .then(result => {
-                    console.log(result.dataValues);
-                    res.status(201).json({
-                        message: 'Client deleted'
-                    })
+        await Client.destroy(
+            { where: { id: id, user_id: req.userData.id } }
+        )
+            .then(result => {
+                console.log(result.dataValues);
+                res.status(201).json({
+                    message: 'Client deleted'
                 })
-                .catch(err => {
-                    console.log(err);
-                    res.status(500).json({
-                        err: err
-                    })
-                });
-        } else {
-            res.status(500).json({
-                 message: 'Client not deleted, becuse already has an order'
-             });
-        }
-
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    err: err,
+                    message: 'Fail to delete Client'
+                })
+            });
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            err: err
+            err: err,
+            message: 'Fail to delete Client'
         });
     }
 }
