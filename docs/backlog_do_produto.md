@@ -71,12 +71,8 @@
          - Eu como usuário gostaria de poder visualizar a listagem dos pedidos cadastrados para saber os produtos mais pedidos e a preferência de cada cliente.
   
   - [FEAT07] Gerenciamento de custos
-      - [US22] Visualizar gastos de material
-         - Eu como usuário gostaria de visualizar os gastos com cada material mensalmente para poder estimar margem de lucro por produto
-      - [US23] Visualizar lucro de produto
-         - Eu como usuário gostaria de visualizar a margem de lucro mensal por produto para gerenciar o preço de venda para cada pedido
-      - [US24] Visualizar lucro de pedido
-         - Eu como usuário gostaria de visualizar a margem de lucro de todos os pedidos mensalmente para ter controle da minha margem de lucro
+      - [US22] Gerar Relatório de Pedidos
+         - Eu como usuário gostaria de gerar um relatório com informações dos pedidos dos clientes para identificar oportunidades de crescimento e aumentar as vendas
 <br>
 
 ## Requisitos funcionais

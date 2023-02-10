@@ -34,6 +34,4 @@ N° | User story | Sprint |
 6| [US16] Excluir cliente | 11 |
 7| [US17] Visualizar clientes | 11 |
 8| [US21] Visualizar pedidos | 11 |
-9| [US22] Visualizar gastos de material | 11 |
-10| [US23] Visualizar lucro de produto | 12 |
-11| [US24] Visualizar lucro de pedido | 12 |
+9| [US22] Gerar Relatório de Pedidos | 12 |
